@@ -67,6 +67,7 @@ class _QuestionTypeB extends State<StatefulWidget>{
               controller: _ansController,
               decoration: new InputDecoration(
                 hintText: 'Tast inn svaret',
+                hintStyle: TextStyle(color: Theme.of(context).accentColor),
                 border: InputBorder.none,
               ),
             ),

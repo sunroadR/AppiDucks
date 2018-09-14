@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import './question_type_a.dart';
 import './question_type_b.dart';
+import './question_type_c.dart';
+
 import './question_evaluator.dart';
 
 void main() => runApp(new MyApp());
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('AppiDucks for Python'),
         ),
-        body: QuestionTypeB(),
+        body: QuestionTypeC(),
         //QuestionTypeA(),
 
       ) ,

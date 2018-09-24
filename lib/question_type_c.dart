@@ -114,6 +114,7 @@ class _QuestionTypeC extends State<QuestionTypeC>{
      MaterialButton(
        minWidth: 50.0,
        color: Theme.of(context).buttonColor,
+         child:  Text(_questionCategory1.getAnswer3()),
          onPressed: () {
            // retrive the answer the user has typed  inn
            Text(_questionCategory1.getAnswer3());
@@ -137,6 +138,7 @@ class _QuestionTypeC extends State<QuestionTypeC>{
               MaterialButton(
                 minWidth: 50.0,
                 color: Theme.of(context).buttonColor,
+                  child:  Text(_questionCategory1.getAnswer4()),
                   onPressed: () {
                     // retrive the answer the user has typed  inn
                     Text(_questionCategory1.getAnswer4());
@@ -153,12 +155,12 @@ class _QuestionTypeC extends State<QuestionTypeC>{
               MaterialButton(
                 minWidth: 50.0,
                 color: Theme.of(context).buttonColor,
+                  child:  Text(_questionCategory1.getAnswer5()),
                   onPressed: () {
-                    // retrive the answer the user has typed  inn
-                  //  Text(_questionCategory1.getAnswer5());
+                    Text(_questionCategory1.getAnswer5());
 
                     setState(() {
-                //      _givenAns = _questionCategory1.getAnswer5();
+                      _givenAns = _questionCategory1.getAnswer5();
 
                     });
                   }
@@ -169,12 +171,12 @@ class _QuestionTypeC extends State<QuestionTypeC>{
               MaterialButton(
                 minWidth: 50.0,
                 color: Theme.of(context).buttonColor,
+                  child:  Text(_questionCategory1.getAnswer6()),
                   onPressed: () {
-                    // retrive the answer the user has typed  inn
-                  //  Text(_questionCategory1.getAnswer1());
+                    Text(_questionCategory1.getAnswer6());
 
                     setState(() {
-                   //   _givenAns = _questionCategory1.getAnswer1();
+                      _givenAns = _questionCategory1.getAnswer6();
 
                     });
                   }

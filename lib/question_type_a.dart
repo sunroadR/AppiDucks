@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:appi_ducks/question_evaluator.dart';
 
 import 'package:appi_ducks/question_category1.dart';
+import 'package:appi_ducks/main.dart';
 
 // WidgetClass that shows the layout for the screen for the question of type A
 // So fare it is not static , but troughthe implemetation it will read the qeustion
@@ -50,6 +51,7 @@ class _QuestionTypeA extends State<QuestionTypeA>{
         new Text(
 
             question.getQuestion(),
+            key: Key('questionA'),
             style: TextStyle(fontSize: 24.0,
                   color: Theme.of(context).accentColor),
             textAlign: TextAlign.center),
@@ -62,7 +64,7 @@ class _QuestionTypeA extends State<QuestionTypeA>{
               children: <Widget>[
 
         new MaterialButton(
-
+             key: Key('answerA1'),
            color: Theme.of(context).buttonColor,
 
 
@@ -89,7 +91,7 @@ class _QuestionTypeA extends State<QuestionTypeA>{
         children: <Widget>[
 
          new MaterialButton(
-
+              key: Key('answerA2'),
 
           color: Theme
               .of(context)
@@ -113,7 +115,7 @@ class _QuestionTypeA extends State<QuestionTypeA>{
     children: <Widget>[
 
     new MaterialButton (
-
+      key: Key('answerA3'),
     color: Theme.of(context).buttonColor,
 
           child:
@@ -138,7 +140,7 @@ class _QuestionTypeA extends State<QuestionTypeA>{
 
     children: <Widget>[
         MaterialButton(
-
+          key: Key('answerA4'),
           color: Theme.of(context).buttonColor,
 
           child: Text(question.getAnswer4(),

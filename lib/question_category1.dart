@@ -10,11 +10,15 @@ class QuestionCategory1 {
 //
  final String question = 'Hva blir (-2)** 4 ?';
 
- final String answer1 = '16 ' ;
+ final String answer1 = '16' ;
 
  final String answer2 = '-16' ;
  final String answer3 = '8 ' ;
  final String answer4 = '-8' ;
+ final String answer5='-12';
+ final String answer6='12';
+
+
 
  final String corectAns= '16';
 
@@ -50,6 +54,16 @@ class QuestionCategory1 {
     return answer4;
 
   }
+
+ String getAnswer5(){
+   return answer5;
+
+ }
+
+ String getAnswer6(){
+   return answer6;
+
+ }
 
   String getcorrectAns(){
 

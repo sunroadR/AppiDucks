@@ -40,7 +40,10 @@ class _QuestionTypeB extends State<StatefulWidget>{
         children: <Widget>[
 
           new Text(
-              _questionCategory1.getQuestion(), style: TextStyle(fontSize: 24.0,
+
+              _questionCategory1.getQuestion(),
+              key: Key('QuestionTypeB'),
+              style: TextStyle(fontSize: 24.0,
               color: Theme
                   .of(context)
                   .accentColor),
@@ -91,12 +94,17 @@ class _QuestionTypeB extends State<StatefulWidget>{
 
                   setState(() {
                     _givenAnswer = _ansController.text.toString();
-                    _isRight = _questionEvaluator.checkAnswer(
+                    if(_givenAnswer.length==0)
+                      {
+                      showMessageNoAnswer();
+                      }
+                   else { _isRight = _questionEvaluator.checkAnswer(
                         _questionCategory1, _givenAnswer);
-                  });
+                    // calls the showMessage with
+                    showMessage(_isRight, _questionCategory1);
+                  }});
 
-                  // calls the showMessage with
-                  showMessage(_isRight, _questionCategory1);
+
 
 
                 },
@@ -169,6 +177,42 @@ class _QuestionTypeB extends State<StatefulWidget>{
 
       // shows the window
       showDialog(context: context, child:  message);
+
+    }
+
+    void showMessageNoAnswer(){
+
+      // variable that holdes the feedback
+      String _feedBackMessage = ' Du må skrive inn svar';
+
+      // creates a AlertDialog window
+      AlertDialog message = new AlertDialog(
+
+        // the content that will shows
+
+        content: new RichText(
+                  text: new TextSpan(
+                      text: _feedBackMessage,
+                  style: new TextStyle(color: Colors.indigo[900],
+                      fontSize: 20.0))
+                ),
+
+
+
+
+
+
+
+
+
+
+        actions: <Widget>[
+        ],
+      );
+
+      // shows the window
+      showDialog(context: context, child:  message);
+
 
     }
 

@@ -1,9 +1,12 @@
 
 
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:appi_ducks/question_evaluator.dart';
 
 import 'package:appi_ducks/question_category1.dart';
+import 'package:appi_ducks/page_question2.dart';
 import 'package:appi_ducks/main.dart';
 
 // WidgetClass that shows the layout for the screen for the question of type A
@@ -24,6 +27,9 @@ class QuestionTypeA extends StatefulWidget {
 
 // Keeps the state for the widget
 class _QuestionTypeA extends State<QuestionTypeA>{
+
+  @override
+
 
   //  String that will take the answer the person give
    String _givenAnswer ='';
@@ -79,6 +85,7 @@ class _QuestionTypeA extends State<QuestionTypeA>{
 
             // calls the showMessage with
             showMessage(_isRight, question);
+
 
 
           },
@@ -155,6 +162,7 @@ class _QuestionTypeA extends State<QuestionTypeA>{
             showMessage(_isRight, question);
 
 
+
           },
 
 
@@ -162,6 +170,8 @@ class _QuestionTypeA extends State<QuestionTypeA>{
 
       ],
     );
+
+
   }
 
 
@@ -211,27 +221,41 @@ void showMessage(bool _isRight, QuestionCategory1 question){
                            new TextSpan(
                               text: _correctAnsToShow,
                               style: new TextStyle(color: Theme.of(context).primaryColor,
-                              fontSize: 28.0,
+                              fontSize: 28.0 ) ,
+                           ),
 
-                              ) ,
-
-  )
   ]
+
   ) ,
 
 
   ),
 
 
+
                      actions: <Widget>[
+           FlatButton(
+           child: Text('neste',
+               style: new TextStyle(color: Theme.of(context).primaryColor,
+               fontSize: 14.0
+           ),),
+               onPressed: () {
+
+  Navigator.of(context).push(new MaterialPageRoute(builder: (context)=>PageQuestion2()));
+
+  })
                        ],
            );
 
                     // shows the window
-               showDialog(context: context, child:  message);
+    showDialog(context: context, child:  message);
 
 }
 
-}
+
+  }
+
+
+
 
 

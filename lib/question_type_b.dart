@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:appi_ducks/question_category1.dart';
 import 'package:appi_ducks/question_evaluator.dart';
-
+import 'package:appi_ducks/page_question3.dart';
 
 class QuestionTypeB extends StatefulWidget {
   @override
@@ -207,6 +207,17 @@ class _QuestionTypeB extends State<StatefulWidget>{
 
 
         actions: <Widget>[
+          FlatButton(
+              child: Text('neste',
+                style: new TextStyle(color: Theme.of(context).primaryColor,
+                    fontSize: 14.0
+                ),),
+              onPressed: () {
+
+                Navigator.of(context).push(new MaterialPageRoute(builder: (context)=>PageQuestion3()));
+
+              })
+
         ],
       );
 

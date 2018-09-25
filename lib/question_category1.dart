@@ -22,11 +22,11 @@ class QuestionCategory1 {
 
  final String corectAns= '16';
 
- bool firstTimeThisLesson;
+ bool firstTimeThisLesson=true;
 
  QuestionCategory1(){
 
-   firstTimeThisLesson=true;
+
  }
 
 

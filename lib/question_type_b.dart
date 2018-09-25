@@ -4,6 +4,7 @@ import 'package:appi_ducks/question_category1.dart';
 import 'package:appi_ducks/question_evaluator.dart';
 import 'package:appi_ducks/page_question3.dart';
 
+
 class QuestionTypeB extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -19,9 +20,12 @@ class QuestionTypeB extends StatefulWidget {
 class _QuestionTypeB extends State<StatefulWidget>{
 
   QuestionCategory1 _questionCategory1 = new QuestionCategory1();
-  String _givenAnswer;
   QuestionEvaluator _questionEvaluator =new QuestionEvaluator();
+
+  String sjekk ='Sjekk';
+  String _givenAnswer;
   bool _isRight;
+
   // Create a text controller. That is used to retrieve  the current answer
   // of the textfield
   final _ansController = TextEditingController();
@@ -77,32 +81,49 @@ class _QuestionTypeB extends State<StatefulWidget>{
           ),
           new Row (
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+                children: <Widget>[
 
-              new MaterialButton(
+              // A button for checking the answer
+                 new MaterialButton(
 
-                color: Theme
+                 //style of the button
+                 color: Theme
                     .of(context)
                     .buttonColor,
 
-
-                child: Text('SJEKK', textAlign: TextAlign.center,
+                   child: Text( sjekk , textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18.0)),
+
                 onPressed: () {
+
                   // retrive the answer the user has typed  inn
-
-
+                  if(sjekk=='Sjekk'){
                   setState(() {
                     _givenAnswer = _ansController.text.toString();
+
+                    // sjekker at det er tastet inn et svar
                     if(_givenAnswer.length==0)
                       {
+                        // Gir beskjed om at de må skrive inn et svar
                       showMessageNoAnswer();
+
                       }
-                   else { _isRight = _questionEvaluator.checkAnswer(
+
+                   else {
+                      // Kaller metode i _questionElovator og evaluerer avgitt svar
+                        _isRight = _questionEvaluator.checkAnswer(
                         _questionCategory1, _givenAnswer);
-                    // calls the showMessage with
-                    showMessage(_isRight, _questionCategory1);
-                  }});
+                    // calls the showMessage with, Gir tilbake melding
+                     showMessage(_isRight, _questionCategory1);
+                    // Endrer navn på button, til neste og den vil nå ta bruker til neste side
+                    sjekk= 'Neste';
+                  }});}
+                  else{
+                    //Navigere til neste side
+                   Navigator.of(context).push(new MaterialPageRoute(builder: (context)=> PageQuestion3()));
+
+
+                  }
 
 
 
@@ -117,7 +138,7 @@ class _QuestionTypeB extends State<StatefulWidget>{
         ]
     );
   }
-    void showMessage(bool _isRight, QuestionCategory1 question){
+   void showMessage(bool _isRight, QuestionCategory1 question){
 
       // variable that holdes the feedback
       String _feedBackMessage; // if right or wrong message
@@ -197,15 +218,6 @@ class _QuestionTypeB extends State<StatefulWidget>{
                       fontSize: 20.0))
                 ),
 
-
-
-
-
-
-
-
-
-
         actions: <Widget>[
           FlatButton(
               child: Text('neste',
@@ -214,7 +226,7 @@ class _QuestionTypeB extends State<StatefulWidget>{
                 ),),
               onPressed: () {
 
-                Navigator.of(context).push(new MaterialPageRoute(builder: (context)=>PageQuestion3()));
+                Navigator.of(context).pop(new MaterialPageRoute(builder: (context)=>PageQuestion3()));
 
               })
 

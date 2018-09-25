@@ -35,6 +35,7 @@ class _QuestionTypeA extends State<QuestionTypeA>{
    String _givenAnswer ='';
    bool _isRight=false;
 
+  bool firstTime=true;
    // the keeps the correctAnswer for question
    String corectAnswer;
 
@@ -65,82 +66,92 @@ class _QuestionTypeA extends State<QuestionTypeA>{
 
         // The lay out for the four button
 
-        new Row (
-            mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
+    new Row (
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
 
-        new MaterialButton(
-             key: Key('answerA1'),
-           color: Theme.of(context).buttonColor,
-
-
-            child: Text(question.getAnswer1(), textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 18.0)),
-          onPressed: () {
-
-            setState(() {
-               _givenAnswer=question.getAnswer1();
-              _isRight=questionEvaluator.checkAnswer(question,_givenAnswer);
-            });
-
-            // calls the showMessage with
-            showMessage(_isRight, question);
+    new MaterialButton(
+    key: Key('answerA1'),
+    color: Theme.of(context).buttonColor,
 
 
+    child: Text(question.getAnswer1(), textAlign: TextAlign.center,
+    style: TextStyle(fontSize: 18.0)),
+    onPressed: () {
+     if(firstTime==true) {
+      setState(() {
+        _givenAnswer = question.getAnswer1();
+        _isRight = questionEvaluator.checkAnswer(question, _givenAnswer);
+        firstTime=false;
 
-          },
+      });
+
+      // calls the showMessage with
+      showMessage(_isRight, question);
+    }
+
+    },
 
 
-    ),],  ),
+    ),
+    ], ),
 
     new Row (
-       mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
 
-         new MaterialButton(
-              key: Key('answerA2'),
+    new MaterialButton(
+    key: Key('answerA2'),
 
-          color: Theme
-              .of(context)
-              .buttonColor,
-          child: Text(question.getAnswer2(),
-          style: TextStyle(fontSize: 18.0),),
-          onPressed: () {
-            setState(() {
-              _givenAnswer=question.getAnswer2();
-              _isRight=questionEvaluator.checkAnswer(question,_givenAnswer);
-            });
+    color: Theme
+        .of(context)
+        .buttonColor,
+    child: Text(question.getAnswer2(),
+    style: TextStyle(fontSize: 18.0), ),
+    onPressed: () {
+    if(firstTime==true) {
+      setState(() {
+        _givenAnswer = question.getAnswer2();
+        _isRight = questionEvaluator.checkAnswer(question, _givenAnswer);
+       firstTime=false;
 
-            showMessage(_isRight, question);
+      });
 
-          },
+      showMessage(_isRight, question);
+    }
+    },
 
 
-        ),],),
-      new Row(
+    ),
+    ], ),
+    new Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
 
     new MaterialButton (
-      key: Key('answerA3'),
+    key: Key('answerA3'),
     color: Theme.of(context).buttonColor,
 
-          child:
-          Text(question.getAnswer3(),
-            style: TextStyle(fontSize: 16.0),),
-          onPressed: () {
+    child:
+    Text(question.getAnswer3(),
+    style: TextStyle(fontSize: 16.0), ),
+    onPressed: () {
+    if(firstTime=true) {
+      setState(() {
+        _givenAnswer = question.getAnswer3();
+        _isRight = questionEvaluator.checkAnswer(question, _givenAnswer);
+      firstTime=false;
 
-            setState(() {
-              _givenAnswer=question.getAnswer3();
-              _isRight=questionEvaluator.checkAnswer(question,_givenAnswer);
-            });
+      });
 
-            showMessage(_isRight, question);
+      showMessage(_isRight, question);
+    }
 
+    },
 
-          },
+    ),
+    ], ),
 
-    ),], ),
 
     new Row(
     mainAxisAlignment: MainAxisAlignment.center,
@@ -153,20 +164,26 @@ class _QuestionTypeA extends State<QuestionTypeA>{
           child: Text(question.getAnswer4(),
           style: TextStyle(fontSize: 18.0),),
           onPressed: () {
+    if(firstTime==true) {
+      setState(() {
+        _givenAnswer = question.getAnswer4();
+        _isRight = questionEvaluator.checkAnswer(question, _givenAnswer);
+        question.upDatedFirstTimeThisLesson();
+        firstTime =false;
 
-            setState(() {
-              _givenAnswer=question.getAnswer4();
-              _isRight=questionEvaluator.checkAnswer( question, _givenAnswer);
-            });
+      });
 
-            showMessage(_isRight, question);
+      showMessage(_isRight, question);
 
-
+    }
+    else
+      Navigator.of(context).push(new MaterialPageRoute(builder: (context)=>PageQuestion2()));
 
           },
 
 
-    ),], ),
+    ),],
+    ),
 
       ],
     );

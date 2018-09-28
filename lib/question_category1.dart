@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:appi_ducks/main.dart';
 import 'package:appi_ducks/question_evaluator.dart';
+import 'package:appi_ducks/question_type_A.dart';
 
 // Object of this class, is a Question of category 1
 
@@ -18,6 +19,7 @@ class QuestionCategory1 {
  final String answer5='-12';
  final String answer6='12';
 
+ StatefulWidget  pageWidget = new QuestionTypeA();
 
 
  final String corectAns= '16';
@@ -71,6 +73,9 @@ class QuestionCategory1 {
 
   }
 
+  Widget getPage(){
+   return pageWidget;
+  }
 
   // Method that returns true if it first time the question is answer
  bool getFirstTimeThisLesson(){

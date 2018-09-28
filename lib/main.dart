@@ -20,16 +20,12 @@ void main() => runApp(
 
 // This widget is the root the application.
 class MyApp extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
 
-    return MaterialApp(
-      theme: ThemeData(
-        primaryColor: Colors.deepOrangeAccent,
-        accentColor: Colors.indigo[900],
-        buttonColor: Colors.indigo[100],
-      ),
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(title: Text('AppiDucks for Python'),
         ),
          //body: QuestionTypeA(),
@@ -67,7 +63,7 @@ class MyApp extends StatelessWidget {
 
 
   ], )
-      ),
+
 
 
 

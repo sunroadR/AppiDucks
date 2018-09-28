@@ -54,6 +54,7 @@ class _QuestionTypeA extends State<QuestionTypeA>{
 
       children: <Widget>[
 
+
 // Text with the question
         new Text(
 
@@ -248,9 +249,7 @@ void showMessage(bool _isRight, QuestionCategory1 question){
 
   ),
 
-
-
-                     actions: <Widget>[
+             actions: <Widget>[
            FlatButton(
            child: Text('neste',
                style: new TextStyle(color: Theme.of(context).primaryColor,

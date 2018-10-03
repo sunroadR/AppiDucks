@@ -1,11 +1,15 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:appi_ducks/summary_page.dart';
+
 
 void main(){
 
   testWidgets('Test if title is ,AppiDucks for Python', (WidgetTester tester) async {
 
-    await tester.pumpWidget(SymmaryPage(title:'AppiDucks for Python'));
+    await tester.pumpWidget(SummaryPage(title: 'AppiDucks for  Python'));
+    final titleFinder = find.text('AppiDucks for  Python');
+
+    expect(titleFinder, findsOneWidget);
 
 
 

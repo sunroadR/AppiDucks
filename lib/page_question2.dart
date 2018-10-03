@@ -25,6 +25,8 @@ class _PageQuestion2 extends State<PageQuestion2> {
       appBar:AppBar(
         backgroundColor: Theme.of(context).primaryColor,
         title: Text('AppiDucks for  Python'),
+        //remove the back button in the AppBar i
+        automaticallyImplyLeading: false,
       ),
 
       body: QuestionTypeB(),

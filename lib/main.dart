@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import './question_type_b.dart';
 import './question_type_c.dart';
 import './question_type_a.dart';
-import './page_question1.dart';
+import './page_lesson.dart';
 
 //
 void main() => runApp(
@@ -27,6 +27,8 @@ class MyApp extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(title: Text('AppiDucks for Python'),
+          // remove the back button in the AppBar
+          automaticallyImplyLeading: false,
         ),
          //body: QuestionTypeA(),
          body:  Column( 
@@ -55,7 +57,7 @@ class MyApp extends StatelessWidget {
                  // When pushed navigates to the first question of the lesson
                  Navigator.push(
                      context,
-                     MaterialPageRoute(builder: (context) => PageQuestion1()),
+                     MaterialPageRoute(builder: (context) =>PageLesson ()),
                  );
                }
                )

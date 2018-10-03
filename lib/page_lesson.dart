@@ -28,9 +28,12 @@ QuestionCategory1 question = new QuestionCategory1();
       appBar:AppBar(
         backgroundColor: Theme.of(context).primaryColor,
         title: Text('AppiDucks for  Python'),
+        //remove the back button in the AppBar i
+        automaticallyImplyLeading: false,
       ),
 
     body: getQuestion().getPage(),
+
 
 
    );

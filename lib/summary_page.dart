@@ -26,7 +26,7 @@ class SummaryPage extends StatelessWidget {
     automaticallyImplyLeading: false,
     ),
 
-            
+
 
 
 )

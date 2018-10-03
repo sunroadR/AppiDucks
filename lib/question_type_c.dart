@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:appi_ducks/question_category1.dart';
 import 'package:appi_ducks/question_evaluator.dart';
 import 'package:appi_ducks/main.dart';
+import 'package:appi_ducks/summary_page.dart';
 
 class QuestionTypeC extends StatefulWidget{
   @override
@@ -231,7 +232,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                   else {
                     //Navigere til neste side
                     Navigator.of(context).push(new MaterialPageRoute(
-                        builder: (context) => MyApp()));
+                        builder: (context) => SummaryPage()));
                   }
                 },
               ),

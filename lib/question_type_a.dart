@@ -8,6 +8,9 @@ import 'package:appi_ducks/question_evaluator.dart';
 import 'package:appi_ducks/question_category1.dart';
 import 'package:appi_ducks/page_question2.dart';
 import 'package:appi_ducks/main.dart';
+import 'package:appi_ducks/question_feedback.dart';
+import 'package:appi_ducks/page_lesson.dart';
+import 'package:appi_ducks/lesson.dart';
 
 // WidgetClass that shows the layout for the screen for the question of type A
 // So fare it is not static , but troughthe implemetation it will read the qeustion
@@ -28,6 +31,23 @@ class QuestionTypeA extends StatefulWidget {
 // Keeps the state for the widget
 class _QuestionTypeA extends State<QuestionTypeA>{
 
+
+
+  static Lesson aLesson= new Lesson();
+  PageLesson pageLesson = new PageLesson();
+  
+QuestionCategory1 question = aLesson.getQuestion();
+
+  
+
+QuestionFeedback questionFeedback= new QuestionFeedback();
+
+
+
+
+
+
+
   @override
 
 
@@ -41,8 +61,9 @@ class _QuestionTypeA extends State<QuestionTypeA>{
 
   @override
   Widget build(BuildContext context) {
+    
 
-    final QuestionCategory1 question = new QuestionCategory1();
+
     final QuestionEvaluator questionEvaluator=new QuestionEvaluator();
 
     return Column(
@@ -57,7 +78,6 @@ class _QuestionTypeA extends State<QuestionTypeA>{
 
 // Text with the question
         new Text(
-
             question.getQuestion(),
             key: Key('questionA'),
             style: TextStyle(fontSize: 24.0,
@@ -88,7 +108,7 @@ class _QuestionTypeA extends State<QuestionTypeA>{
       });
 
       // calls the showMessage with
-      showMessage(_isRight, question);
+      questionFeedback.showMessage(context,_isRight, question);
     }
 
     },
@@ -118,7 +138,7 @@ class _QuestionTypeA extends State<QuestionTypeA>{
 
       });
 
-      showMessage(_isRight, question);
+     questionFeedback.showMessage(context,_isRight, question);
     }
     },
 
@@ -145,7 +165,7 @@ class _QuestionTypeA extends State<QuestionTypeA>{
 
       });
 
-      showMessage(_isRight, question);
+      questionFeedback.showMessage(context,_isRight, question);
     }
 
     },
@@ -174,7 +194,7 @@ class _QuestionTypeA extends State<QuestionTypeA>{
 
       });
 
-      showMessage(_isRight, question);
+      questionFeedback.showMessage(context,_isRight, question);
 
     }
     else
@@ -194,79 +214,9 @@ class _QuestionTypeA extends State<QuestionTypeA>{
 
 
 
-  // Method that gives the user feedback
-  // with an alertWindow
-
-void showMessage(bool _isRight, QuestionCategory1 question){
-
-    // variable that holdes the feedback
-    String _feedBackMessage; // if right or wrong message
-    // variabl to hold the coorect answer
-    String  _correctAnsToShow =question.getcorrectAns()[0].toUpperCase()+question.getcorrectAns().substring(1).toLowerCase();
-
-    // checks if the answer is right
-    if(_isRight) {
-      //feedback string for correct answer
-      _feedBackMessage = ' Det er Riktig ! ';
-      _correctAnsToShow = ' '; // this is put to an emty string, since it is not supose to show for an correct given answer
-    }
-     else {
-        //feedback string for  wrong Answer
-                _feedBackMessage= 'Feil, riktig er :  ';
 
 
 
-
-
-     }
-
-          // creates a AlertDialog window
-           AlertDialog message = new AlertDialog(
-
-         // the content that will shows
-
-                  content: new RichText(
-                     text: new TextSpan(
-                        children: <TextSpan>[
-
-                          // feedback message
-                          new TextSpan(
-                              text: _feedBackMessage,
-                              style: new TextStyle(color: Colors.indigo[900],
-                              fontSize: 20.0),
-                          ),
-                           //  The right answer
-                           new TextSpan(
-                              text: _correctAnsToShow,
-                              style: new TextStyle(color: Theme.of(context).primaryColor,
-                              fontSize: 28.0 ) ,
-                           ),
-
-  ]
-
-  ) ,
-
-
-  ),
-
-             actions: <Widget>[
-           FlatButton(
-           child: Text('neste',
-               style: new TextStyle(color: Theme.of(context).primaryColor,
-               fontSize: 14.0
-           ),),
-               onPressed: () {
-
-  Navigator.of(context).push(new MaterialPageRoute(builder: (context)=>PageQuestion2()));
-
-  })
-                       ],
-           );
-
-                    // shows the window
-    showDialog(context: context, child:  message);
-
-}
 
 
   }

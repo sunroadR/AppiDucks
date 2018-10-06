@@ -5,6 +5,7 @@ import 'package:appi_ducks/question_category1.dart';
 import 'package:appi_ducks/question_evaluator.dart';
 import 'package:appi_ducks/main.dart';
 import 'package:appi_ducks/summary_page.dart';
+import 'package:appi_ducks/question_feedback.dart';
 
 class QuestionTypeC extends StatefulWidget{
   @override
@@ -18,15 +19,21 @@ class QuestionTypeC extends StatefulWidget{
 
 class _QuestionTypeC extends State<QuestionTypeC> {
 
-  QuestionCategory1 _questionCategory1 = new QuestionCategory1();
-  final QuestionEvaluator _questionEvaluator = new QuestionEvaluator();
+  QuestionCategory1 _questionCategory1 ;
 
+  final QuestionEvaluator _questionEvaluator = new QuestionEvaluator();
+  QuestionFeedback questionFeedback = new QuestionFeedback();
 
   String _givenAnswer = '';
   String _sjekk = 'Sjekk';
   bool _isRight = false;
 
 
+  void setQuestion(que){
+
+    _questionCategory1 =que;
+
+  }
 
 
   @override
@@ -224,7 +231,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                       _isRight = _questionEvaluator.checkAnswer(
                           _questionCategory1, _givenAnswer);
                       // calls the showMessage with, Gir tilbake melding
-                      showMessage(_isRight, _questionCategory1);
+                      questionFeedback.showMessage(context,_isRight, _questionCategory1);
                       // Endrer navn på button, til neste og den vil nå ta bruker til neste side
                       _sjekk = 'Neste';
                     });
@@ -239,107 +246,6 @@ class _QuestionTypeC extends State<QuestionTypeC> {
             ],)
         ]
     );
-  }
-
-  void showMessage(bool _isRight, QuestionCategory1 question){
-
-    // variable that holdes the feedback
-    String _feedBackMessage; // if right or wrong message
-    // variabl to hold the coorect answer
-    String  _correctAnsToShow =question.getcorrectAns()[0].toUpperCase()+question.getcorrectAns().substring(1).toLowerCase();
-
-    // checks if the answer is right
-    if(_isRight) {
-      //feedback string for correct answer
-      _feedBackMessage = ' Det er Riktig ! ';
-      _correctAnsToShow = ' '; // this is put to an emty string, since it is not supose to show for an correct given answer
-    }
-    else {
-      //feedback string for  wrong Answer
-      _feedBackMessage= 'Feil, riktig er :  ';
-
-
-
-
-
-    }
-
-    // creates a AlertDialog window
-    AlertDialog message = new AlertDialog(
-
-      // the content that will shows
-
-      content: new RichText(
-        text: new TextSpan(
-            children: <TextSpan>[
-
-              // feedback message
-              new TextSpan(
-                text: _feedBackMessage,
-                style: new TextStyle(color: Colors.indigo[900],
-                    fontSize: 20.0),
-              ),
-              //  The right answer
-              new TextSpan(
-                text: _correctAnsToShow,
-                style: new TextStyle(color: Theme.of(context).primaryColor,
-                  fontSize: 28.0,
-
-                ) ,
-
-              )
-            ]
-        ) ,
-
-
-      ),
-
-
-      actions: <Widget>[
-      ],
-    );
-
-    // shows the window
-    showDialog(context: context, child:  message);
-
-  }
-
-  void showMessageNoAnswer(){
-
-    // variable that holdes the feedback
-    String _feedBackMessage = ' Du må skrive inn svar';
-
-    // creates a AlertDialog window
-    AlertDialog message = new AlertDialog(
-
-      // the content that will shows
-
-      content: new RichText(
-          text: new TextSpan(
-              text: _feedBackMessage,
-              style: new TextStyle(color: Colors.indigo[900],
-                  fontSize: 20.0))
-      ),
-
-      actions: <Widget>[
-        FlatButton(
-            child: Text('neste',
-              style: new TextStyle(color: Theme.of(context).primaryColor,
-                  fontSize: 14.0
-              ),),
-            onPressed: () {
-
-              Navigator.of(context).pop(new MaterialPageRoute(builder: (context)=>MyApp()));
-
-            })
-
-      ],
-    );
-
-    // shows the window
-    showDialog(context: context, child:  message);
-
-
   }
 
 }

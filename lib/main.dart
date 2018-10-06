@@ -5,6 +5,7 @@ import './question_type_b.dart';
 import './question_type_c.dart';
 import './question_type_a.dart';
 import './page_lesson.dart';
+import 'package:appi_ducks/lesson.dart';
 
 //
 void main() => runApp(
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
 
     return Scaffold(
         appBar: AppBar(title: Text('AppiDucks for Python'),
@@ -53,6 +55,7 @@ class MyApp extends StatelessWidget {
                                 color: Colors.deepOrangeAccent),
                                 ),
                onPressed: () {
+
 
                  // When pushed navigates to the first question of the lesson
                  Navigator.push(

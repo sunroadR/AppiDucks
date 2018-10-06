@@ -2,35 +2,54 @@ import 'package:flutter/material.dart';
 import 'package:appi_ducks/main.dart';
 import 'package:appi_ducks/question_evaluator.dart';
 import 'package:appi_ducks/question_type_A.dart';
+import 'package:appi_ducks/question_type_B.dart';
 
 // Object of this class, is a Question of category 1
 
 class QuestionCategory1 {
 
+  int id;
+  String question = 'Hva blir (-2)** 4 ?'; //
+  String answer1 = '16' ;
 
-//
- final String question = 'Hva blir (-2)** 4 ?';
+  String answer2 = '-16' ;
+  String answer3 = '8 ' ;
+  String answer4 = '-8' ;
+  String answer5='-12';
+  String answer6='12';
 
- final String answer1 = '16' ;
-
- final String answer2 = '-16' ;
- final String answer3 = '8 ' ;
- final String answer4 = '-8' ;
- final String answer5='-12';
- final String answer6='12';
-
- StatefulWidget  pageWidget = new QuestionTypeA();
+ StatefulWidget  pageWidget = new QuestionTypeB();
 
 
- final String corectAns= '16';
 
- bool firstTimeThisLesson=true;
+ String corectAns= '16';
 
- QuestionCategory1(){
+ bool firstTimeThisLesson=true; // first time the user answer the the qeuestion
+
+  QuestionCategory1 nextQuestion=null;
+
+ // Constructor
+ /**QuestionCategory1(int id, String qeu, String ans1,String ans2,String ans3,
+     String ans4, String ans5, String ans6, String corrAns , bool firstTime,
+     StatefulWidget pageType ){
+
+           this.question=qeu;
+           this.answer1=ans1;
+           this.answer2=ans2;
+           this.answer3=ans3;
+           this.answer4=ans4;
+           this.answer5=ans5;
+           this.answer6=ans6;
+
+           this.corectAns=corrAns;
+
+           firstTimeThisLesson=firstTime;
+           this.pageWidget=pageType;
+
 
 
  }
-
+*/
 
  // Method thats returns the variable
   String getQuestion (){
@@ -73,7 +92,7 @@ class QuestionCategory1 {
 
   }
 
-  Widget getPage(){
+  Widget getPageView(){
    return pageWidget;
   }
 
@@ -82,12 +101,20 @@ class QuestionCategory1 {
     return firstTimeThisLesson;
  }
 
+
  // Method that updated getFirstTimeLesson an set it to false
 // when user answer the question
 void upDatedFirstTimeThisLesson(){
    firstTimeThisLesson=false;
 }
 
+void setNextQuestion(QuestionCategory1 q){
 
+   this.nextQuestion=q;
+
+}
+QuestionCategory1 getNextQuestion(){
+   return this.nextQuestion;
+}
 
 }

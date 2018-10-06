@@ -4,6 +4,7 @@ import 'package:appi_ducks/question_type_a.dart';
 import 'package:appi_ducks/question_type_c.dart';
 import 'package:appi_ducks/main.dart';
 import 'package:appi_ducks/question_category1.dart';
+import 'package:appi_ducks/lesson.dart';
 
 class PageLesson extends StatefulWidget{
   @override
@@ -20,7 +21,11 @@ class PageLesson extends StatefulWidget{
 class _PageLesson extends State<PageLesson> {
 
 
-QuestionCategory1 question = new QuestionCategory1();
+QuestionCategory1 question;
+
+ Lesson lesson = new Lesson();
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +37,7 @@ QuestionCategory1 question = new QuestionCategory1();
         automaticallyImplyLeading: false,
       ),
 
-    body: getQuestion().getPage(),
+    body: lesson.getFirstQuestionFromList().getPageView(),
 
 
 
@@ -46,6 +51,10 @@ QuestionCategory1 question = new QuestionCategory1();
 
   QuestionCategory1 getQuestion(){
     return question;
+  }
+
+  Lesson getLesson(){
+    return lesson;
   }
 
 }

@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:appi_ducks/question_category1.dart';
 import 'package:appi_ducks/question_evaluator.dart';
 import 'package:appi_ducks/page_question3.dart';
-
+import 'package:appi_ducks/page_lesson.dart';
+import 'package:appi_ducks/lesson.dart';
+import 'dart:developer';
 
 class QuestionTypeB extends StatefulWidget {
   @override
@@ -19,7 +21,11 @@ class QuestionTypeB extends StatefulWidget {
 //
 class _QuestionTypeB extends State<StatefulWidget>{
 
-  QuestionCategory1 _questionCategory1 = new QuestionCategory1();
+
+
+  static Lesson lesson = new Lesson();
+  QuestionCategory1 _questionCategory1= lesson.getQuestion();
+
   QuestionEvaluator _questionEvaluator =new QuestionEvaluator();
 
   String sjekk ='Sjekk';
@@ -32,7 +38,7 @@ class _QuestionTypeB extends State<StatefulWidget>{
 
   @override
   void dispose() {
-    // TODO: implement dispose
+
     _ansController.dispose();
     super.dispose();
   }
@@ -120,8 +126,8 @@ class _QuestionTypeB extends State<StatefulWidget>{
                   }});}
                   else{
                     //Navigere til neste side
-                   Navigator.of(context).push(new MaterialPageRoute(builder: (context)=> PageQuestion3()));
-
+                   Navigator.of(context).push(new MaterialPageRoute(builder: (context)=> PageLesson()));
+                    //lesson.getFirstQuestionFromList();
 
                   }
 

@@ -6,6 +6,8 @@ import 'package:appi_ducks/question_evaluator.dart';
 import 'package:appi_ducks/main.dart';
 import 'package:appi_ducks/summary_page.dart';
 import 'package:appi_ducks/question_feedback.dart';
+import 'package:appi_ducks/lesson.dart';
+import 'package:appi_ducks/page_lesson.dart';
 
 class QuestionTypeC extends StatefulWidget{
   @override
@@ -19,7 +21,13 @@ class QuestionTypeC extends StatefulWidget{
 
 class _QuestionTypeC extends State<QuestionTypeC> {
 
-  QuestionCategory1 _questionCategory1 ;
+
+
+
+  static Lesson aLesson= new Lesson();
+
+
+  QuestionCategory1 _questionCategory1 = aLesson.first();
 
   final QuestionEvaluator _questionEvaluator = new QuestionEvaluator();
   QuestionFeedback questionFeedback = new QuestionFeedback();
@@ -238,8 +246,10 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                   }
                   else {
                     //Navigere til neste side
-                    Navigator.of(context).push(new MaterialPageRoute(
-                        builder: (context) => SummaryPage()));
+                     {
+
+                    }
+
                   }
                 },
               ),

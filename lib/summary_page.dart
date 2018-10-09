@@ -26,7 +26,9 @@ class SummaryPage extends StatelessWidget {
     automaticallyImplyLeading: false,
     ),
 
+    body:   new Text('Hei på deg !!'
 
+    ),
 
 
 )

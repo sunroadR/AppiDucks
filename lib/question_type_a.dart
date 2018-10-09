@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:appi_ducks/question_evaluator.dart';
 
 import 'package:appi_ducks/question_category1.dart';
-import 'package:appi_ducks/page_question2.dart';
 import 'package:appi_ducks/main.dart';
 import 'package:appi_ducks/question_feedback.dart';
 import 'package:appi_ducks/page_lesson.dart';
@@ -36,7 +35,7 @@ class _QuestionTypeA extends State<QuestionTypeA>{
   static Lesson aLesson= new Lesson();
   PageLesson pageLesson = new PageLesson();
   
-QuestionCategory1 question = aLesson.getQuestion();
+QuestionCategory1 question = aLesson.first();
 
   
 
@@ -198,7 +197,8 @@ QuestionFeedback questionFeedback= new QuestionFeedback();
 
     }
     else
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context)=>PageQuestion2()));
+      Navigator.push(context, new MaterialPageRoute(builder: (context)=> new PageLesson()));
+
 
           },
 

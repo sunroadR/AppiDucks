@@ -9,27 +9,27 @@ import 'package:appi_ducks/question_type_B.dart';
 class QuestionCategory1 {
 
   int id;
-  String question = 'Hva blir (-2)** 4 ?'; //
-  String answer1 = '16' ;
+  String question;   // = 'Hva blir (-2)** 4 ?'; //
+  String answer1;    // = '16' ;
 
-  String answer2 = '-16' ;
-  String answer3 = '8 ' ;
-  String answer4 = '-8' ;
-  String answer5='-12';
-  String answer6='12';
+  String answer2;    // = '-16' ;
+  String answer3;    // = '8 ' ;
+  String answer4;    //  = '-8' ;
+  String answer5;    //='-12';
+  String answer6;    //='12';
 
- StatefulWidget  pageWidget = new QuestionTypeB();
+ StatefulWidget  pageWidget; // = new QuestionTypeB();
 
 
 
- String corectAns= '16';
+ String corectAns;   // = '16';
 
- bool firstTimeThisLesson=true; // first time the user answer the the qeuestion
+ bool firstTimeThisLesson; //=true; // first time the user answer the the qeuestion
 
-  QuestionCategory1 nextQuestion=null;
+  QuestionCategory1 nextQuestion; //=null;
 
  // Constructor
- /**QuestionCategory1(int id, String qeu, String ans1,String ans2,String ans3,
+ QuestionCategory1(int id, String qeu, String ans1,String ans2,String ans3,
      String ans4, String ans5, String ans6, String corrAns , bool firstTime,
      StatefulWidget pageType ){
 
@@ -49,7 +49,7 @@ class QuestionCategory1 {
 
 
  }
-*/
+
 
  // Method thats returns the variable
   String getQuestion (){

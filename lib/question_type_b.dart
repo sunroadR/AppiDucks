@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:appi_ducks/question_category1.dart';
 import 'package:appi_ducks/question_evaluator.dart';
-import 'package:appi_ducks/page_question3.dart';
+import 'package:appi_ducks/summary_page.dart';
 import 'package:appi_ducks/page_lesson.dart';
 import 'package:appi_ducks/lesson.dart';
 import 'dart:developer';
@@ -23,8 +23,8 @@ class _QuestionTypeB extends State<StatefulWidget>{
 
 
 
-  static Lesson lesson = new Lesson();
-  QuestionCategory1 _questionCategory1= lesson.getQuestion();
+  static Lesson aLesson = new Lesson();
+  QuestionCategory1 _questionCategory1= aLesson.first();
 
   QuestionEvaluator _questionEvaluator =new QuestionEvaluator();
 
@@ -125,6 +125,8 @@ class _QuestionTypeB extends State<StatefulWidget>{
                     sjekk= 'Neste';
                   }});}
                   else{
+
+
                     //Navigere til neste side
                    Navigator.of(context).push(new MaterialPageRoute(builder: (context)=> PageLesson()));
                     //lesson.getFirstQuestionFromList();
@@ -231,8 +233,8 @@ class _QuestionTypeB extends State<StatefulWidget>{
                     fontSize: 14.0
                 ),),
               onPressed: () {
-
-                Navigator.of(context).pop(new MaterialPageRoute(builder: (context)=>PageQuestion3()));
+                aLesson.removeFirstQuestion();
+                Navigator.of(context).pop(new MaterialPageRoute(builder: (context)=>SummaryPage()));
 
               })
 

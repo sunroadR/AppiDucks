@@ -5,6 +5,7 @@ import 'package:appi_ducks/question_evaluator.dart';
 import 'package:appi_ducks/summary_page.dart';
 import 'package:appi_ducks/page_lesson.dart';
 import 'package:appi_ducks/lesson.dart';
+import 'package:appi_ducks/question_feedback.dart';
 import 'dart:developer';
 
 class QuestionTypeB extends StatefulWidget {
@@ -25,12 +26,14 @@ class _QuestionTypeB extends State<StatefulWidget>{
 
   static Lesson aLesson = new Lesson();
   QuestionCategory1 _questionCategory1= aLesson.first();
+  QuestionFeedback questionFeedback= new QuestionFeedback();
 
   QuestionEvaluator _questionEvaluator =new QuestionEvaluator();
 
   String sjekk ='Sjekk';
   String _givenAnswer;
   bool _isRight;
+  bool isFirst = true;
 
   // Create a text controller. That is used to retrieve  the current answer
   // of the textfield
@@ -103,7 +106,6 @@ class _QuestionTypeB extends State<StatefulWidget>{
                 onPressed: () {
 
                   // retrive the answer the user has typed  inn
-                  if(sjekk=='Sjekk'){
                   setState(() {
                     _givenAnswer = _ansController.text.toString();
 
@@ -111,7 +113,7 @@ class _QuestionTypeB extends State<StatefulWidget>{
                     if(_givenAnswer.length==0)
                       {
                         // Gir beskjed om at de må skrive inn et svar
-                      showMessageNoAnswer();
+                      questionFeedback.showMessageNoAnswer(context);
 
                       }
 
@@ -120,18 +122,11 @@ class _QuestionTypeB extends State<StatefulWidget>{
                         _isRight = _questionEvaluator.checkAnswer(
                         _questionCategory1, _givenAnswer);
                     // calls the showMessage with, Gir tilbake melding
-                     showMessage(_isRight, _questionCategory1);
+                     questionFeedback.showMessage(context,_isRight, _questionCategory1);
                     // Endrer navn på button, til neste og den vil nå ta bruker til neste side
-                    sjekk= 'Neste';
-                  }});}
-                  else{
+                       isFirst=false;
+                  }});
 
-
-                    //Navigere til neste side
-                   Navigator.of(context).push(new MaterialPageRoute(builder: (context)=> PageLesson()));
-                    //lesson.getFirstQuestionFromList();
-
-                  }
 
 
 
@@ -146,7 +141,7 @@ class _QuestionTypeB extends State<StatefulWidget>{
         ]
     );
   }
-   void showMessage(bool _isRight, QuestionCategory1 question){
+ /**  void showMessage(bool _isRight, QuestionCategory1 question){
 
       // variable that holdes the feedback
       String _feedBackMessage; // if right or wrong message
@@ -245,7 +240,7 @@ class _QuestionTypeB extends State<StatefulWidget>{
       showDialog(context: context, child:  message);
 
 
-    }
+    }*/
 
 
 

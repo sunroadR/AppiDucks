@@ -26,14 +26,16 @@ class SummaryPage extends StatelessWidget {
     automaticallyImplyLeading: false,
     ),
 
-    body:   new Text('Hei på deg !!'
+    body:   new Text('Hei på deg !!',
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 18.0)),
 
     ),
 
 
-)
+);
 
-    );
+
     }
 
 

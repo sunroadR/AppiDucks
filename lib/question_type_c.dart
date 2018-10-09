@@ -35,6 +35,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
   String _givenAnswer = '';
   String _sjekk = 'Sjekk';
   bool _isRight = false;
+  bool _isFirst =true;
 
 
   void setQuestion(que){
@@ -233,24 +234,16 @@ class _QuestionTypeC extends State<QuestionTypeC> {
 
                 onPressed: () {
                   // retrive the answer the user has typed  inn
-                  if (_sjekk == 'Sjekk') {
+                  if (_isFirst == true) {
                     setState(() {
-                      // Kaller metode i _questionElovator og evaluerer avgitt svar
-                      _isRight = _questionEvaluator.checkAnswer(
-                          _questionCategory1, _givenAnswer);
-                      // calls the showMessage with, Gir tilbake melding
-                      questionFeedback.showMessage(context,_isRight, _questionCategory1);
-                      // Endrer navn på button, til neste og den vil nå ta bruker til neste side
-                      _sjekk = 'Neste';
-                    });
-                  }
-                  else {
-                    //Navigere til neste side
-                     {
-
-                    }
-
-                  }
+    // Kaller metode i _questionElovator og evaluerer avgitt svar
+    _isRight = _questionEvaluator.checkAnswer(
+    _questionCategory1, _givenAnswer);
+    // calls the showMessage with, Gir tilbake melding
+    questionFeedback.showMessage(context, _isRight, _questionCategory1);
+    _isFirst=false;
+    // Endrer navn på button, til neste og den vil nå ta bruker til neste side
+    });}
                 },
               ),
             ],)

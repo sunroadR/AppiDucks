@@ -156,7 +156,7 @@ QuestionFeedback questionFeedback= new QuestionFeedback();
     Text(question.getAnswer3(),
     style: TextStyle(fontSize: 16.0), ),
     onPressed: () {
-    if(firstTime=true) {
+    if(firstTime==true) {
       setState(() {
         _givenAnswer = question.getAnswer3();
         _isRight = questionEvaluator.checkAnswer(question, _givenAnswer);
@@ -184,23 +184,19 @@ QuestionFeedback questionFeedback= new QuestionFeedback();
           child: Text(question.getAnswer4(),
           style: TextStyle(fontSize: 18.0),),
           onPressed: () {
-    if(firstTime==true) {
-      setState(() {
-        _givenAnswer = question.getAnswer4();
-        _isRight = questionEvaluator.checkAnswer(question, _givenAnswer);
-        question.upDatedFirstTimeThisLesson();
-        firstTime =false;
+            if (firstTime == true) {
+              setState(() {
+                _givenAnswer = question.getAnswer4();
+                _isRight =
+                    questionEvaluator.checkAnswer(question, _givenAnswer);
+                question.upDatedFirstTimeThisLesson();
+                firstTime = false;
+              }
+              );
 
-      });
-
-      questionFeedback.showMessage(context,_isRight, question);
-
-    }
-    else
-      Navigator.push(context, new MaterialPageRoute(builder: (context)=> new PageLesson()));
-
-
-          },
+              questionFeedback.showMessage(context, _isRight, question);
+            }
+          }
 
 
     ),],

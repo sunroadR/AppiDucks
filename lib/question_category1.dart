@@ -8,17 +8,17 @@ import 'package:appi_ducks/question_type_B.dart';
 
 class QuestionCategory1 {
 
-  int id;
-  String question;   // = 'Hva blir (-2)** 4 ?'; //
-  String answer1;    // = '16' ;
+    int id;
+    String question;   // = 'Hva blir (-2)** 4 ?'; //
+    String answer1;    // = '16' ;
 
-  String answer2;    // = '-16' ;
-  String answer3;    // = '8 ' ;
-  String answer4;    //  = '-8' ;
-  String answer5;    //='-12';
-  String answer6;    //='12';
+    String answer2;    // = '-16' ;
+    String answer3;    // = '8 ' ;
+    String answer4;    //  = '-8' ;
+    String answer5;    //='-12';
+     String answer6;    //='12';
 
- StatefulWidget  pageWidget; // = new QuestionTypeB();
+    String  pageWidget; // = new QuestionTypeB();
 
 
 
@@ -26,35 +26,21 @@ class QuestionCategory1 {
 
  bool firstTimeThisLesson; //=true; // first time the user answer the the qeuestion
 
-  QuestionCategory1 nextQuestion; //=null;
-
  // Constructor
- QuestionCategory1(int id, String qeu, String ans1,String ans2,String ans3,
-     String ans4, String ans5, String ans6, String corrAns , bool firstTime,
-     StatefulWidget pageType ){
-
-           this.question=qeu;
-           this.answer1=ans1;
-           this.answer2=ans2;
-           this.answer3=ans3;
-           this.answer4=ans4;
-           this.answer5=ans5;
-           this.answer6=ans6;
-
-           this.corectAns=corrAns;
-
-           firstTimeThisLesson=firstTime;
-           this.pageWidget=pageType;
+ QuestionCategory1(int this.id, String this.question, String this.answer1,
+     String this.answer2 ,String this.answer3, String this.answer4,
+     String this.answer5, String this.answer6, String this.corectAns ,
+     bool this.firstTimeThisLesson, String this.pageWidget );
 
 
-
- }
 
 
  // Method thats returns the variable
-  String getQuestion (){
-    return question;
-  }
+
+String getQuestion()
+{
+  return question;
+}
 
  String getAnswer1(){
       return answer1;
@@ -92,7 +78,7 @@ class QuestionCategory1 {
 
   }
 
-  Widget getPageView(){
+  String getPageView(){
    return pageWidget;
   }
 
@@ -108,6 +94,7 @@ void upDatedFirstTimeThisLesson(){
    firstTimeThisLesson=false;
 }
 
+/**
 void setNextQuestion(QuestionCategory1 q){
 
    this.nextQuestion=q;
@@ -115,6 +102,6 @@ void setNextQuestion(QuestionCategory1 q){
 }
 QuestionCategory1 getNextQuestion(){
    return this.nextQuestion;
-}
+}*/
 
 }

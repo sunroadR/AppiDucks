@@ -7,10 +7,13 @@ import 'package:appi_ducks/question_type_c.dart';
 
 class Lesson {
 
- QuestionCategory1 q =new QuestionCategory1(1,"QA","a1","a2","a3","a4","a5","a6","Ans", true,QuestionTypeA());
- QuestionCategory1 qeu =new QuestionCategory1(1,"QB","b1","b2","b3","b4","b5","b6","BAns", true,QuestionTypeB());
- QuestionCategory1 qeustion =new QuestionCategory1(1,"QC","c1","c2","c3","c4","c5","c6","CAns", true,QuestionTypeC());
+  QuestionCategory1 currentQuestion;
 
+
+   var q =new QuestionCategory1(1,"QA1","a1","a2","a3","a4","Hei","Hopp","Ans", true,"QuestionTypeA");
+   var qeu =new QuestionCategory1(1,"QB2","b1","b2","b3","b4","b5","b6","BAns", true,"QuestionTypeB");
+   var qeustion =new QuestionCategory1(1,'Hei og Hopp',"c1","c2","c3","c4","c5","c6","CAns", true,"QuestionTypeC");
+    var q1 =new QuestionCategory1(1,"QC","c1","c2","c3","c4","c5","c6","CAns", true,"QuestionTypeC");
 
  List<QuestionCategory1> _questionList;
 
@@ -18,26 +21,25 @@ class Lesson {
 
   Lesson(){
        // this.q=  new QuestionCategory1(1,"Q","a1","a2","a3","a4","a5","a6","Ans", true,QuestionTypeA());
-        this._questionList= new List();
+        this._questionList= new List<QuestionCategory1>();
 
 
+        _questionList.add(q1);
+        _questionList.add(q);
+        _questionList.add(qeu);
+        _questionList.add(qeustion);
 
-
-   leggerTil();
-
-  }
-
-
-  // oppretter liste
- void leggerTil(){
-    addQuestionTooList(q);
-    addQuestionTooList(qeu);
-    addQuestionTooList(qeustion);
- }
+        }
+  get lesson => this;
 
   // puts question to the list
-void addQuestionTooList(QuestionCategory1 n){
-    _questionList.add(n);
+void addQuestionTooList(){
+    //_questionList.add(qeu);
+     _questionList.add(q);
+    _questionList.add(q1);
+   // _questionList.add(qeu);
+   // _questionList.add(qeustion);
+
 
 }
 
@@ -62,11 +64,13 @@ bool isEmpty(){
     return _questionList.isEmpty;
 }
 
-QuestionCategory1 startLesson(){
-    while (!isEmpty()){
+void setCurrentQuestion(QuestionCategory1 q){
+    currentQuestion=q;
 
-      return removeFirstQuestion();
-    }
+}
+
+QuestionCategory1 getCurrentQuestion(){
+    return currentQuestion;
 }
 
   

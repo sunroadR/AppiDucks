@@ -10,6 +10,13 @@ import 'package:appi_ducks/lesson.dart';
 import 'package:appi_ducks/page_lesson.dart';
 
 class QuestionTypeC extends StatefulWidget{
+
+  QuestionCategory1 question;
+
+  QuestionTypeC (QuestionCategory1 q)
+  {
+    question=q;
+  }
   @override
   State<StatefulWidget> createState() {
     return _QuestionTypeC();
@@ -21,14 +28,6 @@ class QuestionTypeC extends StatefulWidget{
 
 class _QuestionTypeC extends State<QuestionTypeC> {
 
-
-
-
-  static Lesson aLesson= new Lesson();
-
-
-  QuestionCategory1 _questionCategory1 = aLesson.first();
-
   final QuestionEvaluator _questionEvaluator = new QuestionEvaluator();
   QuestionFeedback questionFeedback = new QuestionFeedback();
 
@@ -36,13 +35,6 @@ class _QuestionTypeC extends State<QuestionTypeC> {
   String _sjekk = 'Sjekk';
   bool _isRight = false;
   bool _isFirst =true;
-
-
-  void setQuestion(que){
-
-    _questionCategory1 =que;
-
-  }
 
 
   @override
@@ -72,7 +64,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
 
-                Text(_questionCategory1.getQuestion(),
+                Text(widget.question.getQuestion(),
 
                   textAlign: TextAlign.left,
                   style: TextStyle(fontSize: 16.0, color: Theme
@@ -114,13 +106,13 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                   color: Theme
                       .of(context)
                       .buttonColor,
-                  child: Text(_questionCategory1.getAnswer1()),
+                  child: Text(widget.question.getAnswer1()),
                   onPressed: () {
                     // retrive the answer the user has typed  inn
-                    Text(_questionCategory1.getAnswer1());
+                    Text(widget.question.getAnswer1());
 
                     setState(() {
-                      _givenAnswer = _questionCategory1.getAnswer1();
+                      _givenAnswer = widget.question.getAnswer1();
                     });
                   }
 
@@ -130,11 +122,11 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                   color: Theme
                       .of(context)
                       .buttonColor,
-                  child: Text(_questionCategory1.getAnswer2()),
+                  child: Text(widget.question.getAnswer2()),
 
                   onPressed: () {
                     setState(() {
-                      _givenAnswer = _questionCategory1.getAnswer2();
+                      _givenAnswer =widget.question.getAnswer2();
                     });
                   }
 
@@ -145,13 +137,13 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                   color: Theme
                       .of(context)
                       .buttonColor,
-                  child: Text(_questionCategory1.getAnswer3()),
+                  child: Text(widget.question.getAnswer3()),
                   onPressed: () {
                     // retrive the answer the user has typed  inn
-                    Text(_questionCategory1.getAnswer3());
+                    Text(widget.question.getAnswer3());
 
                     setState(() {
-                      _givenAnswer = _questionCategory1.getAnswer3();
+                      _givenAnswer = widget.question.getAnswer3();
                     });
                   }
 
@@ -170,13 +162,13 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                   color: Theme
                       .of(context)
                       .buttonColor,
-                  child: Text(_questionCategory1.getAnswer4()),
+                  child: Text(widget.question.getAnswer4()),
                   onPressed: () {
                     // retrive the answer the user has typed  inn
-                    Text(_questionCategory1.getAnswer4());
+                    Text(widget.question.getAnswer4());
 
                     setState(() {
-                      _givenAnswer = _questionCategory1.getAnswer4();
+                      _givenAnswer = widget.question.getAnswer4();
                     });
                   }
 
@@ -187,12 +179,12 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                   color: Theme
                       .of(context)
                       .buttonColor,
-                  child: Text(_questionCategory1.getAnswer5()),
+                  child: Text(widget.question.getAnswer5()),
                   onPressed: () {
-                    Text(_questionCategory1.getAnswer5());
+                    Text(widget.question.getAnswer5());
 
                     setState(() {
-                      _givenAnswer = _questionCategory1.getAnswer5();
+                      _givenAnswer = widget.question.getAnswer5();
                     });
                   }
 
@@ -203,12 +195,12 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                   color: Theme
                       .of(context)
                       .buttonColor,
-                  child: Text(_questionCategory1.getAnswer6()),
+                  child: Text(widget.question.getAnswer6()),
                   onPressed: () {
-                    Text(_questionCategory1.getAnswer6());
+                    Text(widget.question.getAnswer6());
 
                     setState(() {
-                      _givenAnswer = _questionCategory1.getAnswer6();
+                      _givenAnswer =widget.question.getAnswer6();
                     });
                   }
 
@@ -238,9 +230,9 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                     setState(() {
     // Kaller metode i _questionElovator og evaluerer avgitt svar
     _isRight = _questionEvaluator.checkAnswer(
-    _questionCategory1, _givenAnswer);
+    widget.question, _givenAnswer);
     // calls the showMessage with, Gir tilbake melding
-    questionFeedback.showMessage(context, _isRight, _questionCategory1);
+    questionFeedback.showMessage(context, _isRight, widget.question);
     _isFirst=false;
     // Endrer navn på button, til neste og den vil nå ta bruker til neste side
     });}

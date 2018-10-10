@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:appi_ducks/lesson.dart';
 import 'package:appi_ducks/question_category1.dart';
-import 'package:appi_ducks/question_list.dart';
+
 
 
 //class MockLesson extends Mock implements Lesson{
@@ -24,10 +24,8 @@ void main () {
 
   test('Checks that list is emty when created ', (){
 
-    QustionList oneList = new QustionList();
-    var size =oneList.getListCounter();
 
-     expect(oneList.getLength(),equals(4));
+    // expect(oneList.getLength(),equals(4));
 
 
 

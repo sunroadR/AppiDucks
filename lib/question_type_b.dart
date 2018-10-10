@@ -9,6 +9,14 @@ import 'package:appi_ducks/question_feedback.dart';
 import 'dart:developer';
 
 class QuestionTypeB extends StatefulWidget {
+
+  QuestionCategory1 ques;
+
+  QuestionTypeB(QuestionCategory1 q){
+    this.ques=q;
+
+  }
+
   @override
   State<StatefulWidget> createState() {
     return _QuestionTypeB();
@@ -20,14 +28,11 @@ class QuestionTypeB extends StatefulWidget {
 // A corresponding State class. This class holds the data related to layout
 // of question of type B
 //
-class _QuestionTypeB extends State<StatefulWidget>{
+class _QuestionTypeB extends State<QuestionTypeB>{
 
 
-
-  static Lesson aLesson = new Lesson();
-  QuestionCategory1 _questionCategory1= aLesson.first();
+  //static Lesson lesson = new Lesson();
   QuestionFeedback questionFeedback= new QuestionFeedback();
-
   QuestionEvaluator _questionEvaluator =new QuestionEvaluator();
 
   String sjekk ='Sjekk';
@@ -47,15 +52,17 @@ class _QuestionTypeB extends State<StatefulWidget>{
   }
   @override
   Widget build(BuildContext context) {
+
     return Column(
         mainAxisAlignment: MainAxisAlignment.center,
 
         children: <Widget>[
 
           new Text(
-
-              _questionCategory1.getQuestion(),
+              widget.ques.getQuestion(),
               key: Key('QuestionTypeB'),
+
+
               style: TextStyle(fontSize: 24.0,
               color: Theme
                   .of(context)
@@ -120,9 +127,9 @@ class _QuestionTypeB extends State<StatefulWidget>{
                    else {
                       // Kaller metode i _questionElovator og evaluerer avgitt svar
                         _isRight = _questionEvaluator.checkAnswer(
-                        _questionCategory1, _givenAnswer);
+                        widget.ques, _givenAnswer);
                     // calls the showMessage with, Gir tilbake melding
-                     questionFeedback.showMessage(context,_isRight, _questionCategory1);
+                     questionFeedback.showMessage(context,_isRight, widget.ques);
                     // Endrer navn på button, til neste og den vil nå ta bruker til neste side
                        isFirst=false;
                   }});
@@ -141,106 +148,10 @@ class _QuestionTypeB extends State<StatefulWidget>{
         ]
     );
   }
- /**  void showMessage(bool _isRight, QuestionCategory1 question){
-
-      // variable that holdes the feedback
-      String _feedBackMessage; // if right or wrong message
-      // variabl to hold the coorect answer
-      String  _correctAnsToShow =question.getcorrectAns()[0].toUpperCase()+question.getcorrectAns().substring(1).toLowerCase();
-
-      // checks if the answer is right
-      if(_isRight) {
-        //feedback string for correct answer
-        _feedBackMessage = ' Det er Riktig ! ';
-        _correctAnsToShow = ' '; // this is put to an emty string, since it is not supose to show for an correct given answer
-      }
-      else {
-        //feedback string for  wrong Answer
-        _feedBackMessage= 'Feil, riktig er :  ';
 
 
 
 
-
-      }
-
-      // creates a AlertDialog window
-      AlertDialog message = new AlertDialog(
-
-        // the content that will shows
-
-        content: new RichText(
-          text: new TextSpan(
-              children: <TextSpan>[
-
-                // feedback message
-                new TextSpan(
-                  text: _feedBackMessage,
-                  style: new TextStyle(color: Colors.indigo[900],
-                      fontSize: 20.0),
-                ),
-                //  The right answer
-                new TextSpan(
-                  text: _correctAnsToShow,
-                  style: new TextStyle(color: Theme.of(context).primaryColor,
-                    fontSize: 28.0,
-
-                  ) ,
-
-                )
-              ]
-          ) ,
-
-
-        ),
-
-
-        actions: <Widget>[
-        ],
-      );
-
-      // shows the window
-      showDialog(context: context, child:  message);
-
-    }
-
-    void showMessageNoAnswer(){
-
-      // variable that holdes the feedback
-      String _feedBackMessage = ' Du må skrive inn svar';
-
-      // creates a AlertDialog window
-      AlertDialog message = new AlertDialog(
-
-        // the content that will shows
-
-        content: new RichText(
-                  text: new TextSpan(
-                      text: _feedBackMessage,
-                  style: new TextStyle(color: Colors.indigo[900],
-                      fontSize: 20.0))
-                ),
-
-        actions: <Widget>[
-          FlatButton(
-              child: Text('neste',
-                style: new TextStyle(color: Theme.of(context).primaryColor,
-                    fontSize: 14.0
-                ),),
-              onPressed: () {
-                aLesson.removeFirstQuestion();
-                Navigator.of(context).pop(new MaterialPageRoute(builder: (context)=>SummaryPage()));
-
-              })
-
-        ],
-      );
-
-      // shows the window
-      showDialog(context: context, child:  message);
-
-
-    }*/
 
 
 

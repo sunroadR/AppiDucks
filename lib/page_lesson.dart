@@ -2,12 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import 'package:appi_ducks/question_type_a.dart';
-import 'package:appi_ducks/question_type_c.dart';
-import 'package:appi_ducks/main.dart';
+
 import 'package:appi_ducks/question_category1.dart';
 import 'package:appi_ducks/lesson.dart';
 import 'package:appi_ducks/summary_page.dart';
+import 'package:appi_ducks/question_type_a.dart';
+import 'package:appi_ducks/question_type_b.dart';
+import 'package:appi_ducks/question_type_C.dart';
 
 class PageLesson extends StatefulWidget{
   @override
@@ -27,14 +28,20 @@ class PageLesson extends StatefulWidget{
 
 class _PageLesson extends State<PageLesson> {
 
-
   QuestionCategory1 _currentQuestion;
-  Lesson _lesson = new Lesson();
+   
+  Widget _currentView ;
+  
+ final Lesson  _lesson = new Lesson();
 
   @override
   void initState() {
     super.initState();
     _currentQuestion = _lesson.first();
+    _lesson.setCurrentQuestion(_currentQuestion);
+    currentView(_currentQuestion);
+    _currentView= getCurrentView();
+
   }
 
   @override
@@ -57,7 +64,7 @@ class _PageLesson extends State<PageLesson> {
 
                 new Container(
                   margin: EdgeInsets.all(5.0),
-                 child: _currentQuestion.getPageView(),
+                 child: getCurrentView()
 
                 ),
                 new MaterialButton(key: Key('answerA1'),
@@ -66,7 +73,9 @@ class _PageLesson extends State<PageLesson> {
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18.0)),
                      onPressed: () {
-                       _lesson.removeFirstQuestion();
+                       //currentView(getCurrentQuestion());
+
+                       //oppdater Widget state
                      nextQuestion();
 
                   }),
@@ -89,9 +98,9 @@ class _PageLesson extends State<PageLesson> {
 
 
   }
-   Widget upQue(){
+   QuestionCategory1 getCurrentQuestion(){
 
-
+    return _currentQuestion;
 
    }
 
@@ -102,9 +111,35 @@ class _PageLesson extends State<PageLesson> {
             new MaterialPageRoute(builder: (context) => new SummaryPage()));
       } else {
         _currentQuestion = _lesson.first();
+        _lesson.setCurrentQuestion(_currentQuestion);
+        currentView(_currentQuestion);
+        _lesson.removeFirstQuestion();
 
       }
     });
   }
+  
+  
+  void currentView(QuestionCategory1  ques){
+    if(ques.getPageView()=="QuestionTypeA"){
+
+      _currentView= QuestionTypeA(_currentQuestion);
+      
+    }
+
+    if(ques.getPageView()=="QuestionTypeB")
+      {
+        _currentView =QuestionTypeB(_currentQuestion);
+      }
+
+    if(ques.getPageView()=="QuestionTypeC")
+    {
+      _currentView =QuestionTypeC(_currentQuestion);
+    }
+  }
+
+ Widget getCurrentView() {
+    return _currentView;
+ }
 
 }

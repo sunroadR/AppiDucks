@@ -1,21 +1,22 @@
 
-
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:appi_ducks/question_evaluator.dart';
-
-import 'package:appi_ducks/question_category1.dart';
-import 'package:appi_ducks/main.dart';
 import 'package:appi_ducks/question_feedback.dart';
 import 'package:appi_ducks/page_lesson.dart';
 import 'package:appi_ducks/lesson.dart';
+import 'package:appi_ducks/question_category1.dart';
 
 // WidgetClass that shows the layout for the screen for the question of type A
 // So fare it is not static , but troughthe implemetation it will read the qeustion
 // and answer from a table.
 //
 class QuestionTypeA extends StatefulWidget {
+
+        QuestionCategory1 question;
+
+            QuestionTypeA(QuestionCategory1 q){
+                      this.question=q;
+             }
 
   @override
   State<StatefulWidget> createState() {
@@ -32,10 +33,9 @@ class _QuestionTypeA extends State<QuestionTypeA>{
 
 
 
-  static Lesson aLesson= new Lesson();
   PageLesson pageLesson = new PageLesson();
   
-QuestionCategory1 question = aLesson.first();
+
 
   
 
@@ -61,27 +61,26 @@ QuestionFeedback questionFeedback= new QuestionFeedback();
   @override
   Widget build(BuildContext context) {
     
-
-
     final QuestionEvaluator questionEvaluator=new QuestionEvaluator();
 
-    return Column(
+        return Column(
 
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
       // center the text on the screen
 
 
-      children: <Widget>[
+                    children: <Widget>[
 
+                      // Text with the question
+                    new Text(
+                          widget.question.getQuestion(),
 
-// Text with the question
-        new Text(
-            question.getQuestion(),
-            key: Key('questionA'),
-            style: TextStyle(fontSize: 24.0,
-                  color: Theme.of(context).accentColor),
-            textAlign: TextAlign.center),
+                    //question.getQuestion(),
+                      key: Key('questionA'),
+                      style: TextStyle(fontSize: 24.0,
+                      color: Theme.of(context).accentColor),
+                      textAlign: TextAlign.center),
 
 
         // The lay out for the four button
@@ -95,19 +94,19 @@ QuestionFeedback questionFeedback= new QuestionFeedback();
     color: Theme.of(context).buttonColor,
 
 
-    child: Text(question.getAnswer1(), textAlign: TextAlign.center,
+    child: Text(widget.question.getAnswer1(), textAlign: TextAlign.center,
     style: TextStyle(fontSize: 18.0)),
     onPressed: () {
      if(firstTime==true) {
       setState(() {
-        _givenAnswer = question.getAnswer1();
-        _isRight = questionEvaluator.checkAnswer(question, _givenAnswer);
+        _givenAnswer = widget.question.getAnswer1();
+        _isRight = questionEvaluator.checkAnswer(widget.question, _givenAnswer);
         firstTime=false;
 
       });
 
       // calls the showMessage with
-      questionFeedback.showMessage(context,_isRight, question);
+      questionFeedback.showMessage(context,_isRight, widget.question);
     }
 
     },
@@ -126,18 +125,18 @@ QuestionFeedback questionFeedback= new QuestionFeedback();
     color: Theme
         .of(context)
         .buttonColor,
-    child: Text(question.getAnswer2(),
+    child: Text( widget.question.getAnswer2(),
     style: TextStyle(fontSize: 18.0), ),
     onPressed: () {
     if(firstTime==true) {
       setState(() {
-        _givenAnswer = question.getAnswer2();
-        _isRight = questionEvaluator.checkAnswer(question, _givenAnswer);
+        _givenAnswer =  widget.question.getAnswer2();
+        _isRight = questionEvaluator.checkAnswer(widget.question, _givenAnswer);
        firstTime=false;
 
       });
 
-     questionFeedback.showMessage(context,_isRight, question);
+     questionFeedback.showMessage(context,_isRight, widget.question);
     }
     },
 
@@ -153,18 +152,19 @@ QuestionFeedback questionFeedback= new QuestionFeedback();
     color: Theme.of(context).buttonColor,
 
     child:
-    Text(question.getAnswer3(),
+    Text(widget.question.getAnswer3(),
     style: TextStyle(fontSize: 16.0), ),
     onPressed: () {
     if(firstTime==true) {
       setState(() {
-        _givenAnswer = question.getAnswer3();
-        _isRight = questionEvaluator.checkAnswer(question, _givenAnswer);
+        _givenAnswer = widget.question.getAnswer3();
+        _isRight = questionEvaluator.checkAnswer(widget.
+            question, _givenAnswer);
       firstTime=false;
 
       });
 
-      questionFeedback.showMessage(context,_isRight, question);
+      questionFeedback.showMessage(context,_isRight, widget.question);
     }
 
     },
@@ -181,20 +181,20 @@ QuestionFeedback questionFeedback= new QuestionFeedback();
           key: Key('answerA4'),
           color: Theme.of(context).buttonColor,
 
-          child: Text(question.getAnswer4(),
+          child: Text(widget.question.getAnswer4(),
           style: TextStyle(fontSize: 18.0),),
           onPressed: () {
             if (firstTime == true) {
               setState(() {
-                _givenAnswer = question.getAnswer4();
+                _givenAnswer = widget.question.getAnswer4();
                 _isRight =
-                    questionEvaluator.checkAnswer(question, _givenAnswer);
-                question.upDatedFirstTimeThisLesson();
+                    questionEvaluator.checkAnswer(widget.question, _givenAnswer);
+                widget.question.upDatedFirstTimeThisLesson();
                 firstTime = false;
               }
               );
 
-              questionFeedback.showMessage(context, _isRight, question);
+              questionFeedback.showMessage(context, _isRight, widget.question);
             }
           }
 

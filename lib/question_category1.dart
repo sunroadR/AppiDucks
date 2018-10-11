@@ -24,13 +24,13 @@ class QuestionCategory1 {
 
  String corectAns;   // = '16';
 
- bool firstTimeThisLesson; //=true; // first time the user answer the the qeuestion
+ bool firstTimeThisLesson =true; // first time the user answer the the qeuestion
 
  // Constructor
  QuestionCategory1(int this.id, String this.question, String this.answer1,
      String this.answer2 ,String this.answer3, String this.answer4,
      String this.answer5, String this.answer6, String this.corectAns ,
-     bool this.firstTimeThisLesson, String this.pageWidget );
+     String this.pageWidget );
 
 
 

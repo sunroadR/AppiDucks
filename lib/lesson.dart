@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
+
 import 'package:appi_ducks/question_category1.dart';
-import 'package:appi_ducks/question_type_a.dart';
-import 'package:appi_ducks/question_type_b.dart';
-import 'package:appi_ducks/question_type_c.dart';
+import 'package:appi_ducks/database.dart';
 
 
 class Lesson {
@@ -10,12 +8,13 @@ class Lesson {
   QuestionCategory1 currentQuestion;
 
 
-   var q =new QuestionCategory1(1,"QA1","a1","a2","a3","a4","Hei","Hopp","Ans", true,"QuestionTypeA");
-   var qeu =new QuestionCategory1(1,"QB2","b1","b2","b3","b4","b5","b6","BAns", true,"QuestionTypeB");
-   var qeustion =new QuestionCategory1(1,'Hei og Hopp',"c1","c2","c3","c4","c5","c6","CAns", true,"QuestionTypeC");
-    var q1 =new QuestionCategory1(1,"QC","c1","c2","c3","c4","c5","c6","CAns", true,"QuestionTypeC");
+   var q =new QuestionCategory1(1,"QA1","a1","a2","a3","a4","Hei","Hopp","Ans", "QuestionTypeA");
+   var qeu =new QuestionCategory1(1,"QB2","b1","b2","b3","b4","b5","b6","BAns", "QuestionTypeB");
+   var qeustion =new QuestionCategory1(1,'Hei og Hopp',"c1","c2","c3","c4","c5","c6","CAns","QuestionTypeC");
+    var q1 =new QuestionCategory1(1,"QC","c1","c2","c3","c4","c5","c6","CAns", "QuestionTypeC");
 
  List<QuestionCategory1> _questionList;
+ var dataHelper = DBHelper();
 
  //QustionList newList;
 
@@ -28,6 +27,8 @@ class Lesson {
         _questionList.add(q);
         _questionList.add(qeu);
         _questionList.add(qeustion);
+        dataHelper.initDB();
+
 
         }
   get lesson => this;

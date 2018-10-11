@@ -1,4 +1,4 @@
-import 'dart:async';
+
 
 import 'package:flutter/material.dart';
 
@@ -10,6 +10,9 @@ import 'package:appi_ducks/question_type_a.dart';
 import 'package:appi_ducks/question_type_b.dart';
 import 'package:appi_ducks/question_type_C.dart';
 
+
+
+// The page which shows the question in a lessonsession
 class PageLesson extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
@@ -31,13 +34,14 @@ class _PageLesson extends State<PageLesson> {
   QuestionCategory1 _currentQuestion;
    
   Widget _currentView ;
-  
- final Lesson  _lesson = new Lesson();
+
+  final Lesson  _lesson = new Lesson();
 
   @override
   void initState() {
     super.initState();
     _currentQuestion = _lesson.first();
+    _lesson.removeFirstQuestion();
     _lesson.setCurrentQuestion(_currentQuestion);
     currentView(_currentQuestion);
     _currentView= getCurrentView();
@@ -46,28 +50,26 @@ class _PageLesson extends State<PageLesson> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme
-            .of(context)
-            .primaryColor,
-        title: Text('AppiDucks for  Python'),
-        //remove the back button in the AppBar i
-        automaticallyImplyLeading: false,
-      ),
-      body: new Column(
-        children: <Widget>[
 
-          // her skal det wære en widget layout som oppdaterer seg
+        return Scaffold(
+                   appBar: AppBar(
+                          backgroundColor: Theme.of(context).primaryColor,
+                   title: Text('AppiDucks for  Python'),
 
-              //padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
+                     //remove the back button in the AppBar i
+                        automaticallyImplyLeading: false,
+                   ),
+
+          body: new Column(
+                children: <Widget>[
 
                 new Container(
-                  margin: EdgeInsets.all(5.0),
-                 child: getCurrentView()
+                              margin: EdgeInsets.all(5.0),
+                              child: getCurrentView()
 
                 ),
-                new MaterialButton(key: Key('answerA1'),
+
+                new MaterialButton(
                color: Theme.of(context).buttonColor,
                     child: Text('Neste',
                     textAlign: TextAlign.center,

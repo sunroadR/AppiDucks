@@ -34,8 +34,8 @@ class _QuestionTypeA extends State<QuestionTypeA>{
 
 
   PageLesson pageLesson = new PageLesson();
-  
 
+  final QuestionEvaluator questionEvaluator=new QuestionEvaluator();
 
   
 
@@ -60,8 +60,6 @@ QuestionFeedback questionFeedback= new QuestionFeedback();
 
   @override
   Widget build(BuildContext context) {
-    
-    final QuestionEvaluator questionEvaluator=new QuestionEvaluator();
 
         return Column(
 
@@ -98,15 +96,8 @@ QuestionFeedback questionFeedback= new QuestionFeedback();
     style: TextStyle(fontSize: 18.0)),
     onPressed: () {
      if(firstTime==true) {
-      setState(() {
-        _givenAnswer = widget.question.getAnswer1();
-        _isRight = questionEvaluator.checkAnswer(widget.question, _givenAnswer);
-        firstTime=false;
-
-      });
-
-      // calls the showMessage with
-      questionFeedback.showMessage(context,_isRight, widget.question);
+       firstTime=false;
+       answerGiven(widget.question.getAnswer1());
     }
 
     },
@@ -128,15 +119,9 @@ QuestionFeedback questionFeedback= new QuestionFeedback();
     child: Text( widget.question.getAnswer2(),
     style: TextStyle(fontSize: 18.0), ),
     onPressed: () {
-    if(firstTime==true) {
-      setState(() {
-        _givenAnswer =  widget.question.getAnswer2();
-        _isRight = questionEvaluator.checkAnswer(widget.question, _givenAnswer);
-       firstTime=false;
-
-      });
-
-     questionFeedback.showMessage(context,_isRight, widget.question);
+          if(firstTime==true) {
+              firstTime=false;
+               answerGiven(widget.question.getAnswer2());
     }
     },
 
@@ -155,18 +140,10 @@ QuestionFeedback questionFeedback= new QuestionFeedback();
     Text(widget.question.getAnswer3(),
     style: TextStyle(fontSize: 16.0), ),
     onPressed: () {
-    if(firstTime==true) {
-      setState(() {
-        _givenAnswer = widget.question.getAnswer3();
-        _isRight = questionEvaluator.checkAnswer(widget.
-            question, _givenAnswer);
-      firstTime=false;
-
-      });
-
-      questionFeedback.showMessage(context,_isRight, widget.question);
-    }
-
+      if (firstTime == true) {
+        firstTime = false;
+        answerGiven(widget.question.getAnswer3());
+      }
     },
 
     ),
@@ -184,21 +161,12 @@ QuestionFeedback questionFeedback= new QuestionFeedback();
           child: Text(widget.question.getAnswer4(),
           style: TextStyle(fontSize: 18.0),),
           onPressed: () {
-            if (firstTime == true) {
-              setState(() {
-                _givenAnswer = widget.question.getAnswer4();
-                _isRight =
-                    questionEvaluator.checkAnswer(widget.question, _givenAnswer);
-                widget.question.upDatedFirstTimeThisLesson();
-                firstTime = false;
-              }
-              );
+    if(firstTime==true) {
+    firstTime=false;
+    answerGiven(widget.question.getAnswer4());
+    }
 
-              questionFeedback.showMessage(context, _isRight, widget.question);
-            }
-          }
-
-
+    }
     ),],
     ),
 
@@ -208,9 +176,16 @@ QuestionFeedback questionFeedback= new QuestionFeedback();
 
   }
 
+  void answerGiven(String s){
+          setState(() {
+             _givenAnswer = s;
+             _isRight = questionEvaluator.checkAnswer(widget.question, _givenAnswer);
+              firstTime=false;
 
-
-
+           });
+                // calls the showMessage with
+          questionFeedback.showMessage(context,_isRight, widget.question);
+      }
 
 
 

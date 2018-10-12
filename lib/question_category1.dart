@@ -86,7 +86,9 @@ String getQuestion()
  bool getFirstTimeThisLesson(){
     return firstTimeThisLesson;
  }
-
+int getId(){
+    return id;
+}
 
  // Method that updated getFirstTimeLesson an set it to false
 // when user answer the question

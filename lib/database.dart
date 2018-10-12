@@ -20,6 +20,7 @@ class DBHelper {
   initDB() async  {
     io.Directory directory = await getApplicationDocumentsDirectory();
     String path = join(directory.path,"appiDucks.db");
+  //  await deleteDatabase(path);
     var theDB = await openDatabase(path,version:1, onCreate: _onCreate );
     return theDB;
   }
@@ -27,45 +28,46 @@ class DBHelper {
   void _onCreate(Database db, int version)async {
     // crates the table for week 1 questions
     await db.execute(
-  "CREATE TABLE weekQuestions(id INTEGER PRIMARY KEY, nr TEXT, question TEXT, answar2 TEXT,answar3 TEXT,"
-      "answar4 TEXT,answar5 TEXT,answar6 TEXT, pageWidget TEXT, correctAns TEXT)");
+  "CREATE TABLE weekQuestions(id INTEGER PRIMARY KEY, nr TEXT, question TEXT,answer1 TEXT, answer2 TEXT,answer3 TEXT,"
+      "answer4 TEXT,answer5 TEXT,answer6 TEXT, pageWidget TEXT, correctAns TEXT)");
     print("Created tabls");
 
   }
-  /**
+
 // Get a question from the weeksQuestions
-Future<QuestionCategory1>  getQuestion(int i) async {
+Future<List>  getQuestions() async {
     
     var dbQuestions =await db;
-    List<Map> list = await dbQuestions.rawQuery('SELECT * FROM wweekQuestions');
+    List<Map> result = await dbQuestions.rawQuery('SELECT * FROM weekQuestions');
 
-  var questionCategory1= new QuestionCategory1(list[i]["id"],list[i]["question"],list[i]["answer1"],
-                                list[i]["answer2"], list[i]["answer3"], list[i]["answer4"],list[i]["answer5"],list[i]["answer6"],
-        list[i]["pageWidget"],list[i]["correctAns"]);
+  List<QuestionCategory1> weekQuestion = new List();
+      for(int i=0; i<result.length; i++) {
+        weekQuestion.add(new QuestionCategory1(result[i]["id"], result[i]["question"],result[i]["answer1"], result[i]["answer2"],
+            result[i]["answer3"], result[i]["answer4"],result[i]["answer5"],result[i]["answer6"],
+       result[i]["pageWidget"],result[i]["correctAns"]));
+        }
 
-   return questionCategory1;
+
+    print(weekQuestion.length);
+      print('KOMMER JEG HIT');
+   return weekQuestion;
 
   }
 
-  // reads the questions from a text file save weekQuetsionTable
+ //  reads the questions from a text file save weekQuetsionTable
 void saveQuestion(QuestionCategory1 q) async{
+
+  print('Er jeg her da ?');
     var dbQuestion = await db;
     await dbQuestion.transaction((txn) async {
-      return await txn.rawInsert("INSERT INTO weekQuestion(id,question,answar1"
-          ' answar2,answar3,answar4,answar5,answar6,pageWidget,correctAns) VALUES(' +
-          '\'' +
-          q.id.toString() +
-          '\'' +
-          ',' +
-          '\'' +
-          q.question +
-          '\''+
-          ')');
+      return await txn.rawInsert('INSERT INTO weekQuestions(nr,question,answer1,answer2,answer3,answer4,answer5,answer6,pageWidget,correctAns) VALUES(?,?,?,?,?,?,?,?,?,?)',
+          [q.getId().toString(),q.getQuestion(),q.getAnswer1(),q.getAnswer2(),
+    q.getAnswer3(),q.getAnswer4(),q.getAnswer5(),q.getAnswer6(),q.getPageView(),
+    q.getcorrectAns()]);
+    });
 
 
-
-};
+}
 
 // ignore: expected_token
-}*/
 }

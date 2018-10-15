@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:appi_ducks/question_category1.dart';
+import 'package:appi_ducks/database/question.dart';
 import 'package:appi_ducks/question_evaluator.dart';
 import 'package:appi_ducks/summary_page.dart';
 import 'package:appi_ducks/page_lesson.dart';
@@ -8,12 +8,17 @@ import 'package:appi_ducks/lesson.dart';
 import 'package:appi_ducks/question_feedback.dart';
 import 'dart:developer';
 
+
+// WidgetClass that shows the layout for the screen for the question of type A
+// but troughthe implemetation it will read the qeustion
+// and answer from a table.
+//
 class QuestionTypeB extends StatefulWidget {
 
-  QuestionCategory1 ques;
+  Question question;
 
-  QuestionTypeB(QuestionCategory1 q){
-    this.ques=q;
+  QuestionTypeB(Question q){
+    this.question=q;
 
   }
 
@@ -59,7 +64,7 @@ class _QuestionTypeB extends State<QuestionTypeB>{
         children: <Widget>[
 
           new Text(
-              widget.ques.getQuestion(),
+              widget.question.question,
               key: Key('QuestionTypeB'),
 
 
@@ -127,9 +132,9 @@ class _QuestionTypeB extends State<QuestionTypeB>{
                    else {
                       // Kaller metode i _questionElovator og evaluerer avgitt svar
                         _isRight = _questionEvaluator.checkAnswer(
-                        widget.ques, _givenAnswer);
+                        widget.question, _givenAnswer);
                     // calls the showMessage with, Gir tilbake melding
-                     questionFeedback.showMessage(context,_isRight, widget.ques);
+                     questionFeedback.showMessage(context,_isRight, widget.question);
                     // Endrer navn på button, til neste og den vil nå ta bruker til neste side
                        isFirst=false;
                   }});

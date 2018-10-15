@@ -1,51 +1,59 @@
 
-
+import 'dart:async';
+import 'dart:io';
 import 'package:flutter/material.dart';
 
 
-import 'package:appi_ducks/question_category1.dart';
+
 import 'package:appi_ducks/lesson.dart';
 import 'package:appi_ducks/summary_page.dart';
 import 'package:appi_ducks/question_type_a.dart';
 import 'package:appi_ducks/question_type_b.dart';
 import 'package:appi_ducks/question_type_C.dart';
-
-
+import 'package:appi_ducks/database/database_helper.dart';
+import 'package:appi_ducks/database/question.dart';
+import 'package:appi_ducks/helpefile.dart';
 
 // The page which shows the question in a lessonsession
 class PageLesson extends StatefulWidget{
+
   @override
   State<StatefulWidget> createState() {
-
-    return _PageLesson();
+print('Og jeg kommer til å få til!!!');
+     return _PageLesson();
 
   }
-
-
-
-
 
 
 }
 
 
-class _PageLesson extends State<PageLesson> {
+class _PageLesson extends State<PageLesson> implements LessonContract{
 
-  QuestionCategory1 _currentQuestion;
+
+
+ Question currentQuestion;
    
   Widget _currentView ;
+  HelpeFile helpeFile=new HelpeFile();
 
-  final Lesson  _lesson = new Lesson();
+   Lesson lesson;
+   int t=0;
+
 
   @override
   void initState() {
     super.initState();
-    _currentQuestion = _lesson.first();
-    _lesson.removeFirstQuestion();
-    _lesson.setCurrentQuestion(_currentQuestion);
-    currentView(_currentQuestion);
-    _currentView= getCurrentView();
+    print('Jeg klarer jo ingen ting!');
+    lesson =new Lesson(this);
+    helpeFile.leggNyeSpr();
 
+
+  }
+  displayRecord(){
+    setState(() {
+
+    });
   }
 
   @override
@@ -60,12 +68,31 @@ class _PageLesson extends State<PageLesson> {
                         automaticallyImplyLeading: false,
                    ),
 
-          body: new Column(
-                children: <Widget>[
+          body: new ListView(
+               children: <Widget>[
 
                 new Container(
-                              margin: EdgeInsets.all(5.0),
-                              child: getCurrentView()
+
+                              margin: EdgeInsets.all(0.0),
+                              child:  new  FutureBuilder<Question>(
+                                  future:lesson.getQuestion(t),
+
+                                builder: (BuildContext context, AsyncSnapshot snapshot) {
+                                    if(snapshot.hasError) print(snapshot.hasError);
+
+                                  Question ques = snapshot.data;
+                                  print(ques.pageWidget);
+                                  return snapshot.hasData
+                                      ? Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Center(child: currentView(ques)),
+                                      )
+                                      : new Center(child: new CircularProgressIndicator());
+
+
+                                },)
+
+
 
                 ),
 
@@ -75,73 +102,79 @@ class _PageLesson extends State<PageLesson> {
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18.0)),
                      onPressed: () {
-                       //currentView(getCurrentQuestion());
 
-                       //oppdater Widget state
-                     nextQuestion();
+                       screenUpdate();
 
                   }),
+        ],),
 
-              ],
 
 
-            ),
           );
 
 
+}
 
-      // this.setState((){
+   Question getCurrentQuestion(){
 
-      // }
-
-      //  );
-      //
-
-
-
-  }
-   QuestionCategory1 getCurrentQuestion(){
-
-    return _currentQuestion;
+    return currentQuestion;
 
    }
 
-  void nextQuestion()  {
+/*  void nextQuestion()  {
     setState(() {
       if (_lesson.isEmpty()) {
         Navigator.push(context,
             new MaterialPageRoute(builder: (context) => new SummaryPage()));
       } else {
-        _currentQuestion = _lesson.first();
-        _lesson.setCurrentQuestion(_currentQuestion);
-        currentView(_currentQuestion);
-        _lesson.removeFirstQuestion();
+        currentQuestion = _lesson.first();
+        _lesson.setCurrentQuestion(currentQuestion);
+        currentView(currentQuestion);
+       // _lesson.removeFirstQuestion();
 
       }
     });
   }
+ */
   
-  
-  void currentView(QuestionCategory1  ques){
-    if(ques.getPageView()=="QuestionTypeA"){
+Widget currentView(Question ques){
 
-      _currentView= QuestionTypeA(_currentQuestion);
+
+    if(ques.pageWidget=="QuestionTypeA"){
+       t=t+1;
+      return QuestionTypeA(ques);
       
     }
 
-    if(ques.getPageView()=="QuestionTypeB")
+    if(ques.pageWidget=="QuestionTypeB")
       {
-        _currentView =QuestionTypeB(_currentQuestion);
+        t=t+1;
+        return QuestionTypeB(ques);
       }
 
-    if(ques.getPageView()=="QuestionTypeC")
-    {
-      _currentView =QuestionTypeC(_currentQuestion);
-    }
+     if(ques.pageWidget=="QuestionTypeC"){
+       t=t+1;
+      return QuestionTypeC(ques);}
+
+    return Container();
+
   }
 
  Widget getCurrentView() {
     return _currentView;
  }
+
+  @override
+  void screenUpdate() {
+    setState(() {
+      if (t >=3) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => new SummaryPage ()),
+      );}
+
+      lesson.getQuestion(t);
+    } );
+  }
 
 }

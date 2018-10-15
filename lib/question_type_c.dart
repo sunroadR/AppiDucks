@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 
 
-import 'package:appi_ducks/question_category1.dart';
 import 'package:appi_ducks/question_evaluator.dart';
 import 'package:appi_ducks/main.dart';
 import 'package:appi_ducks/summary_page.dart';
 import 'package:appi_ducks/question_feedback.dart';
-import 'package:appi_ducks/lesson.dart';
-import 'package:appi_ducks/page_lesson.dart';
+import 'package:appi_ducks/database/question.dart';
 
+// WidgetClass that shows the layout for the screen for the question of type C
+//  , but troughthe implemetation it will read the qeustion
+// and answer from a table.
+//
 class QuestionTypeC extends StatefulWidget{
 
-  QuestionCategory1 question;
+  Question question;
 
-  QuestionTypeC (QuestionCategory1 q)
+  QuestionTypeC (Question q)
   {
     question=q;
   }
@@ -25,6 +27,10 @@ class QuestionTypeC extends StatefulWidget{
 
 
 }
+
+// A corresponding State class. This class holds the data related to layout
+// of question of type C
+//
 
 class _QuestionTypeC extends State<QuestionTypeC> {
 
@@ -64,7 +70,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
 
-                Text(widget.question.getQuestion(),
+                Text(widget.question.question,
 
                   textAlign: TextAlign.left,
                   style: TextStyle(fontSize: 16.0, color: Theme
@@ -106,13 +112,13 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                   color: Theme
                       .of(context)
                       .buttonColor,
-                  child: Text(widget.question.getAnswer1()),
+                  child: Text(widget.question.answer1),
                   onPressed: () {
                     // retrive the answer the user has typed  inn
-                    Text(widget.question.getAnswer1());
+
 
                     setState(() {
-                      _givenAnswer = widget.question.getAnswer1();
+                      _givenAnswer = widget.question.answer1;
                     });
                   }
 
@@ -122,11 +128,11 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                   color: Theme
                       .of(context)
                       .buttonColor,
-                  child: Text(widget.question.getAnswer2()),
+                  child: Text(widget.question.answer2),
 
                   onPressed: () {
                     setState(() {
-                      _givenAnswer =widget.question.getAnswer2();
+                      _givenAnswer =widget.question.answer2;
                     });
                   }
 
@@ -137,13 +143,13 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                   color: Theme
                       .of(context)
                       .buttonColor,
-                  child: Text(widget.question.getAnswer3()),
+                  child: Text(widget.question.answer3),
                   onPressed: () {
                     // retrive the answer the user has typed  inn
-                    Text(widget.question.getAnswer3());
+                    Text(widget.question.answer3);
 
                     setState(() {
-                      _givenAnswer = widget.question.getAnswer3();
+                      _givenAnswer = widget.question.answer3;
                     });
                   }
 
@@ -162,18 +168,19 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                   color: Theme
                       .of(context)
                       .buttonColor,
-                  child: Text(widget.question.getAnswer4()),
+                  child: Text(widget.question.answer4),
                   onPressed: () {
                     // retrive the answer the user has typed  inn
-                    Text(widget.question.getAnswer4());
+                    Text(widget.question.answer4);
 
                     setState(() {
-                      _givenAnswer = widget.question.getAnswer4();
+                      _givenAnswer = widget.question.answer4;
                     });
                   }
 
 
               ),
+              /*
               MaterialButton(
                   minWidth: 50.0,
                   color: Theme
@@ -205,7 +212,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                   }
 
 
-              ),
+              ),*/
             ],),
 
 

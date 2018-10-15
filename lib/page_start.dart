@@ -1,11 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:appi_ducks/page_lesson.dart';
+import 'package:appi_ducks/helpefile.dart';
+import 'package:appi_ducks/database/database_helper.dart';
 
 
+/*
+    The startpage  for the  app where information about the users level,
+    which weeks the user can pick lesson from and som information about ....
 
+ */
 class PageStart extends StatelessWidget {
   @override
 
+
+
+  PageStart(){
+
+    DataBaseHelper dataBaseHelper = new DataBaseHelper();
+    HelpeFile helpeFile= new HelpeFile();
+    dataBaseHelper.initDB();
+
+    helpeFile.leggNyeSpr();
+  }
 
 
   Widget build(BuildContext context) {
@@ -38,11 +54,11 @@ class PageStart extends StatelessWidget {
                ),
                onPressed: () {
 
-
-                 // When pushed navigates to the first question of the lesson
+                 print(' Men jeg jobber masse !!');
+                 // When pushed navigates to the first question of the lesson for that week
                  Navigator.push(
                    context,
-                   MaterialPageRoute(builder: (context) =>PageLesson ()),
+                   MaterialPageRoute(builder: (context) => new PageLesson ()),
                  );
                }
            )

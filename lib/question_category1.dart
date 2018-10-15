@@ -6,10 +6,10 @@ import 'package:appi_ducks/question_type_B.dart';
 
 // Object of this class, is a Question of category 1
 
-class QuestionCategory1 {
+class Question {
 
-    int id;
-    String question;   // = 'Hva blir (-2)** 4 ?'; //
+    String id;
+    String oneQuestion;
     String answer1;    // = '16' ;
 
     String answer2;    // = '-16' ;
@@ -27,7 +27,7 @@ class QuestionCategory1 {
  bool firstTimeThisLesson =true; // first time the user answer the the qeuestion
 
  // Constructor
- QuestionCategory1(int this.id, String this.question, String this.answer1,
+ Question(String this.id, String this.oneQuestion, String this.answer1,
      String this.answer2 ,String this.answer3, String this.answer4,
      String this.answer5, String this.answer6, String this.corectAns ,
      String this.pageWidget );
@@ -39,7 +39,7 @@ class QuestionCategory1 {
 
 String getQuestion()
 {
-  return question;
+  return oneQuestion;
 }
 
  String getAnswer1(){
@@ -82,16 +82,16 @@ String getQuestion()
    return pageWidget;
   }
 
+    String getId(){
+      return id;
+    }
   // Method that returns true if it first time the question is answer
  bool getFirstTimeThisLesson(){
     return firstTimeThisLesson;
  }
-int getId(){
-    return id;
-}
 
  // Method that updated getFirstTimeLesson an set it to false
-// when user answer the question
+// when user answer the question and the answer is put at the end of the list
 void upDatedFirstTimeThisLesson(){
    firstTimeThisLesson=false;
 }

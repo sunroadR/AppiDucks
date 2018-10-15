@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:appi_ducks/main.dart';
-
+/*
+The page
+ */
 class SummaryPage extends StatelessWidget {
 
   final String title;

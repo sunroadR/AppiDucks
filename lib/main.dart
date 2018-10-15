@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 
+
 import 'package:appi_ducks/page_start.dart';
 
 //
@@ -18,10 +19,19 @@ void main() => runApp(
 // This widget is the root the application.
 class MyApp extends StatelessWidget {
 
+
+//  MyApp({Key key, @required this.readFromFile}) :super(key :key);
+
+
+
+
+
+
   PageStart pageStart = new PageStart();
 
   @override
   Widget build(BuildContext context) {
+   // readFromFile.read();
     return pageStart;
   }
 }

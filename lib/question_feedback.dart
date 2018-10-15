@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:appi_ducks/main.dart';
-import 'package:appi_ducks/question_category1.dart';
-import 'package:appi_ducks/page_lesson.dart';
 
+import 'package:appi_ducks/page_lesson.dart';
+import 'package:appi_ducks/database/question.dart';
 /**
  *    A statless widget that keeps the driffent pop up message ,
  *    with feedback to user off the app
@@ -25,12 +25,12 @@ class QuestionFeedback extends StatelessWidget {
 
 
     void showMessage(BuildContext context, bool _isRight,
-        QuestionCategory1 question) {
+        Question question) {
       // variable that holdes the feedback
       String _feedBackMessage; // if right or wrong message
       // variabl to hold the coorect answer
-      String _correctAnsToShow = question.getcorrectAns()[0].toUpperCase() +
-          question.getcorrectAns().substring(1).toLowerCase();
+      String _correctAnsToShow = question.correctAns[0].toUpperCase() +
+          question.correctAns.substring(1).toLowerCase();
 
       // checks if the answer is right
       if (_isRight) {

@@ -1,4 +1,4 @@
-import 'package:test/test.dart';
+/**import 'package:test/test.dart';
 import "dart:io";
 import 'package:flutter/material.dart';
 //import 'package:mockito/mockito.dart';
@@ -30,6 +30,10 @@ void main () {
 
 
 
+  });
+
+  test('checks that firstTimeInthisLection become false when question are answered',(){
+    expect(actual, matcher)
   });
 
 

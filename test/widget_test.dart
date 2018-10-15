@@ -14,7 +14,7 @@ import 'package:appi_ducks/main.dart';
 import 'package:appi_ducks/question_category1.dart';
 import 'package:flutter/widgets.dart';
 
-class MockQuestionA extends Mock implements QuestionCategory1{
+class MockQuestionA extends Mock implements Question{
 
 }
 

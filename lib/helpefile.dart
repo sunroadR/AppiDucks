@@ -18,12 +18,12 @@ class HelpeFile {
         '',
         '',
         'set med instruksjoner',
-        true,
+
         'QuestionTypeA'));
     db.saveQuestion(new Question('1.1.2', 'Hva blir (-2)**4 ?', '-16', '16',
-        '8', '-8', '6', '-6', '16',true, 'QuestionTypeC'));
+        '8', '-8', '6', '-6', '16', 'QuestionTypeC'));
     db.saveQuestion(new Question('1.1.3', 'Hvilke type er 78 ?', 'Int',
-        'Variable', 'Number', 'Float', '', '', 'int',true, 'QuestionTypeA'));
+        'Variable', 'Number', 'Float', '', '', 'int', 'QuestionTypeA'));
     db.saveQuestion(new Question(
         '1.1.8',
         'Hva menes med denne feilmeldingen? print('
@@ -35,7 +35,10 @@ class HelpeFile {
         '',
         '',
         'mangler quote etter world',
-        true,
+
         'QuestionTypeA'));
+    db.saveQuestion(new Question('1.1.4','Hvordan ser paranteser ut ?','//','()','>>','[]','{}','< >','()','QuestionTypeC'));
+    
   }
+  
 }

@@ -42,8 +42,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRect(
-      child: Column(
+    return  Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
         // center the text on the screen
@@ -63,6 +62,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
           new Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+
               new MaterialButton(
                 key: Key('answerA1'),
                 color: Theme.of(context).buttonColor,
@@ -70,6 +70,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18.0)),
                 onPressed: () {
+                  print(widget.question);
                   if (widget.question.firstTime == true) {
                   print(widget.question.firstTime);
                     answerGiven(widget.question.answer1);
@@ -139,7 +140,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
             ],
           ),
         ],
-      ),
+
     );
   }
 

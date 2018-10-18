@@ -27,8 +27,8 @@ class DataBaseHelper {
     await getApplicationDocumentsDirectory(); // io.directory (?) for å lagre
     String path = join(directory.path,
         "appiDucks.db"); // android directory for (?) for å lagre
-  //await deleteDatabase(path);
-    var theDB = await openDatabase(path, version: 2, onCreate: _onCreate);
+   //  await deleteDatabase(path);
+    var theDB = await openDatabase(path, version: 4, onCreate: _onCreate);
     return theDB;
   }
 
@@ -37,16 +37,16 @@ class DataBaseHelper {
     // crates the table for week 1 questions
     await db.execute(
         "CREATE TABLE Question(id INTEGER PRIMARY KEY, nr TEXT, question TEXT,answer1 TEXT, answer2 TEXT,answer3 TEXT,"
-        "answer4 TEXT,answer5 TEXT,answer6 TEXT, correctAns TEXT,firstTime BOOL, pageWidget TEXT)");
+        'answer4 TEXT,answer5 TEXT,answer6 TEXT, correctAns TEXT, pageWidget TEXT)');
     print("Created tabls");
   }
 
 // Get a list of all the  question for the weeksQuestions
   Future<Question> getQuestions(int i) async {
+
     var dbQuestions = await db;
     List<Map> result = await dbQuestions.rawQuery('SELECT * FROM question');
-
-    Question oneQuestion = new Question(
+        Question oneQuestion =new Question(
         result[i]["nr"],
         result[i]["question"],
         result[i]["answer1"],
@@ -56,13 +56,11 @@ class DataBaseHelper {
         result[i]["answer5"],
         result[i]["answer6"],
         result[i]["correctAns"],
-        result[i]["firstTime"],
         result[i]["pageWidget"]);
-
     return oneQuestion;
   }
 
-  // Gets a question , put the information stored in the quetion in the table
+  // Gets a question , put the information stored in the question in the table
   void saveQuestion(Question q) async {
     var dbQuestion = await db;
     await dbQuestion.transaction((txn) async {

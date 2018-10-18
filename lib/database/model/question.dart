@@ -9,7 +9,7 @@ class Question {
   String _answer5;
   String _answer6;
   String _corectAns;
-  bool   _firstTime;
+  bool   _firstTime=true;
   String _pageWidget;
 
   Question(
@@ -22,7 +22,6 @@ class Question {
       this._answer5,
       this._answer6,
       this._corectAns,
-      this._firstTime,
       this._pageWidget);
 
   Question.map(dynamic obj) {
@@ -35,7 +34,6 @@ class Question {
     this._answer5 == obj['answer5'];
     this._answer6 == obj['answer6'];
     this._corectAns == obj['correctAns'];
-    this._firstTime==obj['firstTime'];
     this._pageWidget == obj['pageWidget'];
   }
 

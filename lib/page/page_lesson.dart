@@ -9,7 +9,6 @@ import 'package:appi_ducks/page/summary_page.dart';
 import 'package:appi_ducks/page/ui/question_type_a.dart';
 import 'package:appi_ducks/page/ui/question_type_b.dart';
 import 'package:appi_ducks/page/ui/question_type_c.dart';
-import 'package:appi_ducks/database/database_helper.dart';
 import 'package:appi_ducks/database/model/question.dart';
 import 'package:appi_ducks/helpefile.dart';
 
@@ -65,10 +64,11 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
                 child: new FutureBuilder<Question>(
                   future: lesson.getQuestion(t),
                   builder: (BuildContext context, AsyncSnapshot snapshot) {
+
                     if (snapshot.hasError) print(snapshot.hasError);
 
                     Question ques = snapshot.data;
-
+                    // print(ques.question );
                     return snapshot.hasData
                         ? Padding(
                       padding: const EdgeInsets.all(8.0),

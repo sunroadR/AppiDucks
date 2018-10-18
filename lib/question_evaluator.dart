@@ -16,6 +16,8 @@ class QuestionEvaluator {
     if (question.firstTime == true)
       question.setFirstTime(); // set firstTimeThisLesson false
 
+    print(answer);
+    print(question.correctAns);
     // Checks the if the give answer is correct
     if (answer == question.correctAns) return true;
 

@@ -11,7 +11,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
 import 'package:appi_ducks/main.dart';
-import 'package:appi_ducks/question_category1.dart';
+import 'package:appi_ducks/database/model/question.dart';
 import 'package:flutter/widgets.dart';
 
 class MockQuestionA extends Mock implements Question{
@@ -69,26 +69,12 @@ void main() {
   });
 
 
-  testWidgets('Test that shows  that it i child row widget ', (WidgetTester tester) async {
+
+
+  testWidgets('Test that shows  that it is child row widget ', (WidgetTester tester) async {
 
     // Define a testkey
-    final childrenWidget= Row(children: <Widget>[],);
-
-    //Build a MaterialAppwith the test key
-    await tester.pumpWidget(childrenWidget);
-
-    // Find the MaterialApp Widget using the testKey
-    expect(find.byWidget(childrenWidget), findsOneWidget);
-
-
-
-    // Verify that all the answer is on the screen
-  });
-
-  testWidgets('Test that shows  that it i child row widget ', (WidgetTester tester) async {
-
-    // Define a testkey
-    final childrenWidget= Row(children: <Widget>[],);
+    final childrenWidget= Row( mainAxisAlignment:  MainAxisAlignment.center,);
 
     //Build a MaterialAppwith the test key
     await tester.pumpWidget(childrenWidget);

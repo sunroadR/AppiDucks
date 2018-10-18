@@ -61,7 +61,8 @@ class _QuestionTypeB extends State<QuestionTypeB> {
               style: TextStyle(
                   fontSize: 24.0, color: Theme.of(context).accentColor),
               textAlign: TextAlign.center),
-          new Container(
+          new SingleChildScrollView(
+          child: Container(
             width: 300.0,
             height: 200.0,
             margin: EdgeInsets.all(45.0),
@@ -70,7 +71,7 @@ class _QuestionTypeB extends State<QuestionTypeB> {
                 color: Colors.indigo[50],
                 border: new Border.all(
                     color: Theme.of(context).primaryColor, width: 1.0)),
-            child: new Flexible(
+
                 child: new TextField(
               textAlign: TextAlign.center,
               controller: _ansController,
@@ -79,8 +80,9 @@ class _QuestionTypeB extends State<QuestionTypeB> {
                 hintStyle: TextStyle(color: Theme.of(context).accentColor),
                 border: InputBorder.none,
               ),
-            )),
-          ),
+            ),
+          ),),
+
           new Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[

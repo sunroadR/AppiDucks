@@ -1,6 +1,6 @@
-/**import 'package:test/test.dart';
+import 'package:test/test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:appi_ducks/question_category1.dart';
+import 'package:appi_ducks/database/model/question.dart';
 import 'package:appi_ducks/question_evaluator.dart';
 
 class MockQuestionCategory1 extends Mock implements Question{
@@ -8,7 +8,7 @@ class MockQuestionCategory1 extends Mock implements Question{
 
 
 }
-/**
+
 void main () {
 
   Question question1 = new MockQuestionCategory1();
@@ -22,7 +22,7 @@ void main () {
 
 
     // set the givenAvwer to a wrong answer
-    String givenAns=question1.getAnswer1();
+    String givenAns=question1.answer1;
 
     //  sjekk the answer from checkAnswer method
     bool answer= questionEvaluator.checkAnswer(question1, givenAns);
@@ -40,7 +40,7 @@ void main () {
     QuestionEvaluator questionEvaluator= new QuestionEvaluator();
 
     // set the givenAvwer to a right answer
-    String givenAns=question1.getAnswer3();
+    String givenAns=question1.answer3;
 
     //  sjekk the answer from checkAnswer method
     bool answer= questionEvaluator.checkAnswer(question1,givenAns);
@@ -52,16 +52,16 @@ void main () {
 
 
   test('checks that the firstTimeInthisLection is true when question is created', () {
-
-    expect(true, question1.getFirstTimeThisLesson());
+    Question question1 = new MockQuestionCategory1();
+    expect(true, question1.firstTime);
 
   });
 
   test('checks that firstTimeInthisLection become false when question are answered',(){
 
-    question1.upDatedFirstTimeThisLesson();
+    question1.setFirstTime();
 
-    expect(false, question1.getFirstTimeThisLesson());
+    expect(false, question1.firstTime);
 
 
   });

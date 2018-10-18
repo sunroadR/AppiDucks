@@ -27,7 +27,7 @@ class DataBaseHelper {
     await getApplicationDocumentsDirectory(); // io.directory (?) for å lagre
     String path = join(directory.path,
         "appiDucks.db"); // android directory for (?) for å lagre
-   //  await deleteDatabase(path);
+    await deleteDatabase(path);
     var theDB = await openDatabase(path, version: 4, onCreate: _onCreate);
     return theDB;
   }

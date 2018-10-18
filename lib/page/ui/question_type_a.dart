@@ -55,12 +55,13 @@ class _QuestionTypeA extends State<QuestionTypeA> {
               key: Key('questionA'),
               style: TextStyle(
                   fontSize: 24.0, color: Theme.of(context).accentColor),
-              textAlign: TextAlign.center),
+              textAlign: TextAlign.center,
+            softWrap: true,),
 
           // The lay out for the four button
 
           new Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
 
               new MaterialButton(
@@ -72,7 +73,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                 onPressed: () {
                   print(widget.question);
                   if (widget.question.firstTime == true) {
-                  print(widget.question.firstTime);
+                    print(widget.question.answer1);
                     answerGiven(widget.question.answer1);
                     widget.question.setFirstTime();
                   }

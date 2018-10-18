@@ -48,6 +48,7 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
         appBar: AppBar(
           backgroundColor: Theme
               .of(context)

@@ -14,7 +14,6 @@ class QuestionFeedback extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final PageLesson pageLesson = new PageLesson();
     return Card();
   }
 

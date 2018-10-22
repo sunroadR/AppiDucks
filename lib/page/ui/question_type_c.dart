@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:appi_ducks/question_evaluator.dart';
 import 'package:appi_ducks/main.dart';
 import 'package:appi_ducks/page/summary_page.dart';
-import 'package:appi_ducks/question_feedback.dart';
+import 'package:appi_ducks/page/ui/question_feedback.dart';
 import 'package:appi_ducks/database/model/question.dart';
+import 'package:appi_ducks/info_lesson.dart';
 
 // WidgetClass that shows the layout for the screen for the question of type C
 //  , but troughthe implemetation it will read the qeustion
@@ -12,9 +13,11 @@ import 'package:appi_ducks/database/model/question.dart';
 //
 class QuestionTypeC extends StatefulWidget {
   Question question;
+  InfoLesson infoLesson;
 
-  QuestionTypeC(Question q) {
-    question = q;
+  QuestionTypeC(Question q, InfoLesson info) {
+    this.question = q;
+    this.infoLesson=info;
   }
 
   @override
@@ -166,8 +169,8 @@ class _QuestionTypeC extends State<QuestionTypeC> {
               if (_isFirst == true) {
                 setState(() {
                   // Kaller metode i _questionElovator og evaluerer avgitt svar
-                  _isRight = _questionEvaluator.checkAnswer(
-                      widget.question, _givenAnswer);
+                  _isRight = _questionEvaluator.checkAnswer(context,
+                      widget.question, _givenAnswer,widget.infoLesson);
                   // calls the showMessage with, Gir tilbake melding
                   questionFeedback.showMessage(
                       context, _isRight, widget.question);

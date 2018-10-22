@@ -6,7 +6,8 @@ import 'package:appi_ducks/question_evaluator.dart';
 import 'package:appi_ducks/page/summary_page.dart';
 import 'package:appi_ducks/page/page_lesson.dart';
 import 'package:appi_ducks/lesson.dart';
-import 'package:appi_ducks/question_feedback.dart';
+import 'package:appi_ducks/page/ui/question_feedback.dart';
+import 'package:appi_ducks/info_lesson.dart';
 import 'dart:developer';
 
 // WidgetClass that shows the layout for the screen for the question of type A
@@ -15,9 +16,12 @@ import 'dart:developer';
 //
 class QuestionTypeB extends StatefulWidget {
   Question question;
+  InfoLesson infoLesson;
 
-  QuestionTypeB(Question q) {
+
+  QuestionTypeB(Question q, InfoLesson info) {
     this.question = q;
+    this.infoLesson=info;
   }
 
   @override
@@ -105,14 +109,17 @@ class _QuestionTypeB extends State<QuestionTypeB> {
                       // Gir beskjed om at de må skrive inn et svar
                       questionFeedback.showMessageNoAnswer(context);
                     } else {
-                      // Kaller metode i _questionElovator og evaluerer avgitt svar
-                      _isRight = _questionEvaluator.checkAnswer(
-                          widget.question, _givenAnswer);
-                      // calls the showMessage with, Gir tilbake melding
-                      questionFeedback.showMessage(
-                          context, _isRight, widget.question);
-                      // Endrer navn på button, til neste og den vil nå ta bruker til neste side
-                      isFirst = false;
+                      if(widget.question.firstTime==true) {
+                        widget.question.setFirstTime();
+                        // Kaller metode i _questionElovator og evaluerer avgitt svar
+                        _isRight = _questionEvaluator.checkAnswer(context,
+                            widget.question, _givenAnswer, widget.infoLesson);
+                        // calls the showMessage with, Gir tilbake melding
+                        questionFeedback.showMessage(
+                            context, _isRight, widget.question);
+                        // Endrer navn på button, til neste og den vil nå ta bruker til neste side
+
+                      }
                     }
                   });
                 },

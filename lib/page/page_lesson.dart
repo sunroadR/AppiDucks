@@ -11,7 +11,7 @@ import 'package:appi_ducks/page/ui/question_type_b.dart';
 import 'package:appi_ducks/page/ui/question_type_c.dart';
 import 'package:appi_ducks/database/model/question.dart';
 import 'package:appi_ducks/helpefile.dart';
-
+import 'package:appi_ducks/info_lesson.dart';
 // The page which shows the question in a lessonsession
 class PageLesson extends StatefulWidget {
   @override
@@ -22,6 +22,7 @@ class PageLesson extends StatefulWidget {
 
 class _PageLesson extends State<PageLesson> implements LessonContract {
   final controller = new ScrollController();
+  final InfoLesson  infoLesson = new InfoLesson();
   OverlayEntry sticky;
   GlobalKey stickyKey = new GlobalKey();
 
@@ -102,15 +103,15 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
 
   Widget currentView(Question ques) {
     if (ques.pageWidget == "QuestionTypeA") {
-      return QuestionTypeA(ques);
+      return QuestionTypeA(ques,infoLesson);
     }
 
     if (ques.pageWidget == "QuestionTypeB") {
-      return QuestionTypeB(ques);
+      return QuestionTypeB(ques,infoLesson);
     }
 
     if (ques.pageWidget == "QuestionTypeC") {
-      return QuestionTypeC(ques);
+      return QuestionTypeC(ques,infoLesson);
     }
   }
 

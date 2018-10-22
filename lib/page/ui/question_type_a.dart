@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:appi_ducks/question_evaluator.dart';
-import 'package:appi_ducks/question_feedback.dart';
+import 'package:appi_ducks/page/ui/question_feedback.dart';
 import 'package:appi_ducks/page/page_lesson.dart';
 import 'package:appi_ducks/lesson.dart';
-
+import 'package:appi_ducks/info_lesson.dart';
 import 'package:appi_ducks/database/model/question.dart';
 
 // WidgetClass that shows the layout for the screen for the question of type A
@@ -12,9 +12,12 @@ import 'package:appi_ducks/database/model/question.dart';
 //
 class QuestionTypeA extends StatefulWidget {
   Question question;
+  InfoLesson infoLesson;
 
-  QuestionTypeA(Question q) {
-    this.question = q;
+  QuestionTypeA(Question ques,InfoLesson info){
+    this.question=ques;
+    this.infoLesson=info;
+
   }
 
   @override
@@ -25,6 +28,8 @@ class QuestionTypeA extends StatefulWidget {
 
 // Keeps the state for the statefullwidget
 class _QuestionTypeA extends State<QuestionTypeA> {
+
+
   PageLesson pageLesson = new PageLesson();
 
   final QuestionEvaluator questionEvaluator = new QuestionEvaluator();
@@ -74,7 +79,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                   print(widget.question);
                   if (widget.question.firstTime == true) {
                     print(widget.question.answer1);
-                    answerGiven(widget.question.answer1);
+                    answerGiven(context, widget.question.answer1);
                     widget.question.setFirstTime();
                   }
                 },
@@ -94,7 +99,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                 ),
                 onPressed: () {
                   if (widget.question.firstTime == true) {
-                    answerGiven(widget.question.answer2);
+                    answerGiven(context,widget.question.answer2);
                     widget.question.setFirstTime();
                   }
                 },
@@ -114,7 +119,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                 onPressed: () {
                   if (widget.question.firstTime==true) {
                     widget.question.setFirstTime();
-                    answerGiven(widget.question.answer3);
+                    answerGiven(context, widget.question.answer3);
                     widget.question.setFirstTime();
                   }
                 },
@@ -134,7 +139,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                   ),
                   onPressed: () {
                     if (widget.question.firstTime == true) {
-                      answerGiven(widget.question.answer4);
+                      answerGiven(context,widget.question.answer4);
                        widget.question.setFirstTime();
                     }
                   }),
@@ -145,10 +150,10 @@ class _QuestionTypeA extends State<QuestionTypeA> {
     );
   }
 
-  void answerGiven(String s) {
+  void answerGiven(BuildContext context, String s) {
     setState(() {
       _givenAnswer = s;
-      _isRight = questionEvaluator.checkAnswer(widget.question, _givenAnswer);
+      _isRight = questionEvaluator.checkAnswer(context, widget.question, _givenAnswer, widget.infoLesson);
       widget.question.setFirstTime();
     });
     // calls the showMessage with

@@ -172,11 +172,12 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                   _isRight = _questionEvaluator.checkAnswer(context,
                       widget.question, _givenAnswer,widget.infoLesson);
                   // calls the showMessage with, Gir tilbake melding
-                  questionFeedback.showMessage(
-                      context, _isRight, widget.question);
-                  _isFirst = false;
-                  // Endrer navn på button, til neste og den vil nå ta bruker til neste side
-                });
+                  if(_isRight==false) {
+                    questionFeedback.showMessageWrongAnswer(
+                        context, widget.question);
+                    _isFirst = false;
+                    // Endrer navn på button, til neste og den vil nå ta bruker til neste side
+                  }});
               }
             },
           ),

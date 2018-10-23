@@ -157,6 +157,8 @@ class _QuestionTypeA extends State<QuestionTypeA> {
       widget.question.setFirstTime();
     });
     // calls the showMessage with
-    questionFeedback.showMessage(context, _isRight, widget.question);
+    if(_isRight=false) {
+      questionFeedback.showMessageWrongAnswer(context, widget.question);
+    }
   }
 }

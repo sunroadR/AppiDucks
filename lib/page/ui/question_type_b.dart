@@ -41,7 +41,7 @@ class _QuestionTypeB extends State<QuestionTypeB> {
   String sjekk = 'Sjekk';
   String _givenAnswer;
   bool _isRight;
-  bool isFirst = true;
+  bool isFirst;
 
   // Create a text controller. That is used to retrieve  the current answer
   // of the textfield
@@ -102,26 +102,28 @@ class _QuestionTypeB extends State<QuestionTypeB> {
                 onPressed: () {
                   // retrive the answer the user has typed  inn
                   setState(() {
+                if(widget.question.firstTime==true) {
                     _givenAnswer = _ansController.text.toString();
-
                     // sjekker at det er tastet inn et svar
-                    if (_givenAnswer.length == 0) {
-                      // Gir beskjed om at de må skrive inn et svar
-                      questionFeedback.showMessageNoAnswer(context);
-                    } else {
-                      if(widget.question.firstTime==true) {
-                        widget.question.setFirstTime();
-                        // Kaller metode i _questionElovator og evaluerer avgitt svar
-                        _isRight = _questionEvaluator.checkAnswer(context,
-                            widget.question, _givenAnswer, widget.infoLesson);
-                        // calls the showMessage with, Gir tilbake melding
-                        questionFeedback.showMessage(
-                            context, _isRight, widget.question);
-                        // Endrer navn på button, til neste og den vil nå ta bruker til neste side
-
+                      if (_givenAnswer.length == 0) {
+                        // Gir beskjed om at de må skrive inn et svar
+                        questionFeedback.showMessageNoAnswer(context);
+                      } else {
+                        if (widget.question.firstTime == true) {
+                          // Kaller metode i _questionElovator og evaluerer avgitt svar
+                          _isRight = _questionEvaluator.checkAnswer(context,
+                              widget.question, _givenAnswer, widget.infoLesson);
+                          widget.question.setFirstTime();
+                          // calls the showMessageWrogAnswer if wrong answer
+                          if (_isRight == false) {
+                            questionFeedback.showMessageWrongAnswer(
+                                context, widget.question);
+                            widget.question.setFirstTime();
+                            // Endrer navn på button, til neste og den vil nå ta bruker til neste side
+                          }
+                        }
                       }
-                    }
-                  });
+                    } });
                 },
               ),
             ],

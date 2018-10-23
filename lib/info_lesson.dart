@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:appi_ducks/page/ui/lesson_feedback.dart';
+import 'package:appi_ducks/page/ui/question_feedback.dart';
 /**
  *The class holds info about status in a lesson
  **/
 class InfoLesson {
 
   LessonFeedBack lessonFeedBack = new LessonFeedBack();
+  QuestionFeedback questionFeedback =new QuestionFeedback();
 
   // antall riktige på rad er null når en lesson starter
 
@@ -25,11 +27,12 @@ class InfoLesson {
     if(getCorrectAnsInRow()==3){
       lessonFeedBack.showMessageThreeInRow(context);
     }
-    if(getCorrectAnsInRow()==5){
+    else if(getCorrectAnsInRow()==5){
       lessonFeedBack.showMessageFiveInRow(context);
     }
-
-
+    else {
+      questionFeedback.showMessageRightAnswer(context);
+    }
   }
 
   // metoder som setter antall riktige på rad til lik null , når bruker svarer feil

@@ -17,29 +17,10 @@ class QuestionFeedback extends StatelessWidget {
     return Card();
   }
 
-  // Method that gives the user feedback
-  // with an alertWindow
+  // Metode som gir tilbake melding om at svaret er riktig
+  void showMessageRightAnswer(BuildContext context){
 
-  void showMessage(BuildContext context, bool _isRight, Question question) {
-    // variable that holdes the feedback
-    String _feedBackMessage; // if right or wrong message
-    // variabl to hold the coorect answer
-    
-    print(question.question);
-    String _correctAnsToShow = question.correctAns[0].toUpperCase() +
-        question.correctAns.substring(1).toLowerCase();
-
-    // checks if the answer is right
-    if (_isRight) {
-      //feedback string for correct answer
-      _feedBackMessage = ' Det er Riktig ! ';
-      _correctAnsToShow =
-          ' '; // this is put to an empty string, since it is not supose to
-      // show for an correct given answer
-    } else {
-      //feedback string for  wrong Answer
-      _feedBackMessage = 'Feil, riktig er :  ';
-    }
+    String _feedbackMessage = 'Det er riktig !';
 
     // creates a AlertDialog window
     AlertDialog message = new AlertDialog(
@@ -49,7 +30,45 @@ class QuestionFeedback extends StatelessWidget {
         text: new TextSpan(children: <TextSpan>[
           // feedback message
           new TextSpan(
-            text: _feedBackMessage,
+            text: _feedbackMessage,
+            // in indigo blue
+            style: new TextStyle(
+                color: Theme.of(context).accentColor, fontSize: 20.0),
+          ),
+          //  The right answer
+
+        ]),
+      ),
+
+
+    );
+
+    // shows the window
+    showDialog(context: context, child: message);
+  }
+
+
+
+  // Method that gives the user feedback
+  // with an alertWindow
+
+  void showMessageWrongAnswer(BuildContext context, Question question) {
+    // variable that holdes the feedback
+    String _feedbackMessage = 'Feil, riktig er :  ';; // if right or wrong message
+    // variabl to hold the coorect answer
+
+    String _correctAnsToShow = question.correctAns[0].toUpperCase() +
+        question.correctAns.substring(1).toLowerCase();
+
+    // creates a AlertDialog window
+    AlertDialog message = new AlertDialog(
+      // the content that will shows
+
+      content: new RichText(
+        text: new TextSpan(children: <TextSpan>[
+          // feedback message
+          new TextSpan(
+            text: _feedbackMessage,
             // in indigo blue
             style: new TextStyle(
                 color: Theme.of(context).accentColor, fontSize: 20.0),

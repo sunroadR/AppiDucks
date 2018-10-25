@@ -41,7 +41,7 @@ class _QuestionTypeB extends State<QuestionTypeB> {
   String sjekk = 'Sjekk';
   String _givenAnswer;
   bool _isRight;
-  bool isFirst;
+  bool _isFirst=true;
 
   // Create a text controller. That is used to retrieve  the current answer
   // of the textfield
@@ -100,31 +100,35 @@ class _QuestionTypeB extends State<QuestionTypeB> {
                     style: TextStyle(fontSize: 18.0)),
 
                 onPressed: () {
+                  print('under onPressed');
+                  print(widget.question.firstTime);
                   // retrive the answer the user has typed  inn
+
+                if(_isFirst==true) {
+                  _isFirst=false;
                   setState(() {
-                if(widget.question.firstTime==true) {
                     _givenAnswer = _ansController.text.toString();
                     // sjekker at det er tastet inn et svar
                       if (_givenAnswer.length == 0) {
                         // Gir beskjed om at de må skrive inn et svar
                         questionFeedback.showMessageNoAnswer(context);
                       } else {
-                        if (widget.question.firstTime == true) {
                           // Kaller metode i _questionElovator og evaluerer avgitt svar
                           _isRight = _questionEvaluator.checkAnswer(context,
                               widget.question, _givenAnswer, widget.infoLesson);
-                          widget.question.setFirstTime();
+                          //  widget.question.setFirstTime();
                           // calls the showMessageWrogAnswer if wrong answer
+
                           if (_isRight == false) {
                             questionFeedback.showMessageWrongAnswer(
                                 context, widget.question);
-                            widget.question.setFirstTime();
+                           // widget.question.setFirstTime();
                             // Endrer navn på button, til neste og den vil nå ta bruker til neste side
                           }
                         }
-                      }
-                    } });
-                },
+
+                    } );
+                }}
               ),
             ],
           ),

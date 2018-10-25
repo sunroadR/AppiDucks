@@ -121,6 +121,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                     widget.question.setFirstTime();
                     answerGiven(context, widget.question.answer3);
                     widget.question.setFirstTime();
+
                   }
                 },
               ),

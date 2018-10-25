@@ -34,6 +34,7 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
 
   Lesson lesson;
   int t = 0;
+  bool _notAnswered=false;
 
   @override
   void initState() {
@@ -95,6 +96,14 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
                 }),
           ],
         ));
+  }
+  bool get notAnswered => _notAnswered;
+  void setNotAnsweredTrue(){
+     _notAnswered=true;
+  }
+
+  void setNotAnsweredFalse(){
+    _notAnswered=false;
   }
 
   void setCurrentQuestion(Question q) {

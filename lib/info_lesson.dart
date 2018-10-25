@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:appi_ducks/page/ui/lesson_feedback.dart';
 import 'package:appi_ducks/page/ui/question_feedback.dart';
+import 'package:appi_ducks/page/page_lesson.dart';
 /**
  *The class holds info about status in a lesson
  **/
@@ -8,6 +9,9 @@ class InfoLesson {
 
   LessonFeedBack lessonFeedBack = new LessonFeedBack();
   QuestionFeedback questionFeedback =new QuestionFeedback();
+  PageLesson _pageLesson = new PageLesson();
+
+
 
   // antall riktige på rad er null når en lesson starter
 
@@ -23,7 +27,9 @@ class InfoLesson {
   // Da oppdateres correctAnsInRow
   void addCorrectAnsInRow(BuildContext context){
 
+    
     correctAnsInRow = correctAnsInRow +1;
+
     if(getCorrectAnsInRow()==3){
       lessonFeedBack.showMessageThreeInRow(context);
     }

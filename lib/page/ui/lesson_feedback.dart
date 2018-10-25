@@ -112,7 +112,26 @@ class LessonFeedBack extends StatelessWidget {
     showDialog(context: context, child: message);
   }
 
+// Metode som gir beskjed om at bruker må skrive inn et svar
+  void showMessageNotAnswered(BuildContext context) {
+    // variable that holdes the feedback
+    String _feedBackMessage = ' Du må besvare spørsmål før du kan gå til neste ';
 
+    // creates a AlertDialog window
+    AlertDialog message = new AlertDialog(
+      // the content that will shows
+
+      content: new RichText(
+          text: new TextSpan(
+              text: _feedBackMessage,
+              style: new TextStyle(color: Colors.indigo[900], fontSize: 20.0))),
+
+
+    );
+
+    // shows the window
+    showDialog(context: context, child: message);
+  }
 
 
     }

@@ -40,7 +40,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
   //  String that will take the answer the person give
   String _givenAnswer = '';
   bool _isRight = false;
-
+  bool _isFirstTime=true;
 
   // the keeps the correctAnswer for question
   String corectAnswer;
@@ -54,7 +54,9 @@ class _QuestionTypeA extends State<QuestionTypeA> {
 
         children: <Widget>[
           // Text with the question
-          new Text(widget.question.question,
+          new Text(
+
+            widget.question.question,
 
               //question.getQuestion(),
               key: Key('questionA'),
@@ -77,10 +79,11 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                     style: TextStyle(fontSize: 18.0)),
                 onPressed: () {
                   print(widget.question);
-                  if (widget.question.firstTime == true) {
+                  if (_isFirstTime== true) {
+                    print('Tester ');
                     print(widget.question.answer1);
                     answerGiven(context, widget.question.answer1);
-                    widget.question.setFirstTime();
+
                   }
                 },
               ),
@@ -98,9 +101,9 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                   style: TextStyle(fontSize: 18.0),
                 ),
                 onPressed: () {
-                  if (widget.question.firstTime == true) {
+                  if (_isFirstTime == true) {
                     answerGiven(context,widget.question.answer2);
-                    widget.question.setFirstTime();
+
                   }
                 },
               ),
@@ -117,10 +120,10 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                   style: TextStyle(fontSize: 16.0),
                 ),
                 onPressed: () {
-                  if (widget.question.firstTime==true) {
-                    widget.question.setFirstTime();
+                  if (_isFirstTime==true) {
+
                     answerGiven(context, widget.question.answer3);
-                    widget.question.setFirstTime();
+
 
                   }
                 },
@@ -139,9 +142,9 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                     style: TextStyle(fontSize: 18.0),
                   ),
                   onPressed: () {
-                    if (widget.question.firstTime == true) {
+                    if (_isFirstTime == true) {
                       answerGiven(context,widget.question.answer4);
-                       widget.question.setFirstTime();
+
                     }
                   }),
             ],
@@ -156,10 +159,13 @@ class _QuestionTypeA extends State<QuestionTypeA> {
       _givenAnswer = s;
       _isRight = questionEvaluator.checkAnswer(context, widget.question, _givenAnswer, widget.infoLesson);
       widget.question.setFirstTime();
+      _isFirstTime=false;
     });
     // calls the showMessage with
-    if(_isRight=false) {
+    if(_isRight==false) {
       questionFeedback.showMessageWrongAnswer(context, widget.question);
+      widget.question.setFirstTime();
+      _isFirstTime=false;
     }
   }
 }

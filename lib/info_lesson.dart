@@ -27,7 +27,7 @@ class InfoLesson {
   // Da oppdateres correctAnsInRow
   void addCorrectAnsInRow(BuildContext context){
 
-    
+
     correctAnsInRow = correctAnsInRow +1;
 
     if(getCorrectAnsInRow()==3){

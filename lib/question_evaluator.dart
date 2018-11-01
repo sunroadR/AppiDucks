@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quiver/strings.dart';
+
 import 'package:appi_ducks/page/ui/question_type_a.dart';
 import 'package:appi_ducks/page/ui/question_type_b.dart';
 
@@ -15,12 +17,19 @@ class QuestionEvaluator {
   // and return a boolean value
   bool checkAnswer(BuildContext context, Question question, String answer,
       InfoLesson infoLesson) {
+
+    // Fjerner whitespace i Strengene for riktig svar og avgitt svar
+    String _correct = question.correctAns.replaceAll(new RegExp(r"\s+\b|\b\s"), "");
+    print(_correct, );
+    print('over er riktig ');
+    String _givenAns=answer..replaceAll(new RegExp(r"\s+\b|\b\s"), "");
+    print(_givenAns);
     // check if it first time this question are answer this lesson
     if (question.firstTime == true)
       question.setFirstTime(); // set firstTimeThisLesson false
 
     // Checks the if the give answer is correct
-    if (answer == question.correctAns) {
+    if (_givenAns==_correct) {
       infoLesson.addCorrectAnsInRow(context);
 
       return true;

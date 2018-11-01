@@ -81,7 +81,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           MaterialButton(
-              minWidth: 100.0,
+              minWidth: 50.0,
               color: Theme.of(context).buttonColor,
               child: Text(widget.question.answer1),
               onPressed: () {

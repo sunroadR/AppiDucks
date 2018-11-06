@@ -18,20 +18,24 @@ class QuestionEvaluator {
   bool checkAnswer(BuildContext context, Question question, String answer,
       InfoLesson infoLesson) {
 
+
+    print('akkurat inne i checkAnswer :' );
+    print(question.correctAns);
     // Fjerner whitespace i Strengene for riktig svar og avgitt svar
-    String _correct = question.correctAns.replaceAll(new RegExp(r"\s+\b|\b\s"), "");
+   var _correct = question.correctAns.replaceAll(new RegExp(r"\s+\b|\b\s"), "");
     print(_correct, );
     print('over er riktig ');
-    String _givenAns=answer..replaceAll(new RegExp(r"\s+\b|\b\s"), "");
+      var  _givenAns=answer.replaceAll(new RegExp(r"\s+\b|\b\s"), "");
     print(_givenAns);
     // check if it first time this question are answer this lesson
     if (question.firstTime == true)
       question.setFirstTime(); // set firstTimeThisLesson false
 
     // Checks the if the give answer is correct
-    if (_givenAns==_correct) {
+  //  if (_givenAns.toString() == _correct.toString()) {
+    if(answer==question.correctAns){
+      print('Kom jeg inne i her');
       infoLesson.addCorrectAnsInRow(context);
-
       return true;
     }
     else {

@@ -1,6 +1,6 @@
 import 'package:appi_ducks/database/database_helper.dart';
 import 'package:appi_ducks/database/model/question.dart';
-import 'package:appi_ducks/helpefile.dart';
+//import 'package:appi_ducks/helpefile.dart';
 import 'dart:async';
 
 abstract class LessonContract {

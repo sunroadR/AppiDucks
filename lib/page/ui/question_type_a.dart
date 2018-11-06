@@ -155,6 +155,8 @@ class _QuestionTypeA extends State<QuestionTypeA> {
   }
 
   void answerGiven(BuildContext context, String s) {
+
+
     setState(() {
       _givenAnswer = s;
       _isRight = questionEvaluator.checkAnswer(context, widget.question, _givenAnswer, widget.infoLesson);

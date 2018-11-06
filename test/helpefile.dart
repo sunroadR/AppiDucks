@@ -10,8 +10,8 @@ class HelpeFile {
   void leggNyeSpr() {
     db.saveQuestion(new Question('1.1.2', 'Hva blir (-2)**4 ?', '-16', '16',
         '8', '-8', '6', '-6', '16', 'QuestionTypeC'));
-    db.saveQuestion(new Question('1.1.3', 'Hvilke type er 78 ?', 'Int  ',
-        'Variable', 'Number', 'Float', '', '', 'In t', 'QuestionTypeA'));
+    db.saveQuestion(new Question('1.1.3', 'Hvilke type er 78 ?', 'Int',
+        'Variable', 'Number', 'Float', '', '', 'Int', 'QuestionTypeA'));
     db.saveQuestion(new Question(
         '1.1.8',
         'Hva menes med denne feilmeldingen? print('

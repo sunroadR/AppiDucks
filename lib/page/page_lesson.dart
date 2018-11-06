@@ -1,17 +1,18 @@
-import 'dart:async';
-import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:source_maps/builder.dart';
 
 
+import 'package:appi_ducks/read_week.dart';
 import 'package:appi_ducks/lesson.dart';
 import 'package:appi_ducks/page/summary_page.dart';
 import 'package:appi_ducks/page/ui/question_type_a.dart';
 import 'package:appi_ducks/page/ui/question_type_b.dart';
 import 'package:appi_ducks/page/ui/question_type_c.dart';
 import 'package:appi_ducks/database/model/question.dart';
-import 'package:appi_ducks/helpefile.dart';
+//import 'package:appi_ducks/helpefile.dart';
 import 'package:appi_ducks/info_lesson.dart';
+
+
 // The page which shows the question in a lessonsession
 class PageLesson extends StatefulWidget {
   @override
@@ -30,7 +31,9 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
 
   Widget _currentView;
 
-  HelpeFile helpeFile = new HelpeFile();
+
+
+  //HelpeFile helpeFile = new HelpeFile();
 
   Lesson lesson;
   int t = 0;
@@ -40,8 +43,7 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
   void initState() {
     super.initState();
     lesson = new Lesson(this);
-    helpeFile.leggNyeSpr();
-  }
+    }
 
   displayRecord() {
     setState(() {});

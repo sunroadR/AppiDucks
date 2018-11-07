@@ -57,6 +57,7 @@ class QuestionFeedback extends StatelessWidget {
     String _feedbackMessage = 'Feil, riktig er :  ';; // if right or wrong message
     // variabl to hold the coorect answer
 
+
     String _correctAnsToShow = question.correctAns[0].toUpperCase() +
         question.correctAns.substring(1).toLowerCase();
 

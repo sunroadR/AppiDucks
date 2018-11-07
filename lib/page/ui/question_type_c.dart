@@ -14,15 +14,25 @@ import 'package:appi_ducks/info_lesson.dart';
 class QuestionTypeC extends StatefulWidget {
   Question question;
   InfoLesson infoLesson;
+  bool _isFirstTime;
 
   QuestionTypeC(Question q, InfoLesson info) {
     this.question = q;
     this.infoLesson=info;
+    _isFirstTime = true;
+
   }
 
   @override
   State<StatefulWidget> createState() {
     return _QuestionTypeC();
+  }
+  bool getFirstime(){
+    return _isFirstTime;
+  }
+
+  void setFirstime(){
+    _isFirstTime=false;
   }
 }
 
@@ -37,7 +47,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
   String _givenAnswer = '';
   String _sjekk = 'Sjekk';
   bool _isRight = false;
-  bool _isFirst = true;
+
 
   @override
   Widget build(BuildContext context) {
@@ -67,13 +77,13 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                 color: Theme.of(context).buttonColor,
                 child: Text(_givenAnswer),
                 onPressed: () {
-                  // retrive the answer the user has typed  inn
-                  // ) Text(_questionCategory1.getAnswer1());
+                  if(widget._isFirstTime==true) {
+                    // retrive the answer the user has typed  inn
 
-                  setState(() {
-                    //   _givenAns = _questionCategory1.getAnswer1();
-                  });
-                }),
+                    setState(() {
+
+                    });
+                  } }),
           ],
         ),
       ),
@@ -85,33 +95,36 @@ class _QuestionTypeC extends State<QuestionTypeC> {
               color: Theme.of(context).buttonColor,
               child: Text(widget.question.answer1),
               onPressed: () {
-                // retrive the answer the user has typed  inn
+    if(widget._isFirstTime==true) {
+      // retrive the answer the user has typed  inn
 
-                setState(() {
-                  _givenAnswer = widget.question.answer1;
-                });
-              }),
+      setState(() {
+        _givenAnswer = widget.question.answer1;
+      });
+    }}),
           MaterialButton(
               minWidth: 50.0,
               color: Theme.of(context).buttonColor,
               child: Text(widget.question.answer2),
               onPressed: () {
-                setState(() {
-                  _givenAnswer = widget.question.answer2;
-                });
-              }),
+            if(widget._isFirstTime==true) {
+              setState(() {
+                _givenAnswer = widget.question.answer2;
+              });
+            }   }),
           MaterialButton(
               minWidth: 50.0,
               color: Theme.of(context).buttonColor,
               child: Text(widget.question.answer3),
               onPressed: () {
-                // retrive the answer the user has typed  inn
-                Text(widget.question.answer3);
+    if(widget._isFirstTime==true) {
+      // retrive the answer the user has typed  inn
+      Text(widget.question.answer3);
 
-                setState(() {
-                  _givenAnswer = widget.question.answer3;
-                });
-              })
+      setState(() {
+        _givenAnswer = widget.question.answer3;
+      });
+    }   })
         ],
       ),
       new Row(
@@ -122,35 +135,39 @@ class _QuestionTypeC extends State<QuestionTypeC> {
               color: Theme.of(context).buttonColor,
               child: Text(widget.question.answer4),
               onPressed: () {
-                // retrive the answer the user has typed  inn
-                Text(widget.question.answer4);
+    if(widget._isFirstTime==true) {
+      // retrive the answer the user has typed  inn
+      Text(widget.question.answer4);
 
-                setState(() {
-                  _givenAnswer = widget.question.answer4;
-                });
-              }),
+      setState(() {
+        _givenAnswer = widget.question.answer4;
+
+      });
+    } }),
           MaterialButton(
               minWidth: 50.0,
               color: Theme.of(context).buttonColor,
               child: Text(widget.question.answer5),
               onPressed: () {
-                Text(widget.question.answer5);
+    if(widget._isFirstTime==true) {
+      Text(widget.question.answer5);
 
-                setState(() {
-                  _givenAnswer = widget.question.answer5;
-                });
-              }),
+      setState(() {
+        _givenAnswer = widget.question.answer5;
+      });
+    }   }),
           MaterialButton(
               minWidth: 50.0,
               color: Theme.of(context).buttonColor,
               child: Text(widget.question.answer6),
               onPressed: () {
-                Text(widget.question.answer6);
+    if(widget._isFirstTime==true) {
+      Text(widget.question.answer6);
 
-                setState(() {
-                  _givenAnswer = widget.question.answer6;
-                });
-              }),
+      setState(() {
+        _givenAnswer = widget.question.answer6;
+      });
+    }    }),
         ],
       ),
       new Row(
@@ -165,9 +182,10 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                 textAlign: TextAlign.center, style: TextStyle(fontSize: 18.0)),
 
             onPressed: () {
+              if(widget._isFirstTime==true) {
               // retrive the answer the user has typed  inn
-              if (_isFirst == true) {
                 setState(() {
+                   widget.setFirstime();
                   // Kaller metode i _questionElovator og evaluerer avgitt svar
                   _isRight = _questionEvaluator.checkAnswer(context,
                       widget.question, _givenAnswer,widget.infoLesson);
@@ -175,7 +193,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                   if(_isRight==false) {
                     questionFeedback.showMessageWrongAnswer(
                         context, widget.question);
-                    _isFirst = false;
+
                     // Endrer navn på button, til neste og den vil nå ta bruker til neste side
                   }});
               }

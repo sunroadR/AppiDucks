@@ -100,12 +100,12 @@ class _QuestionTypeB extends State<QuestionTypeB> {
                     style: TextStyle(fontSize: 18.0)),
 
                 onPressed: () {
-                  print('under onPressed');
+
                   print(widget.question.firstTime);
                   // retrive the answer the user has typed  inn
 
                 if(_isFirst==true) {
-                  _isFirst=false;
+
                   setState(() {
                     _givenAnswer = _ansController.text.toString();
                     // sjekker at det er tastet inn et svar
@@ -113,13 +113,15 @@ class _QuestionTypeB extends State<QuestionTypeB> {
                         // Gir beskjed om at de må skrive inn et svar
                         questionFeedback.showMessageNoAnswer(context);
                       } else {
+
+                          _isFirst=false;
                           // Kaller metode i _questionElovator og evaluerer avgitt svar
                           _isRight = _questionEvaluator.checkAnswer(context,
                               widget.question, _givenAnswer, widget.infoLesson);
                           //  widget.question.setFirstTime();
                           // calls the showMessageWrogAnswer if wrong answer
 
-                          if (_isRight == false) {
+                            if (_isRight == false) {
                             questionFeedback.showMessageWrongAnswer(
                                 context, widget.question);
                            // widget.question.setFirstTime();

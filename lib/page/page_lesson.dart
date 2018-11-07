@@ -2,14 +2,12 @@
 import 'package:flutter/material.dart';
 
 
-import 'package:appi_ducks/read_week.dart';
 import 'package:appi_ducks/lesson.dart';
 import 'package:appi_ducks/page/summary_page.dart';
 import 'package:appi_ducks/page/ui/question_type_a.dart';
 import 'package:appi_ducks/page/ui/question_type_b.dart';
 import 'package:appi_ducks/page/ui/question_type_c.dart';
 import 'package:appi_ducks/database/model/question.dart';
-//import 'package:appi_ducks/helpefile.dart';
 import 'package:appi_ducks/info_lesson.dart';
 
 
@@ -28,8 +26,6 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
   GlobalKey stickyKey = new GlobalKey();
 
   Question currentQuestion;
-
-  Widget _currentView;
 
 
 
@@ -73,7 +69,8 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
                     if (snapshot.hasError) print(snapshot.hasError);
 
                     Question ques = snapshot.data;
-                    // print(ques.question );
+
+
                     return snapshot.hasData
                         ? Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -90,7 +87,7 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18.0)),
                 onPressed: () {
-                  if(t>3){
+                  if(t>=4){
                     Navigator.push(context, MaterialPageRoute(builder:(context)=> SummaryPage()));
                   }
 
@@ -114,15 +111,15 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
 
   Widget currentView(Question ques) {
     if (ques.pageWidget == "QuestionTypeA") {
-      return QuestionTypeA(ques,infoLesson);
+      return new QuestionTypeA(ques,infoLesson);
     }
 
     if (ques.pageWidget == "QuestionTypeB") {
-      return QuestionTypeB(ques,infoLesson);
+      return new QuestionTypeB(ques,infoLesson);
     }
 
     if (ques.pageWidget == "QuestionTypeC") {
-      return QuestionTypeC(ques,infoLesson);
+      return new QuestionTypeC(ques,infoLesson);
     }
   }
 

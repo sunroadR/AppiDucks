@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:appi_ducks/page/page_start.dart';
 import 'package:appi_ducks/read_week.dart';
-import 'package:appi_ducks/database/database_helper.dart';
 
 void main() {
 
-// DataBaseHelper dataBaseHelper = new DataBaseHelper();
-
+// oppretter et object av klassen readweek
   ReadWeek readweek = new ReadWeek();
-print ('her ?');
+
+  // kaller metode for lese fra uken fra fil ,
   readweek.loadWeek(1);
 
 

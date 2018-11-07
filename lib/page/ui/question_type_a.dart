@@ -13,17 +13,25 @@ import 'package:appi_ducks/database/model/question.dart';
 class QuestionTypeA extends StatefulWidget {
   Question question;
   InfoLesson infoLesson;
+  bool _isFirstTime;
+
 
   QuestionTypeA(Question ques,InfoLesson info){
     this.question=ques;
     this.infoLesson=info;
-
+     _isFirstTime=true;
   }
 
   @override
   State<StatefulWidget> createState() {
     return _QuestionTypeA();
   }
+
+  bool getFirstime(){
+    return _isFirstTime;
+  }
+
+
 }
 
 // Keeps the state for the statefullwidget
@@ -40,7 +48,6 @@ class _QuestionTypeA extends State<QuestionTypeA> {
   //  String that will take the answer the person give
   String _givenAnswer = '';
   bool _isRight = false;
-  bool _isFirstTime=true;
 
   // the keeps the correctAnswer for question
   String corectAnswer;
@@ -78,10 +85,9 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18.0)),
                 onPressed: () {
-                  print(widget.question);
-                  if (_isFirstTime== true) {
-                    print('Tester ');
-                    print(widget.question.answer1);
+
+                  if (widget._isFirstTime== true) {
+
                     answerGiven(context, widget.question.answer1);
 
                   }
@@ -101,7 +107,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                   style: TextStyle(fontSize: 18.0),
                 ),
                 onPressed: () {
-                  if (_isFirstTime == true) {
+                  if (widget._isFirstTime == true) {
                     answerGiven(context,widget.question.answer2);
 
                   }
@@ -120,7 +126,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                   style: TextStyle(fontSize: 16.0),
                 ),
                 onPressed: () {
-                  if (_isFirstTime==true) {
+                  if (widget._isFirstTime==true) {
 
                     answerGiven(context, widget.question.answer3);
 
@@ -142,7 +148,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                     style: TextStyle(fontSize: 18.0),
                   ),
                   onPressed: () {
-                    if (_isFirstTime == true) {
+                    if (widget._isFirstTime == true) {
                       answerGiven(context,widget.question.answer4);
 
                     }
@@ -161,13 +167,13 @@ class _QuestionTypeA extends State<QuestionTypeA> {
       _givenAnswer = s;
       _isRight = questionEvaluator.checkAnswer(context, widget.question, _givenAnswer, widget.infoLesson);
       widget.question.setFirstTime();
-      _isFirstTime=false;
+      widget._isFirstTime=false;
     });
     // calls the showMessage with
     if(_isRight==false) {
       questionFeedback.showMessageWrongAnswer(context, widget.question);
       widget.question.setFirstTime();
-      _isFirstTime=false;
+      widget._isFirstTime=false;
     }
   }
 }

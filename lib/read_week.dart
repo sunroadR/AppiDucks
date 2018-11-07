@@ -19,19 +19,17 @@ class ReadWeek{
 
   void  loadWeek(int weekNr){
 
-    print('inne i load');
-    JsonCodec jsonCodec = new JsonCodec();
+    JsonCodec cod = new JsonCodec();
 
-    loadAssets('assets/week1.csv').then((dynamic output) {
+    loadAssets('assets/week$weekNr.csv').then((dynamic output) {
       String weekQues = output;
 
 
-      try {
-        Map<String, dynamic> decoded = jsonCodec.decode(weekQues);
 
-        print(decoded);
-        for(int a=1; a<=1 ; a++) {
-          print('hvor mange ganger er vi her ?');
+      try {
+        Map<String, dynamic> decoded = cod.decode(weekQues);
+
+        for(int a=1; a<=5  ; a++) {
           String uniq = '${decoded['uniqID$a']}';
           String ques = '${decoded['que$a']}';
           String ans1 = '${decoded['ans1$a']}';
@@ -40,10 +38,8 @@ class ReadWeek{
           String ans4 = '${decoded['ans4$a']}';
           String ans5 = '${decoded['ans5$a']}';
           String ans6 = '${decoded['ans6$a']}';
-          String corrAns = '${decoded['correctAns1$a']}';
+          String corrAns = '${decoded['correctAns$a']}';
           String pageType = '${decoded['pageType$a']}';
-          print(' PageType : ');
-          print(uniq);
 
           db.saveQuestion(new Question(uniq,ques,ans1,ans2,ans3,ans4,ans5,ans6,corrAns,pageType));
 

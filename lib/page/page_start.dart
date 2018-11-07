@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:appi_ducks/page/page_lesson.dart';
-//import 'package:appi_ducks/helpefile.dart';
-import 'package:appi_ducks/database/database_helper.dart';
 
 /*
     The startpage  for the  app where information about the users level,
@@ -11,11 +9,7 @@ import 'package:appi_ducks/database/database_helper.dart';
 class PageStart extends StatelessWidget {
   @override
   PageStart() {
-   // DataBaseHelper dataBaseHelper = new DataBaseHelper();
-   // HelpeFile helpeFile = new HelpeFile();
-    //dataBaseHelper.initDB();
 
-   // helpeFile.leggNyeSpr();
   }
 
   Widget build(BuildContext context) {

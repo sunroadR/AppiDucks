@@ -87,7 +87,7 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18.0)),
                 onPressed: () {
-                  if(t>=4){
+                  if(t>=12){
                     Navigator.push(context, MaterialPageRoute(builder:(context)=> SummaryPage()));
                   }
 
@@ -106,10 +106,12 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
   }
 
   void setCurrentQuestion(Question q) {
+
     this.currentQuestion = q;
   }
 
   Widget currentView(Question ques) {
+
     if (ques.pageWidget == "QuestionTypeA") {
       return new QuestionTypeA(ques,infoLesson);
     }

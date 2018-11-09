@@ -112,6 +112,108 @@ class LessonFeedBack extends StatelessWidget {
     showDialog(context: context, child: message);
   }
 
+  // Shows message for 10 på rad
+  void showMessageTenInRow(BuildContext context){
+
+    String _threeInRow = 'Ti rette på rad! Nå begynner du å bli klar til eksamen i materialet fra denne uken. ';
+    AlertDialog message = new AlertDialog(
+
+      content: DecoratedBox(
+
+
+        decoration: BoxDecoration(
+          gradient: RadialGradient(
+            center: const Alignment(-0.5, -0.6),
+            radius: 0.1,
+            colors: <Color>[
+              const Color(0xFFEEEEE3),
+              const Color(0xFf16183),
+            ],
+            stops: <double>[0.9, 1.0],
+          ),
+        ),
+
+        child:new RichText(
+          text: new TextSpan(children: <TextSpan>[
+            // feedback message
+            new TextSpan(
+              text: _threeInRow,
+              // in indigo blue
+              style: new TextStyle(
+                color: Theme.of(context).accentColor, fontSize: 25.0,
+                decorationColor: Colors.lightBlue,
+
+
+              ),
+
+            ),
+            //  The right answer
+
+          ]),
+        ),
+      ),);
+    EdgeInsets.fromLTRB(25.0, 500.0, 25.0, 20.0);
+
+    // shows the window
+    showDialog(context: context, child: message);
+  }
+
+
+  // Shows message for 12 på rad
+  void showMessageTwelveInRow(BuildContext context){
+
+    String _threeInRow = 'Tolv rette på rad! Hm, kanskje du skal øve '
+        'på en av de andre ukene? Dette kan du allerede. Dette bør åpne for neste uke om '
+        'den ikke allerede er åpnet. ';
+    AlertDialog message = new AlertDialog(
+
+      content: DecoratedBox(
+
+
+        decoration: BoxDecoration(
+          gradient: RadialGradient(
+            center: const Alignment(-0.5, -0.6),
+            radius: 0.1,
+            colors: <Color>[
+              const Color(0xFFEEEEE3),
+              const Color(0xFf16183),
+            ],
+            stops: <double>[0.9, 1.0],
+          ),
+        ),
+
+        child:new RichText(
+          text: new TextSpan(children: <TextSpan>[
+            // feedback message
+            new TextSpan(
+              text: _threeInRow,
+              // in indigo blue
+              style: new TextStyle(
+                color: Theme.of(context).accentColor, fontSize: 25.0,
+                decorationColor: Colors.lightBlue,
+
+
+              ),
+
+            ),
+            //  The right answer
+
+          ]),
+        ),
+      ),);
+    EdgeInsets.fromLTRB(25.0, 500.0, 25.0, 20.0);
+
+    // shows the window
+    showDialog(context: context, child: message);
+  }
+
+
+
+
+
+
+
+
 // Metode som gir beskjed om at bruker må skrive inn et svar
   void showMessageNotAnswered(BuildContext context) {
     // variable that holdes the feedback

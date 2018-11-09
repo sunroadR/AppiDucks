@@ -17,11 +17,13 @@ class ReadWeek{
 
   DataBaseHelper db = new DataBaseHelper();
 
+
+
   void  loadWeek(int weekNr){
 
     JsonCodec cod = new JsonCodec();
 
-    loadAssets('assets/week$weekNr.csv').then((dynamic output) {
+    loadAssets('assets/week2.csv').then((dynamic output) {
       String weekQues = output;
 
 
@@ -29,7 +31,7 @@ class ReadWeek{
       try {
         Map<String, dynamic> decoded = cod.decode(weekQues);
 
-        for(int a=1; a<=5  ; a++) {
+        for(int a=1; a<=20  ; a++) {
           String uniq = '${decoded['uniqID$a']}';
           String ques = '${decoded['que$a']}';
           String ans1 = '${decoded['ans1$a']}';
@@ -41,9 +43,19 @@ class ReadWeek{
           String corrAns = '${decoded['correctAns$a']}';
           String pageType = '${decoded['pageType$a']}';
 
+          print(uniq);
+          print(ques);
+          print(ans1);
+          print(ans2);
+          print(ans3);
+          print(ans4);
+          print(corrAns);
+
           db.saveQuestion(new Question(uniq,ques,ans1,ans2,ans3,ans4,ans5,ans6,corrAns,pageType));
+       //  print( db.getUser(0));
 
         }
+
       } catch (e) {
         print('Error : $e');
       }

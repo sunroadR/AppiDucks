@@ -5,7 +5,7 @@ import 'package:sqflite/sqflite.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'package:appi_ducks/database/model/question.dart';
-
+import 'package:appi_ducks/database/model/user';
 class DataBaseHelper {
   static final DataBaseHelper _instance = new DataBaseHelper.internal();
 
@@ -29,7 +29,7 @@ class DataBaseHelper {
         "appiDucks.db"); // android directory for (?) for å lagre
     await deleteDatabase(path);
     var theDB = await openDatabase(path, version: 5, onCreate: _onCreate);
-  // await deleteDatabase(path); // denne legger jeg til for å prøve slette data besen
+    //await deleteDatabase(path); // denne legger jeg til for å prøve slette data besen
     return theDB;
   }
 
@@ -39,10 +39,15 @@ class DataBaseHelper {
     await db.execute(
         "CREATE TABLE Question(id INTEGER PRIMARY KEY, nr TEXT, question TEXT,answer1 TEXT, answer2 TEXT,answer3 TEXT,"
         'answer4 TEXT,answer5 TEXT,answer6 TEXT, correctAns TEXT, pageWidget TEXT)');
-    print("Created tabls");
+
+    await db.execute(
+         "CREATE TABLE USER(id INTEGER PRIMARY KEY, level INTEGER, daysInRow INTEGER)"
+    );
+
+    print("Created tables");
   }
 
-// Get a list of all the  question for the weeksQuestions
+// Get a question for the weeksQuestions
   Future<Question> getQuestions(int i) async {
 
     var dbQuestions = await db;
@@ -61,6 +66,9 @@ class DataBaseHelper {
 
     return oneQuestion;
   }
+
+
+
 
   // Gets a question , put the information stored in the question in the table
   void saveQuestion(Question q) async {
@@ -82,4 +90,36 @@ class DataBaseHelper {
           ]);
     });
   }
+/**
+  //gets the user, and puts the information in the table
+  void saveUser(User user) async {
+    var dbUser = await db;
+    await dbUser.transaction((txn) async{
+      return await txn.rawInsert(
+          'INSERT INTO USER(level,daysInRow) VALUES(?,?)',
+          [
+            user.level,
+            user.daysInRow
+          ]);
+    });
+  }
+
+  // Get the user from the table
+  Future<User> getUser(int i) async{
+
+    var dbUser = await db;
+
+
+    List<Map> result = await dbUser.rawQuery('SELECT * FROM user');
+    if(result.length == 0)return null;
+    User user = new User(
+        result[i]['level'],
+        result[i]['daysInRow']
+    );
+    print(user.daysInRow);
+    print(user.level);
+    return user;
+  }
+    */
+
 }

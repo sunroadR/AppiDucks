@@ -24,7 +24,7 @@ class InfoLesson {
   }
 
   // Metode som blir kaldt når buker svare riktig, Da oppdater
-  // Da oppdateres correctAnsInRow
+  // Da oppdateres correctAnsInRow og hvis bruker har
   void addCorrectAnsInRow(BuildContext context){
 
 
@@ -36,9 +36,18 @@ class InfoLesson {
     else if(getCorrectAnsInRow()==5){
       lessonFeedBack.showMessageFiveInRow(context);
     }
-    else {
-      questionFeedback.showMessageRightAnswer(context);
+
+    else if(getCorrectAnsInRow()==10){
+    lessonFeedBack.showMessageTenInRow(context);
     }
+    else if(getCorrectAnsInRow()==12){
+    lessonFeedBack.showMessageTwelveInRow(context);
+    }
+    else {
+    questionFeedback.showMessageRightAnswer(context);
+    }
+
+
   }
 
   // metoder som setter antall riktige på rad til lik null , når bruker svarer feil

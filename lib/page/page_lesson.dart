@@ -87,7 +87,7 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18.0)),
                 onPressed: () {
-                  if(t>=12){
+                  if(t>=20){
                     Navigator.push(context, MaterialPageRoute(builder:(context)=> SummaryPage()));
                   }
 

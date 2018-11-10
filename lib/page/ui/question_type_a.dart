@@ -74,15 +74,23 @@ class _QuestionTypeA extends State<QuestionTypeA> {
 
           // The lay out for the four button
 
-          new Row(
-             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+          new Container(
 
-              new MaterialButton(
+            padding: EdgeInsets.all(12.0),
+           // mainAxisAlignment : MainAxisAlignment.spaceEvenly,
+          //   mainAxisAlignment: MainAxisAlignment.center,
+
+
+              child: MaterialButton(
+
+                minWidth: 200.0,
+                height: 100.0,
+
                 key: Key('answerA1'),
                 color: Theme.of(context).buttonColor,
                 child: Text(widget.question.answer1,
                     textAlign: TextAlign.center,
+                    softWrap: true,
                     style: TextStyle(fontSize: 18.0)),
                 onPressed: () {
 
@@ -93,17 +101,24 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                   }
                 },
               ),
-            ],
           ),
 
-          new Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              new MaterialButton(
-                key: Key('answerA2'),
+new Container(
+    padding: EdgeInsets.all(12.0),
+    // mainAxisAlignment : MainAxisAlignment.spaceEvenly,
+    //   mainAxisAlignment: MainAxisAlignment.center,
+
+
+    child: MaterialButton(
+
+    minWidth: 200.0,
+    height: 100.0,
+
+    key: Key('answerA2'),
                 color: Theme.of(context).buttonColor,
                 child: Text(
                   widget.question.answer2,
+                  softWrap: true,
                   style: TextStyle(fontSize: 18.0),
                 ),
                 onPressed: () {
@@ -113,16 +128,24 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                   }
                 },
               ),
-            ],
-          ),
-          new Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              new MaterialButton(
-                key: Key('answerA3'),
+),
+          new Container(
+
+            padding: EdgeInsets.all(12.0),
+            // mainAxisAlignment : MainAxisAlignment.spaceEvenly,
+            //   mainAxisAlignment: MainAxisAlignment.center,
+
+
+            child: MaterialButton(
+
+              minWidth: 200.0,
+              height: 100.0,
+
+              key: Key('answerA3'),
                 color: Theme.of(context).buttonColor,
                 child: Text(
                   widget.question.answer3,
+                  softWrap: true,
                   style: TextStyle(fontSize: 16.0),
                 ),
                 onPressed: () {
@@ -134,18 +157,27 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                   }
                 },
               ),
-            ],
-          ),
+    )
 
-          new Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              MaterialButton(
-                  key: Key('answerA4'),
+
+          new Container(
+
+            padding: EdgeInsets.all(12.0),
+            // mainAxisAlignment : MainAxisAlignment.spaceEvenly,
+            //   mainAxisAlignment: MainAxisAlignment.center,
+
+
+            child: MaterialButton(
+
+                minWidth: 200.0,
+                height: 100.0,
+
+                key: Key('answerA4'),
                   color: Theme.of(context).buttonColor,
                   child: Text(
                     widget.question.answer4,
                     style: TextStyle(fontSize: 18.0),
+                    softWrap: true,
                   ),
                   onPressed: () {
                     if (widget._isFirstTime == true) {
@@ -153,10 +185,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
 
                     }
                   }),
-            ],
-          ),
-        ],
-
+    ),],
     );
   }
 

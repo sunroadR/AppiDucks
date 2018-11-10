@@ -31,7 +31,7 @@ class ReadWeek{
       try {
         Map<String, dynamic> decoded = cod.decode(weekQues);
 
-        for(int a=1; a<=20  ; a++) {
+        for(int a=1; a<33  ; a++) {
           String uniq = '${decoded['uniqID$a']}';
           String ques = '${decoded['que$a']}';
           String ans1 = '${decoded['ans1$a']}';

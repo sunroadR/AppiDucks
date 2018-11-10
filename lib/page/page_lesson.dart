@@ -80,14 +80,18 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
                   },
                 )),
             new MaterialButton(
+
+                minWidth: 300.0,
+                height: 50.0,
                 color: Theme
                     .of(context)
-                    .buttonColor,
+                    .primaryColor,
                 child: Text('Neste',
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 18.0)),
+                    style: TextStyle(fontSize: 18.0,
+                    color: Colors.white)),
                 onPressed: () {
-                  if(t>=20){
+                  if(t>=33){
                     Navigator.push(context, MaterialPageRoute(builder:(context)=> SummaryPage()));
                   }
 

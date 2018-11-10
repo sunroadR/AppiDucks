@@ -91,7 +91,8 @@ class _QuestionTypeA extends State<QuestionTypeA> {
                 child: Text(widget.question.answer1,
                     textAlign: TextAlign.center,
                     softWrap: true,
-                    style: TextStyle(fontSize: 18.0)),
+                    style: TextStyle(fontSize: 18.0)
+                    ),
                 onPressed: () {
 
                   if (widget._isFirstTime== true) {
@@ -109,6 +110,7 @@ new Container(
     //   mainAxisAlignment: MainAxisAlignment.center,
 
 
+
     child: MaterialButton(
 
     minWidth: 200.0,
@@ -119,7 +121,10 @@ new Container(
                 child: Text(
                   widget.question.answer2,
                   softWrap: true,
-                  style: TextStyle(fontSize: 18.0),
+                  style: TextStyle(fontSize: 18.0,
+
+                  ),
+                    textAlign: TextAlign.center
                 ),
                 onPressed: () {
                   if (widget._isFirstTime == true) {
@@ -147,6 +152,7 @@ new Container(
                   widget.question.answer3,
                   softWrap: true,
                   style: TextStyle(fontSize: 16.0),
+                    textAlign: TextAlign.center
                 ),
                 onPressed: () {
                   if (widget._isFirstTime==true) {
@@ -157,7 +163,7 @@ new Container(
                   }
                 },
               ),
-    )
+    ),
 
 
           new Container(
@@ -174,10 +180,13 @@ new Container(
 
                 key: Key('answerA4'),
                   color: Theme.of(context).buttonColor,
+
                   child: Text(
                     widget.question.answer4,
                     style: TextStyle(fontSize: 18.0),
+
                     softWrap: true,
+                      textAlign: TextAlign.center
                   ),
                   onPressed: () {
                     if (widget._isFirstTime == true) {

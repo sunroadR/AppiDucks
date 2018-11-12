@@ -54,8 +54,10 @@ class _QuestionTypeA extends State<QuestionTypeA> {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    
+
+    return Column(
+       // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
         // center the text on the screen
 
@@ -84,7 +86,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
               child: MaterialButton(
 
                 minWidth: 200.0,
-                height: 100.0,
+                height: 50.0,
 
                 key: Key('answerA1'),
                 color: Theme.of(context).buttonColor,
@@ -114,7 +116,7 @@ new Container(
     child: MaterialButton(
 
     minWidth: 200.0,
-    height: 100.0,
+    height: 50.0,
 
     key: Key('answerA2'),
                 color: Theme.of(context).buttonColor,
@@ -144,7 +146,7 @@ new Container(
             child: MaterialButton(
 
               minWidth: 200.0,
-              height: 100.0,
+              height: 50.0,
 
               key: Key('answerA3'),
                 color: Theme.of(context).buttonColor,
@@ -176,7 +178,7 @@ new Container(
             child: MaterialButton(
 
                 minWidth: 200.0,
-                height: 100.0,
+                height: 50.0,
 
                 key: Key('answerA4'),
                   color: Theme.of(context).buttonColor,

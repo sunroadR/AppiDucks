@@ -9,10 +9,13 @@ import 'package:appi_ducks/page/ui/question_type_b.dart';
 import 'package:appi_ducks/page/ui/question_type_c.dart';
 import 'package:appi_ducks/database/model/question.dart';
 import 'package:appi_ducks/info_lesson.dart';
-
+import 'package:appi_ducks/start_lesson.dart';
 
 // The page which shows the question in a lessonsession
 class PageLesson extends StatefulWidget {
+
+
+
   @override
   State<StatefulWidget> createState() {
     return _PageLesson();
@@ -32,13 +35,22 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
   //HelpeFile helpeFile = new HelpeFile();
 
   Lesson lesson;
-  int t = 0;
+  StartLesson startLesson = new StartLesson();
+
+  var t;
+  var questionNr;
+  List<int> _allQuestion;
   bool _notAnswered=false;
 
   @override
   void initState() {
     super.initState();
+    _allQuestion=startLesson.createLesson();
     lesson = new Lesson(this);
+    print('lengden til listen med sprøsmål ');
+    print(_allQuestion);
+    questionNr =0;
+    _allQuestion.elementAt(questionNr);
     }
 
   displayRecord() {
@@ -63,7 +75,7 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
             new Container(
                 margin: EdgeInsets.all(0.0),
                 child: new FutureBuilder<Question>(
-                  future: lesson.getQuestion(t),
+                  future: lesson.getQuestion(_allQuestion.elementAt(questionNr)),
                   builder: (BuildContext context, AsyncSnapshot snapshot) {
 
                     if (snapshot.hasError) print(snapshot.hasError);
@@ -91,7 +103,7 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
                     style: TextStyle(fontSize: 18.0,
                     color: Colors.white)),
                 onPressed: () {
-                  if(t>=33){
+                  if(questionNr>=_allQuestion.length){
                     Navigator.push(context, MaterialPageRoute(builder:(context)=> SummaryPage()));
                   }
 
@@ -100,6 +112,8 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
           ],
         ));
   }
+
+
   bool get notAnswered => _notAnswered;
   void setNotAnsweredTrue(){
      _notAnswered=true;
@@ -132,9 +146,10 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
   @override
   void screenUpdate() {
     setState(() {
+     questionNr=questionNr+1;
+     print(questionNr);
+        lesson.getQuestion(_allQuestion.elementAt(questionNr));
 
-        lesson.getQuestion(t);
-        t = t + 1;
       
 
 

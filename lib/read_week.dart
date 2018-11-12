@@ -43,16 +43,9 @@ class ReadWeek{
           String corrAns = '${decoded['correctAns$a']}';
           String pageType = '${decoded['pageType$a']}';
 
-          print(uniq);
-          print(ques);
-          print(ans1);
-          print(ans2);
-          print(ans3);
-          print(ans4);
-          print(corrAns);
 
           db.saveQuestion(new Question(uniq,ques,ans1,ans2,ans3,ans4,ans5,ans6,corrAns,pageType));
-       //  print( db.getUser(0));
+
 
         }
 

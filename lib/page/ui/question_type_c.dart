@@ -15,11 +15,13 @@ class QuestionTypeC extends StatefulWidget {
   Question question;
   InfoLesson infoLesson;
   bool _isFirstTime;
+  String _givenAnswer='';
 
   QuestionTypeC(Question q, InfoLesson info) {
     this.question = q;
     this.infoLesson=info;
     _isFirstTime = true;
+    _givenAnswer='';
 
   }
 
@@ -30,6 +32,7 @@ class QuestionTypeC extends StatefulWidget {
   bool getFirstime(){
     return _isFirstTime;
   }
+
 
   void setFirstime(){
     _isFirstTime=false;
@@ -75,7 +78,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
             MaterialButton(
                 minWidth: 14.0,
                 color: Theme.of(context).buttonColor,
-                child: Text(_givenAnswer),
+                child: Text(widget._givenAnswer),
                 onPressed: () {
                   if(widget._isFirstTime==true) {
                     // retrive the answer the user has typed  inn
@@ -99,7 +102,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
       // retrive the answer the user has typed  inn
 
       setState(() {
-        _givenAnswer = widget.question.answer1;
+       widget._givenAnswer = widget.question.answer1;
       });
     }}),
           MaterialButton(
@@ -109,7 +112,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
               onPressed: () {
             if(widget._isFirstTime==true) {
               setState(() {
-                _givenAnswer = widget.question.answer2;
+                widget._givenAnswer = widget.question.answer2;
               });
             }   }),
           MaterialButton(
@@ -122,7 +125,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
       Text(widget.question.answer3);
 
       setState(() {
-        _givenAnswer = widget.question.answer3;
+        widget._givenAnswer = widget.question.answer3;
       });
     }   })
         ],
@@ -140,7 +143,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
       Text(widget.question.answer4);
 
       setState(() {
-        _givenAnswer = widget.question.answer4;
+        widget._givenAnswer = widget.question.answer4;
 
       });
     } }),
@@ -153,7 +156,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
       Text(widget.question.answer5);
 
       setState(() {
-        _givenAnswer = widget.question.answer5;
+        widget._givenAnswer = widget.question.answer5;
       });
     }   }),
           MaterialButton(
@@ -165,7 +168,7 @@ class _QuestionTypeC extends State<QuestionTypeC> {
       Text(widget.question.answer6);
 
       setState(() {
-        _givenAnswer = widget.question.answer6;
+        widget._givenAnswer = widget.question.answer6;
       });
     }    }),
         ],
@@ -188,14 +191,17 @@ class _QuestionTypeC extends State<QuestionTypeC> {
                    widget.setFirstime();
                   // Kaller metode i _questionElovator og evaluerer avgitt svar
                   _isRight = _questionEvaluator.checkAnswer(context,
-                      widget.question, _givenAnswer,widget.infoLesson);
+                      widget.question, widget._givenAnswer,widget.infoLesson);
                   // calls the showMessage with, Gir tilbake melding
                   if(_isRight==false) {
                     questionFeedback.showMessageWrongAnswer(
                         context, widget.question);
 
+
                     // Endrer navn på button, til neste og den vil nå ta bruker til neste side
-                  }});
+                  }
+
+                });
               }
             },
           ),

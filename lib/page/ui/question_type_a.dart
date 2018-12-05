@@ -63,7 +63,10 @@ class _QuestionTypeA extends State<QuestionTypeA> {
 
         children: <Widget>[
           // Text with the question
-          new Text(
+          new  Container(
+            padding: EdgeInsets.all(44.0),
+
+            child: Text(
 
             widget.question.question,
 
@@ -72,7 +75,7 @@ class _QuestionTypeA extends State<QuestionTypeA> {
               style: TextStyle(
                   fontSize: 24.0, color: Theme.of(context).accentColor),
               textAlign: TextAlign.center,
-            softWrap: true,),
+            softWrap: true,),),
 
           // The lay out for the four button
 

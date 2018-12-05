@@ -60,11 +60,14 @@ class _QuestionTypeB extends State<QuestionTypeB> {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          new Text(widget.question.question,
+          Container(
+
+            padding: EdgeInsets.all(44.0),
+              child: Text(widget.question.question,
               key: Key('QuestionTypeB'),
               style: TextStyle(
                   fontSize: 24.0, color: Theme.of(context).accentColor),
-              textAlign: TextAlign.center),
+              textAlign: TextAlign.center),),
           new SingleChildScrollView(
           child: Container(
             width: 300.0,

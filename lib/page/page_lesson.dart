@@ -91,7 +91,10 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
                         : new Center(child: new CircularProgressIndicator());
                   },
                 )),
-            new MaterialButton(
+            Container(
+
+              padding: EdgeInsets.only(bottom: 3.0),
+            child: MaterialButton(
 
                 minWidth: 300.0,
                 height: 50.0,
@@ -103,12 +106,14 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
                     style: TextStyle(fontSize: 18.0,
                     color: Colors.white)),
                 onPressed: () {
-                  if(questionNr>=_allQuestion.length){
+                  if(questionNr>=_allQuestion.length-1){
                     Navigator.push(context, MaterialPageRoute(builder:(context)=> SummaryPage()));
                   }
 
                   screenUpdate();
                 }),
+            ),
+
           ],
         ));
   }

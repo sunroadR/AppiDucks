@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
+import 'package:appi_ducks/matte_uke1.dart';
+import 'package:appi_ducks/database/model/question.dart';
 // The class create a lesson with 12 question
 
 class StartLesson {
@@ -9,7 +11,9 @@ class StartLesson {
    var t = new Random();
   int a;
 
-  List<int> createLesson() {
+  MatteUke1 matteUke1 =new MatteUke1();
+
+  List<Question> createLesson() {
 
 
       a = t.nextInt(32);

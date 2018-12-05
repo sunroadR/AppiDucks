@@ -29,7 +29,7 @@ class DataBaseHelper {
         "appiDucks.db"); // android directory for (?) for å lagre
     await deleteDatabase(path);
     var theDB = await openDatabase(path, version: 5, onCreate: _onCreate);
-    //await deleteDatabase(path); // denne legger jeg til for å prøve slette data besen
+   // await deleteDatabase(path); // denne legger jeg til for å prøve slette data besen
     return theDB;
   }
 

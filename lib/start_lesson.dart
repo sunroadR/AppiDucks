@@ -13,7 +13,7 @@ class StartLesson {
 
   MatteUke1 matteUke1 =new MatteUke1();
 
-  List<Question> createLesson() {
+  List<int> createLesson() {
 
 
       a = t.nextInt(32);

@@ -13,6 +13,7 @@ void main() {
  // db.saveUser(new User(01,3));
  // db.saveUser(new User(2,6));
 
+
   // kaller metode for lese fra uken fra fil ,
   readweek.loadWeek(2);
 

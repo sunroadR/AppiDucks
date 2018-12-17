@@ -21,6 +21,8 @@ class ReadWeek{
 
   void  loadWeek(int weekNr){
 
+
+
     JsonCodec cod = new JsonCodec();
 
     loadAssets('assets/week2.csv').then((dynamic output) {

@@ -12,3 +12,6 @@
         "ans35": "feil type quote mark","ans45": "feilstavet Helo",
 "ans55":"", "ans65":"","correctAns5":"mangler quote etter world","pageType5":"QuestionTypeA"
 }
+
+
+"uniqID1":"1.1.1", "que1":"Hva er et program?", "ans11":"Python", "ans21":"Matte oppgaver", "ans31":"Sett med variabler", "ans41":"Sett med instruksjoner", "correctAns1":"Sett med instruksjoner", "pageType1":"QuestionTypeA"

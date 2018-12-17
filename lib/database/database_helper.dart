@@ -5,9 +5,14 @@ import 'package:sqflite/sqflite.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'package:appi_ducks/database/model/question.dart';
+import 'package:appi_ducks/matte_uke1.dart';
 import 'package:appi_ducks/database/model/user';
 class DataBaseHelper {
+
   static final DataBaseHelper _instance = new DataBaseHelper.internal();
+
+  int mathId=20;
+  MatteUke1 matteUke1= new MatteUke1();
 
   factory DataBaseHelper() => _instance;
   static Database _db;
@@ -51,20 +56,30 @@ class DataBaseHelper {
   Future<Question> getQuestions(int i) async {
 
     var dbQuestions = await db;
-    List<Map> result = await dbQuestions.rawQuery('SELECT * FROM question');
-        Question oneQuestion =new Question(
-        result[i]["nr"],
-        result[i]["question"],
-        result[i]["answer1"],
-        result[i]["answer2"],
-        result[i]["answer3"],
-        result[i]["answer4"],
-        result[i]["answer5"],
-        result[i]["answer6"],
-        result[i]["correctAns"],
-        result[i]["pageWidget"]);
 
-    return oneQuestion;
+    if(i==mathId){
+      Question question= await matteUke1.division1();
+      print('riktig svar');
+      print(question.correctAns);
+      return question;
+    }
+
+    else {
+      List<Map> result = await dbQuestions.rawQuery('SELECT * FROM question');
+      Question oneQuestion = new Question(
+          result[i]["nr"],
+          result[i]["question"],
+          result[i]["answer1"],
+          result[i]["answer2"],
+          result[i]["answer3"],
+          result[i]["answer4"],
+          result[i]["answer5"],
+          result[i]["answer6"],
+          result[i]["correctAns"],
+          result[i]["pageWidget"]);
+
+      return oneQuestion;
+    }
   }
 
 

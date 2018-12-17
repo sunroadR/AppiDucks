@@ -45,6 +45,7 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
   @override
   void initState() {
     super.initState();
+    print('Kom jeg inni initState page_lesson');
     _allQuestion=startLesson.createLesson();
     lesson = new Lesson(this);
     print('lengden til listen med sprøsmål ');
@@ -134,6 +135,8 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
   }
 
   Widget currentView(Question ques) {
+
+    print(ques.correctAns);
 
     if (ques.pageWidget == "QuestionTypeA") {
       return new QuestionTypeA(ques,infoLesson);

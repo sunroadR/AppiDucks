@@ -15,9 +15,12 @@ class StartLesson {
 
   List<int> createLesson() {
 
-
       a = t.nextInt(32);
+
+      print('før verdien av a ');
+      print(a);
       questionsLesson.add(a);
+
 
     for (int i = 1; i<12; i++) {
       a = t.nextInt(32);
@@ -40,4 +43,5 @@ class StartLesson {
       }}
     return false;
   }
+
 }

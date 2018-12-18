@@ -11,7 +11,7 @@ import 'package:appi_ducks/info_lesson.dart';
 import 'dart:developer';
 
 // WidgetClass that shows the layout for the screen for the question of type A
-// but troughthe implemetation it will read the qeustion
+// but trough the implemetation it will read the qeustion
 // and answer from a table.
 //
 class QuestionTypeB extends StatefulWidget {
@@ -45,7 +45,7 @@ class _QuestionTypeB extends State<QuestionTypeB> {
 
   // Create a text controller. That is used to retrieve  the current answer
   // of the textfield
-  final _ansController = TextEditingController();
+  final _ansController =new TextEditingController();
 
   @override
   @override
@@ -80,6 +80,7 @@ class _QuestionTypeB extends State<QuestionTypeB> {
                     color: Theme.of(context).primaryColor, width: 1.0)),
 
                 child: new TextField(
+                  autofocus: true|false,
               textAlign: TextAlign.center,
               controller: _ansController,
               decoration: new InputDecoration(
@@ -107,33 +108,32 @@ class _QuestionTypeB extends State<QuestionTypeB> {
                   print(widget.question.firstTime);
                   // retrive the answer the user has typed  inn
 
-                if(_isFirst==true) {
+              if(_isFirst==true) {
+                setState(() {
+                  print('inne i onPressed() setState()');
+                  _givenAnswer = _ansController.text.toString();
+                  // sjekker at det er tastet inn et svar
+                  if (_givenAnswer.length == 0) {
+                    // Gir beskjed om at de må skrive inn et svar
+                    questionFeedback.showMessageNoAnswer(context);
+                  } else {
+                    print('inne i onPressed() i  setState() inne i else ');
+                    print(_givenAnswer);
+                    _isFirst = false;
+                    // Kaller metode i _questionEvaluator og evaluerer avgitt svar
+                    _isRight = _questionEvaluator.checkAnswer(context,
+                        widget.question, _givenAnswer, widget.infoLesson);
+                    //  widget.question.setFirstTime();
+                    // calls the showMessageWrogAnswer if wrong answer
 
-                  setState(() {
-                    _givenAnswer = _ansController.text.toString();
-                    // sjekker at det er tastet inn et svar
-                      if (_givenAnswer.length == 0) {
-                        // Gir beskjed om at de må skrive inn et svar
-                        questionFeedback.showMessageNoAnswer(context);
-                      } else {
-
-                          _isFirst=false;
-                          // Kaller metode i _questionElovator og evaluerer avgitt svar
-                          _isRight = _questionEvaluator.checkAnswer(context,
-                              widget.question, _givenAnswer, widget.infoLesson);
-                          //  widget.question.setFirstTime();
-                          // calls the showMessageWrogAnswer if wrong answer
-
-                            if (_isRight == false) {
-                            questionFeedback.showMessageWrongAnswer(
-                                context, widget.question);
-                           // widget.question.setFirstTime();
-                            // Endrer navn på button, til neste og den vil nå ta bruker til neste side
-                          }
-                        }
-
-                    } );
-                }}
+                    if (_isRight == false) {
+                      questionFeedback.showMessageWrongAnswer(
+                          context, widget.question);
+                    }
+                  }
+                }
+                );
+              }   }
               ),
             ],
           ),

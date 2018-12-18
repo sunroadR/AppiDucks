@@ -18,6 +18,8 @@ class QuestionEvaluator {
   bool checkAnswer(BuildContext context, Question question, String answer,
       InfoLesson infoLesson) {
 
+    print('Inne i checkAnswer hos question_evaluator ');
+    print(answer);
     // Fjerner whitespace i Strengene for riktig svar og avgitt svar
    //var _correct = question.correctAns.replaceAll(new RegExp(r"\s+\b|\b\s"), "");
     //print(_correct, );

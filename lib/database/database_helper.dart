@@ -11,7 +11,15 @@ class DataBaseHelper {
 
   static final DataBaseHelper _instance = new DataBaseHelper.internal();
 
-  int mathId=20;
+  int mathId1=20;
+  int mathId2=21;
+  int mathId3=22;
+  int mathId4=23;
+  int mathId5=24;
+  int mathId6=25;
+  int mathId7=26;
+  int mathId8=27;
+
   MatteUke1 matteUke1= new MatteUke1();
 
   factory DataBaseHelper() => _instance;
@@ -57,13 +65,37 @@ class DataBaseHelper {
 
     var dbQuestions = await db;
 
-    if(i==mathId){
-      Question question= await matteUke1.division1();
-      print('riktig svar');
-      print(question.correctAns);
-      return question;
-    }
+    if(i==mathId1){
 
+      return await matteUke1.division1();
+    }
+    if(i==mathId2){
+
+
+      return await matteUke1.divisionNeg();
+    }
+    if(i==mathId3){
+
+
+      return await matteUke1.divisionNeg2();
+    }
+    if(i==mathId4){
+
+
+      return await matteUke1.divisionNeg3();
+    }
+   if(i==mathId5){
+     return await matteUke1.divisionNeg4();
+   }
+    if(i==mathId6){
+      return await matteUke1.modulo1();
+    }
+    if(i==mathId7){
+      return await matteUke1.modulo2();
+    }
+    if(i==mathId8) {
+      return await matteUke1.modulo3();
+    }
     else {
       List<Map> result = await dbQuestions.rawQuery('SELECT * FROM question');
       Question oneQuestion = new Question(

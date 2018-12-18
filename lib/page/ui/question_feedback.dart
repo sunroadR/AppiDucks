@@ -56,11 +56,18 @@ class QuestionFeedback extends StatelessWidget {
     // variable that holdes the feedback
     String _feedbackMessage = 'Feil, riktig er :  ';; // if right or wrong message
     // variabl to hold the coorect answer
+    String _correctAnsToShow;
 
-
-    String _correctAnsToShow = question.correctAns[0].toUpperCase() +
-        question.correctAns.substring(1).toLowerCase();
-
+if(question.correctAns.length==0) {
+   print('Inne _correctAnsToShow under her skrives riktig svar');
+   print(question.correctAns);
+  _correctAnsToShow =""+question.correctAns+"";
+  print( _correctAnsToShow);
+}
+else {
+  _correctAnsToShow = question.correctAns[0].toUpperCase() +
+      question.correctAns.substring(1).toLowerCase();
+}
     // creates a AlertDialog window
     AlertDialog message = new AlertDialog(
       // the content that will shows

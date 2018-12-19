@@ -157,12 +157,11 @@ class MatteUke1 {
 
 
     // Deler
-    var j = t/n;
+    var a = t%n;
 
-    int m =j.toInt();
-    int a= t-m*n;
 
-    return new Question("1.2.1", "Hva blir  modulo \n "+t.toString()+ " mod" +t.toString()+" ?",
+
+    return new Question("1.2.1", "Hva blir "+t.toString()+ " modulo " +n.toString()+"?",
         "","","","","",
        "" ,""+a.toString()+"","QuestionTypeB");
 
@@ -180,13 +179,9 @@ class MatteUke1 {
     int n =random.nextInt(49)+1;
 
 
-    // Deler
-    var j = t/(-n);
+    int a= t%n;
 
-    int m =j.toInt();
-    int a= t- m*(-n);
-
-    return new Question("1.2.1", "Hva blir  modulo "+t.toString()+ "mod  " +n.toString()+" ?",
+    return new Question("1.2.1", "Hva blir "+t.toString()+" modulo "+n.toString()+"?",
         "","","","","",
         "" ,""+a.toString()+"","QuestionTypeB");
 
@@ -203,12 +198,7 @@ class MatteUke1 {
     // tilfeldige tall mellom 0-49, men legger til en slik at  man ikke får deling med 0
     int n =random.nextInt(49)+1;
 
-
-    // Deler
-    var j = -t/n;
-
-    int m =j.toInt();
-    int a=(-t)- m*(n);
+    int a=(-t)%n;
 
     return new Question("1.2.1", "Hva blir  modulo "+t.toString()+ "mod  " +n.toString()+" ?",
         "","","","","",

@@ -85,7 +85,7 @@ class Question {
     _firstTime = false;
   }
 
-  /// takes a parameter on the form
+  /// takes a parameter on the form //TODO clean up documentation
   /// "uniqID:X.Y.Z pageType:<question type> que:<question text> [correctAns:<answer text>]? [ans: <alternative answers>]*"
   ///
   /// example argument "uniqID:1.2.8 pageType:questionTypeC que:% correctAns: ans1: ans2: ans3: ans4: ans5: ans6:"

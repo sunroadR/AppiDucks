@@ -28,43 +28,12 @@ class ReadWeek{
 
     loadAssets('assets/week2.csv').then((dynamic output) {
       String weekQues = output;
-      //List<String> weekQues = output.split("\n");
-      //weekQues.removeWhere((s) => !s.contains("uniqID"));
 
       try {
-        //for(String question in weekQues) {
-          Map<Question, dynamic> decoded = cod.decode(weekQues, reviver:(k,v){
+          cod.decode(weekQues, reviver:(k,v){
             if(isQuestion(k))
-              return new Question.fromString(v);
-            return v;
+              db.saveQuestion(Question.fromString(v));
           });
-          print(decoded);
-          /*
-          String uniq = '${decoded['uniqID']}';
-          String ques = '${decoded['que']}';
-          String ans1 = '${decoded['ans']}';
-          String ans2 = '${decoded['ans']}';
-          String ans3 = '${decoded['ans']}';
-          String ans4 = '${decoded['ans']}';
-          String ans5 = '${decoded['ans']}';
-          String ans6 = '${decoded['ans']}';
-          String corrAns = '${decoded['correctAns']}';
-          String pageType = '${decoded['pageType']}';
-
-          print("read from file: " + uniq + ques + ans1 + ans2 + ans3 + ans4 +
-              ans5 + ans6 + corrAns + pageType);
-          db.saveQuestion(new Question(
-              uniq,
-              ques,
-              ans1,
-              ans2,
-              ans3,
-              ans4,
-              ans5,
-              ans6,
-              corrAns,
-              pageType));*/
-      //  }
       } catch (e) {
         print('Error : $e');
       }

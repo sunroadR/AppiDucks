@@ -108,6 +108,9 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
                     color: Colors.white)),
                 onPressed: () {
                   if(questionNr>=_allQuestion.length-1){
+                    print('Antall spørsmål : ');
+                    print(_allQuestion.length);
+
                     Navigator.push(context, MaterialPageRoute(builder:(context)=> SummaryPage()));
                   }
 

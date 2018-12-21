@@ -11,15 +11,6 @@ class DataBaseHelper {
 
   static final DataBaseHelper _instance = new DataBaseHelper.internal();
 
-  int mathId1=20;
-  int mathId2=21;
-  int mathId3=22;
-  int mathId4=23;
-  int mathId5=24;
-  int mathId6=25;
-  int mathId7=26;
-  int mathId8=27;
-
   MatteUke1 matteUke1= new MatteUke1();
 
   factory DataBaseHelper() => _instance;
@@ -61,57 +52,35 @@ class DataBaseHelper {
   }
 
 // Get a question for the weeksQuestions
-  Future<Question> getQuestions(int i) async {
+  Future<Question> getQuestions(int i) async { //TODO get questionS or question?
 
     var dbQuestions = await db;
 
-    if(i==mathId1){
 
-      return await matteUke1.division1();
-    }
-    if(i==mathId2){
+    List<Map> result = await dbQuestions.rawQuery('SELECT * FROM question WHERE id = ' + i.toString());
+    print('resultat: ' + result.toString());
 
+    if(result.isEmpty)
+      return null;
 
-      return await matteUke1.divisionNeg();
-    }
-    if(i==mathId3){
-
-
-      return await matteUke1.divisionNeg2();
-    }
-    if(i==mathId4){
-
-
-      return await matteUke1.divisionNeg3();
-    }
-   if(i==mathId5){
-     return await matteUke1.divisionNeg4();
-   }
-    if(i==mathId6){
-      return await matteUke1.modulo1();
-    }
-    if(i==mathId7){
-      return await matteUke1.modulo2();
-    }
-    if(i==mathId8) {
+    Map question = result[0];
+    /*if(result[0]) {
       return await matteUke1.modulo3();
-    }
-    else {
-      List<Map> result = await dbQuestions.rawQuery('SELECT * FROM question');
-      Question oneQuestion = new Question(
-          result[i]["nr"],
-          result[i]["question"],
-          result[i]["answer1"],
-          result[i]["answer2"],
-          result[i]["answer3"],
-          result[i]["answer4"],
-          result[i]["answer5"],
-          result[i]["answer6"],
-          result[i]["correctAns"],
-          result[i]["pageWidget"]);
+    }*/
+
+    Question oneQuestion = new Question(
+        question["nr"], // nr = uniqId
+        question["question"],
+        question["answer1"],
+        question["answer2"],
+        question["answer3"],
+        question["answer4"],
+        question["answer5"],
+        question["answer6"],
+        question["correctAns"],
+        question["pageWidget"]);
 
       return oneQuestion;
-    }
   }
 
 

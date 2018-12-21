@@ -27,13 +27,13 @@ class ReadWeek{
 
     loadAssets('assets/week2.csv').then((dynamic output) {
       String weekQues = output;
-
+      print('weekQues: ' + weekQues);
 
 
       try {
         Map<String, dynamic> decoded = cod.decode(weekQues);
 
-        for(int a=1; a<33  ; a++) {
+        for(int a=1; a<4  ; a++) {
           String uniq = '${decoded['uniqID$a']}';
           String ques = '${decoded['que$a']}';
           String ans1 = '${decoded['ans1$a']}';
@@ -43,9 +43,9 @@ class ReadWeek{
           String ans5 = '${decoded['ans5$a']}';
           String ans6 = '${decoded['ans6$a']}';
           String corrAns = '${decoded['correctAns$a']}';
-          String pageType = '${decoded['pageType$a']}';
+          String pageType = '${decoded['pageType']}';
 
-
+          print("read from file: " + uniq+ques+ans1+ans2+ans3+ans4+ans5+ans6+corrAns+pageType);
           db.saveQuestion(new Question(uniq,ques,ans1,ans2,ans3,ans4,ans5,ans6,corrAns,pageType));
 
 

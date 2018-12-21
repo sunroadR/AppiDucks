@@ -26,6 +26,6 @@ class Lesson {
   updateScreen() {
     _view.screenUpdate();
   }
-// The question shown on the screen
+
 
 }

@@ -24,11 +24,11 @@ class MatteUke1 {
 
     int a= j.toInt();
 
-    var b =a+1;
-    var c =a+2;
-    var d = a-1;
-    var e = a-2;
-    var f = -a;
+    int b =a+1;
+    int c =a+2;
+    int d = a-1;
+    int e = a-2;
+    int f = -a-3;
 
     return new Question("1.2.1", "Hva blir "+t.toString()+ "// " +n.toString()+" ?",
         ""+a.toString()+"",""+c.toString()+"",""+d.toString()+"",""+b.toString()+"",""+e.toString()+"",
@@ -51,11 +51,11 @@ class MatteUke1 {
     var j = t/n;
 
     int a =j.toInt();
-    var b =a+1;
-    var c =a+2;
-    var d = a-1;
-    var e = a-2;
-    var f = -a;
+    int b =a+1;
+    int c =a+2;
+    int d = a-1;
+    int e = a-2;
+    int f = -a-3;
 
     return new Question("1.2.1", "Hva blir "+t.toString()+ "// " +n.toString()+" ?",
         ""+b.toString()+"",""+c.toString()+"",""+d.toString()+"",""+a.toString()+"",""+e.toString()+"",
@@ -79,11 +79,11 @@ class MatteUke1 {
     var j = t/n;
 
     int a =j.toInt();
-    var b =a+1;
-    var c =a+2;
-    var d = a-1;
-    var e = a-2;
-    var f = -a;
+    int b =a+1;
+    int c =a+2;
+    int d = a-1;
+    int e = a-2;
+    int f = -a-3;
 
     return new Question("1.2.1", "Hva blir "+t.toString()+ "// " +n.toString()+" ?",
         ""+b.toString()+"",""+c.toString()+"",""+d.toString()+"",""+e.toString()+"",""+a.toString()+"",
@@ -106,11 +106,11 @@ class MatteUke1 {
     var j = t/n;
 
     int a =j.toInt();
-    var b =a+1;
-    var c =a+2;
-    var d = a-1;
-    var e = a-2;
-    var f = -a;
+    int b =a+1;
+    int c =a+2;
+    int  d = a-1;
+    int e = a-2;
+    int f = -a+4;
 
     return new Question("1.2.1", "Hva blir "+t.toString()+ "// " +n.toString()+" ?",
         ""+c.toString()+"",""+a.toString()+"",""+d.toString()+"",""+e.toString()+"",""+b.toString()+"",
@@ -132,11 +132,11 @@ class MatteUke1 {
     var j = t/n;
 
     int a =j.toInt();
-    var b =a+1;
-    var c =a+2;
-    var d = a-1;
-    var e = a-2;
-    var f = -a;
+    int b =a+1;
+    int c =a+2;
+    int d = a-1;
+    int e = a-2;
+    int f = -a+4;
 
     return new Question("1.2.1", "Hva blir "+t.toString()+ "// " +n.toString()+" ?",
         ""+b.toString()+"",""+c.toString()+"",""+d.toString()+"",""+e.toString()+"",""+f.toString()+"",
@@ -156,7 +156,7 @@ class MatteUke1 {
     int n =random.nextInt(49)+1;
 
 
-    // Deler
+
     var a = t%n;
 
 
@@ -200,7 +200,7 @@ class MatteUke1 {
 
     int a=(-t)%n;
 
-    return new Question("1.2.1", "Hva blir  modulo "+t.toString()+ "mod  " +n.toString()+" ?",
+    return new Question("1.2.1", "Hva blir  "+t.toString()+ "modulo  " +n.toString()+" ?",
         "","","","","",
         "" ,""+a.toString()+"","QuestionTypeB");
 

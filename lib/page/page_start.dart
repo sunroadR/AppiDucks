@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:appi_ducks/page/page_lesson.dart';
 import 'package:appi_ducks/start_lesson.dart';
+import 'package:appi_ducks/read_week.dart';
 
 /*
     The startpage  for the  app where information about the users level,
@@ -10,6 +11,7 @@ import 'package:appi_ducks/start_lesson.dart';
 class PageStart extends StatelessWidget {
 
   StartLesson startLesson = new StartLesson();
+  ReadWeek readweek = new ReadWeek();
 
   @override
   PageStart() {
@@ -46,6 +48,7 @@ class PageStart extends StatelessWidget {
                 ),
                 onPressed: () {
 
+                  readweek.loadWeek(2);
 
                   // When pushed navigates to the first question of the lesson for that week
                   Navigator.push(

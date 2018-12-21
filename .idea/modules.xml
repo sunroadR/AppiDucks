@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/appi_ducks.iml" filepath="$PROJECT_DIR$/appi_ducks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appi_ducks_android.iml" filepath="$PROJECT_DIR$/appi_ducks_android.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,32 +1,35 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
-import 'package:appi_ducks/matte_uke1.dart';
 import 'package:appi_ducks/database/model/question.dart';
 // The class create a lesson with 12 question
 
 class StartLesson {
 
+
+  int _antallGanger=0;
   List<int> questionsLesson =new List();
+
+
 
    var t = new Random();
   int a;
 
-  MatteUke1 matteUke1 =new MatteUke1();
+
 
   List<int> createLesson() {
 
-      a = t.nextInt(32);
+      a = t.nextInt(3);
 
       print('før verdien av a ');
       print(a);
       questionsLesson.add(a);
 
 
-    for (int i = 1; i<12; i++) {
-      a = t.nextInt(32);
-      while (inList(a)) {
-        a = t.nextInt(32);
-      }
+    for (int i = 1; i<3; i++) {
+      a = t.nextInt(3);
+   //   while (inList(a)) {
+        a = t.nextInt(3);
+     // }
       questionsLesson.add(a);
     }
 
@@ -43,5 +46,6 @@ class StartLesson {
       }}
     return false;
   }
+
 
 }

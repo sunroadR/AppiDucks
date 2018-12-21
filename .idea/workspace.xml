@@ -1,0 +1,1330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/lib/read_week.dart" line="48" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="11f9b3f3-e9d4-4869-a399-97d36c7cedf8" name="Default" comment="19.12.2018">
+      <change beforePath="$PROJECT_DIR$/lib/database/database_helper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/database/database_helper.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/info_lesson.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/info_lesson.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lesson.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lesson.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/matte_uke1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/matte_uke1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/page/page_lesson.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/page/page_lesson.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/page/page_start.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/page/page_start.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/page/summary_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/page/summary_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/page/ui/question_type_b.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/page/ui/question_type_b.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read_week.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read_week.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/start_lesson.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/start_lesson.dart" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.dart_tool/" />
+    <ignored path="$PROJECT_DIR$/.idea/" />
+    <ignored path="$PROJECT_DIR$/.pub/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="appi_ducks" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="matte_uke1.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/matte_uke1.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="97" selection-start-line="97" selection-end-line="97" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="read_week.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/read_week.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start_lesson.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/start_lesson.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-304">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page_start.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/page/page_start.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>build/app.dill</find>
+      <find>prin</find>
+      <find>rint</find>
+      <find>print</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="FlutterView" splitter-proportion="0.70869565" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/test/widget_type_b_test.dart" />
+        <option value="$PROJECT_DIR$/pages_questions/page_question1.dart" />
+        <option value="$PROJECT_DIR$/lib/message.dart" />
+        <option value="$PROJECT_DIR$/lib/page_question1.dart" />
+        <option value="$PROJECT_DIR$/lib/page_question2.dart" />
+        <option value="$PROJECT_DIR$/lib/page_question3.dart" />
+        <option value="$PROJECT_DIR$/test/widget_test_summary_page.dart" />
+        <option value="$PROJECT_DIR$/test/unit_test_lesson.dart" />
+        <option value="$PROJECT_DIR$/lib/question_list.dart" />
+        <option value="$PROJECT_DIR$/database/database.dart" />
+        <option value="$PROJECT_DIR$/lib/database.dart" />
+        <option value="$PROJECT_DIR$/lib/summary_page.dart" />
+        <option value="$PROJECT_DIR$/lib/questionweekone.txt" />
+        <option value="$PROJECT_DIR$/lib/read_from_file.dart" />
+        <option value="$PROJECT_DIR$/lib/aletrnativ.dart" />
+        <option value="$PROJECT_DIR$/lib/db_helper.dart" />
+        <option value="$PROJECT_DIR$/test/unit_test_question_list.dart" />
+        <option value="$PROJECT_DIR$/lib/database/question.dart" />
+        <option value="$PROJECT_DIR$/lib/page_start.dart" />
+        <option value="$PROJECT_DIR$/lib/question_category1.dart" />
+        <option value="$PROJECT_DIR$/lib/question_type_a.dart" />
+        <option value="$PROJECT_DIR$/lib/question_type_c.dart" />
+        <option value="$PROJECT_DIR$/lib/page_lesson.dart" />
+        <option value="$PROJECT_DIR$/lib/question_type_b.dart" />
+        <option value="$PROJECT_DIR$/lib/database/model/question.dart" />
+        <option value="$PROJECT_DIR$/lib/question_feedback.dart" />
+        <option value="$PROJECT_DIR$/test/widget_test.dart" />
+        <option value="$PROJECT_DIR$/test/unit_test_info_lesson.dart" />
+        <option value="$PROJECT_DIR$/test/unit_test_questions1.dart" />
+        <option value="$PROJECT_DIR$/lib/helpefile.dart" />
+        <option value="$PROJECT_DIR$/assets/week1" />
+        <option value="$PROJECT_DIR$/lib/page/ui/lesson_feedback.dart" />
+        <option value="$PROJECT_DIR$/lib/database/model/user" />
+        <option value="$PROJECT_DIR$/lib/page/ui/question_type_c.dart" />
+        <option value="$PROJECT_DIR$/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/lib/page/ui/question_type_a.dart" />
+        <option value="$PROJECT_DIR$/assets/week1.csv" />
+        <option value="$PROJECT_DIR$/lib/question_evaluator.dart" />
+        <option value="$PROJECT_DIR$/lib/page/ui/question_feedback.dart" />
+        <option value="$PROJECT_DIR$/lib/info_lesson.dart" />
+        <option value="$PROJECT_DIR$/lib/page/summary_page.dart" />
+        <option value="$PROJECT_DIR$/lib/page/page_lesson.dart" />
+        <option value="$PROJECT_DIR$/lib/page/ui/question_type_b.dart" />
+        <option value="$PROJECT_DIR$/lib/matte_uke1.dart" />
+        <option value="$PROJECT_DIR$/lib/page/page_start.dart" />
+        <option value="$PROJECT_DIR$/lib/database/database_helper.dart" />
+        <option value="$PROJECT_DIR$/lib/read_week.dart" />
+        <option value="$PROJECT_DIR$/assets/week2.csv" />
+        <option value="$PROJECT_DIR$/lib/lesson.dart" />
+        <option value="$PROJECT_DIR$/lib/main.dart" />
+        <option value="$PROJECT_DIR$/lib/start_lesson.dart" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="8" />
+    <option name="y" value="23" />
+    <option name="width" value="1729" />
+    <option name="height" value="805" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="appi_ducks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appi_ducks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appi_ducks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appi_ducks" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appi_ducks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appi_ducks" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="picture" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appi_ducks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appi_ducks" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appi_ducks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appi_ducks" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appi_ducks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appi_ducks" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appi_ducks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appi_ducks" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appi_ducks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appi_ducks" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="appi_ducks" type="1abcf292:AndroidViewProjectNode" />
+              <item name="appi_ducks" type="e9137016:NonAndroidModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Default">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="appi_ducks" type="cbb8eebc:String" user="appi_ducks" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="appi_ducks" type="cbb8eebc:String" user="appi_ducks" />
+              <item name="appi_ducks" type="cbb8eebc:String" user="appi_ducks" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="appi_ducks" type="cbb8eebc:String" user="appi_ducks" />
+              <item name="appi_ducks" type="cbb8eebc:String" user="appi_ducks" />
+              <item name="lib" type="cbb8eebc:String" user="lib" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/picture" />
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/lib/page/ui" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Flutter.main.dart">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="Test that shows the text for all the Answer 2 alternative " type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="Test that shows the text for all the Answer 2 alternative " />
+      <option name="testFile" value="$PROJECT_DIR$/test/widget_test.dart" />
+    </configuration>
+    <configuration name="When call addCorrectInRow, it increment with one " type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="When call addCorrectInRow, it increment with one " />
+      <option name="testFile" value="$PROJECT_DIR$/test/unit_test_info_lesson.dart" />
+    </configuration>
+    <configuration name="When call correctAnsInRowZero, correctAnsInRow  " type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="When call correctAnsInRowZero, correctAnsInRow  " />
+      <option name="testFile" value="$PROJECT_DIR$/test/unit_test_info_lesson.dart" />
+    </configuration>
+    <configuration name="When lesson start, correctAns ==0" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="When lesson start, correctAns ==0" />
+      <option name="testFile" value="$PROJECT_DIR$/test/unit_test_info_lesson.dart" />
+    </configuration>
+    <configuration name="checks that firstTimeInthisLection become false when question are answered" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="checks that firstTimeInthisLection become false when question are answered" />
+      <option name="testFile" value="$PROJECT_DIR$/test/unit_test_questions1.dart" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+    <list>
+      <item itemvalue="Flutter.main.dart" />
+      <item itemvalue="Flutter Test.checks that firstTimeInthisLection become false when question are answered" />
+      <item itemvalue="Flutter Test.When lesson start, correctAns ==0" />
+      <item itemvalue="Flutter Test.When call addCorrectInRow, it increment with one " />
+      <item itemvalue="Flutter Test.When call correctAnsInRowZero, correctAnsInRow  " />
+      <item itemvalue="Flutter Test.Test that shows the text for all the Answer 2 alternative " />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Flutter Test.Test that shows the text for all the Answer 2 alternative " />
+        <item itemvalue="Flutter Test.When call correctAnsInRowZero, correctAnsInRow  " />
+        <item itemvalue="Flutter Test.When call addCorrectInRow, it increment with one " />
+        <item itemvalue="Flutter Test.When lesson start, correctAns ==0" />
+        <item itemvalue="Flutter Test.checks that firstTimeInthisLection become false when question are answered" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="11f9b3f3-e9d4-4869-a399-97d36c7cedf8" name="Default" comment="" />
+      <created>1535372904442</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1535372904442</updated>
+    </task>
+    <task id="LOCAL-00001" summary="AppiDucks">
+      <created>1536779652041</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1536779652041</updated>
+    </task>
+    <task id="LOCAL-00002" summary="QuestionTyoeC">
+      <created>1536931137118</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1536931137118</updated>
+    </task>
+    <task id="LOCAL-00003" summary="QuestionTyoeC">
+      <created>1536931394262</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1536931394262</updated>
+    </task>
+    <task id="LOCAL-00004" summary="page1_question">
+      <created>1537781890712</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1537781890712</updated>
+    </task>
+    <task id="LOCAL-00005" summary="page3_question">
+      <created>1537812444710</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1537812444710</updated>
+    </task>
+    <task id="LOCAL-00006" summary=" 25.08">
+      <created>1537875033818</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1537875033819</updated>
+    </task>
+    <task id="LOCAL-00007" summary=" 25.08">
+      <created>1538158296276</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1538158296276</updated>
+    </task>
+    <task id="LOCAL-00008" summary=" 25.08">
+      <created>1538426391144</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1538426391144</updated>
+    </task>
+    <task id="LOCAL-00009" summary=" 03.10">
+      <created>1538565214392</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1538565214392</updated>
+    </task>
+    <task id="LOCAL-00010" summary="03.10.2018">
+      <created>1538569368983</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1538569368983</updated>
+    </task>
+    <task id="LOCAL-00011" summary="03.10.2018 + summaryPage">
+      <created>1538570722311</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1538570722311</updated>
+    </task>
+    <task id="LOCAL-00012" summary="06.10.2018">
+      <created>1538828051870</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1538828051870</updated>
+    </task>
+    <task id="LOCAL-00013" summary="09.10.2018">
+      <created>1539105349889</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1539105349889</updated>
+    </task>
+    <task id="LOCAL-00014" summary="09.10.2018">
+      <created>1539107532386</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1539107532386</updated>
+    </task>
+    <task id="LOCAL-00015" summary="09.10.2018">
+      <created>1539177638828</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1539177638828</updated>
+    </task>
+    <task id="LOCAL-00016" summary="11.10.2018">
+      <created>1539237296041</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1539237296041</updated>
+    </task>
+    <task id="LOCAL-00017" summary="11.10.2018">
+      <created>1539270952294</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1539270952294</updated>
+    </task>
+    <task id="LOCAL-00018" summary="11.10.2018">
+      <created>1539351171714</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1539351171714</updated>
+    </task>
+    <task id="LOCAL-00019" summary="15.10.2018">
+      <created>1539604015484</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1539604015484</updated>
+    </task>
+    <task id="LOCAL-00020" summary="17.10.2018">
+      <created>1539781893257</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1539781893257</updated>
+    </task>
+    <task id="LOCAL-00021" summary="18.10.2018">
+      <created>1539867270782</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1539867270782</updated>
+    </task>
+    <task id="LOCAL-00022" summary="18.10.2018">
+      <created>1539884061523</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1539884061523</updated>
+    </task>
+    <task id="LOCAL-00023" summary="22.10.2018">
+      <created>1540216458177</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1540216458177</updated>
+    </task>
+    <task id="LOCAL-00024" summary="23.10.2018">
+      <created>1540289372518</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1540289372518</updated>
+    </task>
+    <task id="LOCAL-00025" summary="25.10.2018">
+      <created>1540480342427</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1540480342427</updated>
+    </task>
+    <task id="LOCAL-00026" summary="01.11.2018">
+      <created>1541088808961</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1541088808961</updated>
+    </task>
+    <task id="LOCAL-00027" summary="06.11.2018">
+      <created>1541531725215</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1541531725215</updated>
+    </task>
+    <task id="LOCAL-00028" summary="07.11.2018">
+      <created>1541602364662</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1541602364663</updated>
+    </task>
+    <task id="LOCAL-00029" summary="09.11.2018">
+      <created>1541780295938</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1541780295938</updated>
+    </task>
+    <task id="LOCAL-00030" summary="10.11.2018">
+      <created>1541855570604</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1541855570604</updated>
+    </task>
+    <task id="LOCAL-00031" summary="10.11.2018">
+      <created>1541880595742</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1541880595742</updated>
+    </task>
+    <task id="LOCAL-00032" summary="12.11.2018">
+      <created>1542030050182</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1542030050182</updated>
+    </task>
+    <task id="LOCAL-00033" summary="05.12.2018">
+      <created>1544000132574</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1544000132574</updated>
+    </task>
+    <task id="LOCAL-00034" summary="09.12.2018">
+      <created>1544381024234</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1544381024234</updated>
+    </task>
+    <task id="LOCAL-00035" summary="17.12.2018">
+      <created>1545049395657</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1545049395659</updated>
+    </task>
+    <task id="LOCAL-00036" summary="18.12.2018">
+      <created>1545144137563</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1545144137563</updated>
+    </task>
+    <task id="LOCAL-00037" summary="19.12.2018">
+      <created>1545207497754</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1545207497754</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Test_that_shows_the_text_for_all_the_Answer_2_alternative_ - 2018.10.23 at 18h 30m 52s.xml">
+      <configuration name="Test that shows the text for all the Answer 2 alternative " configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="Test_that_shows_the_text_for_all_the_Answer_2_alternative_ - 2018.10.23 at 18h 31m 20s.xml">
+      <configuration name="Test that shows the text for all the Answer 2 alternative " configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="When_call_addCorrectInRow,_it_increment_with_one_ - 2018.10.22 at 14h 03m 49s.xml">
+      <configuration name="When call addCorrectInRow, it increment with one " configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="When_call_addCorrectInRow,_it_increment_with_one_ - 2018.10.22 at 14h 11m 53s.xml">
+      <configuration name="When call addCorrectInRow, it increment with one " configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="When_call_addCorrectInRow,_it_increment_with_one_ - 2018.10.22 at 14h 12m 04s.xml">
+      <configuration name="When call addCorrectInRow, it increment with one " configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="When_call_correctAnsInRowZero,_correctAnsInRow__ - 2018.10.22 at 14h 12m 20s.xml">
+      <configuration name="When call correctAnsInRowZero, correctAnsInRow  " configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="When_call_correctAnsInRowZero,_correctAnsInRow__ - 2018.10.22 at 14h 12m 37s.xml">
+      <configuration name="When call correctAnsInRowZero, correctAnsInRow  " configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="When_call_correctAnsInRowZero,_correctAnsInRow__ - 2018.10.22 at 15h 21m 54s.xml">
+      <configuration name="When call correctAnsInRowZero, correctAnsInRow  " configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="When_lesson_start,_correctAns_==0 - 2018.10.22 at 13h 51m 16s.xml">
+      <configuration name="When lesson start, correctAns ==0" configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="When_lesson_start,_correctAns_==0 - 2018.10.22 at 13h 51m 38s.xml">
+      <configuration name="When lesson start, correctAns ==0" configurationId="FlutterTestConfigType" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="8" y="23" width="1729" height="805" extended-state="0" />
+    <layout>
+      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.47496423" weight="0.41021898" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info id="Image Layers" order="7" />
+      <window_info id="Build Variants" order="2" sideWeight="0.6059957" side_tool="true" weight="0.3297568" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.3969957" side_tool="true" weight="0.32424676" />
+      <window_info anchor="bottom" id="Dart Analysis" order="8" sideWeight="0.87982833" weight="0.3211679" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6595136" visible="true" weight="0.34452555" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.6030043" weight="0.32846716" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.59227467" weight="0.31594202" />
+      <window_info anchor="right" id="Flutter Outline" order="3" />
+      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.4620887" weight="0.36560693" />
+      <window_info id="Captures" order="5" weight="0.32965416" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8262806" visible="true" weight="0.15411974" />
+      <window_info id="Structure" order="1" sideWeight="0.17371938" side_tool="true" weight="0.18374164" />
+      <window_info anchor="right" id="Device File Explorer" order="4" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41021898" />
+      <window_info id="Favorites" order="6" sideWeight="0.23385939" side_tool="true" weight="0.2134412" />
+      <window_info anchor="right" id="Flutter Inspector" order="7" weight="0.00852459" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.60228896" weight="0.31824818" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" x="0" y="0" width="293" height="605" id="Documentation" order="9" side_tool="true" visible="true" weight="0.082987554" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49713877" weight="0.32846716" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="4" />
+      <window_info anchor="bottom" id="Dart Analysis" order="8" sideWeight="0.87982833" weight="0.3211679" />
+      <window_info id="Build Variants" order="2" sideWeight="0.6059957" side_tool="true" weight="0.3297568" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6595136" visible="true" weight="0.020437956" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Flutter Inspector" order="7" visible="true" weight="0.00852459" />
+      <window_info id="Favorites" order="6" sideWeight="0.23385939" side_tool="true" weight="0.2134412" />
+      <window_info id="Captures" order="5" weight="0.32965416" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.3969957" side_tool="true" weight="0.32424676" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.47496423" weight="0.41021898" />
+      <window_info anchor="right" x="0" y="0" width="367" height="605" id="Documentation" order="9" side_tool="true" visible="true" weight="0.3553719" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Device File Explorer" order="4" side_tool="true" />
+      <window_info anchor="right" id="Flutter Outline" order="3" />
+      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.4620887" weight="0.36560693" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.6030043" weight="0.32846716" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.59227467" weight="0.31594202" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7661406" visible="true" weight="0.27409837" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.60228896" weight="0.31824818" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Image Layers" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49713877" weight="0.3289855" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41021898" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="page3_question" />
+    <MESSAGE value=" 25.08" />
+    <MESSAGE value=" 03.10" />
+    <MESSAGE value="03.10.2018" />
+    <MESSAGE value="03.10.2018 + summaryPage" />
+    <MESSAGE value="06.10.2018" />
+    <MESSAGE value="09.10.2018" />
+    <MESSAGE value="11.10.2018" />
+    <MESSAGE value="15.10.2018" />
+    <MESSAGE value="17.10.2018" />
+    <MESSAGE value="18.10.2018" />
+    <MESSAGE value="22.10.2018" />
+    <MESSAGE value="23.10.2018" />
+    <MESSAGE value="25.10.2018" />
+    <MESSAGE value="01.11.2018" />
+    <MESSAGE value="06.11.2018" />
+    <MESSAGE value="07.11.2018" />
+    <MESSAGE value="09.11.2018" />
+    <MESSAGE value="10.11.2018" />
+    <MESSAGE value="12.11.2018" />
+    <MESSAGE value="05.12.2018" />
+    <MESSAGE value="09.12.2018" />
+    <MESSAGE value="17.12.2018" />
+    <MESSAGE value="18.12.2018" />
+    <MESSAGE value="19.12.2018" />
+    <option name="LAST_COMMIT_MESSAGE" value="19.12.2018" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/test/unit_test_questions1.dart</url>
+          <line>58</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/test/widget_test.dart</url>
+          <line>54</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/lesson.dart</url>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/page/ui/lesson_feedback.dart</url>
+          <line>82</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/test/widget_test.dart</url>
+          <line>48</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/page/ui/question_feedback.dart</url>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="dart-exception">
+          <properties />
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="47" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/widgets/text.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3345">
+          <caret line="229" column="14" selection-start-line="229" selection-start-column="14" selection-end-line="229" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/bug-report.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-0.12.2/lib/src/sqflite_impl.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="94" column="31" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-0.12.2/lib/src/database.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../flutter/bin/cache/dart-sdk/lib/async/stream.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="639" column="29" selection-start-line="639" selection-start-column="29" selection-end-line="639" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/aletrnativ.dart" />
+    <entry file="file://$PROJECT_DIR$/res/questionweekone.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="77" lean-forward="true" selection-start-column="77" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/question_category1.dart" />
+    <entry file="file://$PROJECT_DIR$/lib/read_from_file.dart" />
+    <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/rendering/stack.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="519" column="14" selection-start-line="519" selection-start-column="14" selection-end-line="519" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/rendering/box.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324">
+          <caret line="513" column="8" selection-start-line="513" selection-start-column="8" selection-end-line="513" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/rendering/stack.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="519" column="14" selection-start-line="519" selection-start-column="14" selection-end-line="519" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../flutter/bin/cache/dart-sdk/lib/async/async.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/widgets/framework.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ios/Flutter/App.framework/App">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ios/Podfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ios/Podfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit_test_question_list.dart" />
+    <entry file="file://$PROJECT_DIR$/test/widget_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#355#394#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit_test_info_lesson.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QuestionTyoeC.patch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/week1" />
+    <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/widgets/framework.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56400">
+          <caret line="3786" column="57" selection-start-line="3786" selection-start-column="57" selection-end-line="3786" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/helpefile.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-0.12.2+1/lib/src/exception.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/database/model/user">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-0.12.2+1/lib/src/sqflite_impl.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="94" column="31" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit_test_questions1.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="70" column="3" selection-start-line="70" selection-start-column="3" selection-end-line="70" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../flutter/bin/cache/dart-sdk/lib/internal/list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="30" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-0.12.2+1/lib/src/database.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="317" column="13" selection-start-line="317" selection-start-column="13" selection-end-line="317" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/page/ui/question_feedback.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="61" column="62" selection-start-line="61" selection-start-column="62" selection-end-line="61" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/page/summary_page.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/page/ui/question_type_c.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1051">
+          <caret line="178" column="43" selection-start-line="178" selection-start-column="43" selection-end-line="178" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/database/model/question.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/week1.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="31" selection-start-line="16" selection-end-line="17" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/week2.csv">
+      <provider editor-type-id="csv-text-editor">
+        <state relative-caret-position="-798">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/question_evaluator.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/page/ui/question_type_a.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1728">
+          <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/info_lesson.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/page/ui/lesson_feedback.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2595">
+          <caret line="173" column="35" selection-start-line="173" selection-start-column="35" selection-end-line="173" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/page/ui/question_type_b.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/matte_uke1.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/database/database_helper.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="93" column="113" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="113" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/lesson.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/page/page_lesson.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="78" column="78" selection-start-line="78" selection-start-column="68" selection-end-line="78" selection-end-column="78" />
+          <folding>
+            <element signature="e#1#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/page/page_start.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/read_week.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/start_lesson.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-304">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Android</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>appi_ducks</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Dart Packages</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

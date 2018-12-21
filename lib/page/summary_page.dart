@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:appi_ducks/main.dart';
 import 'package:appi_ducks/page/page_start.dart';
+import 'package:appi_ducks/start_lesson.dart';
 
 /*
 The page
  */
 class SummaryPage extends StatelessWidget {
   final String title;
+
 
   const SummaryPage({
     Key key,
@@ -17,7 +19,7 @@ class SummaryPage extends StatelessWidget {
   Widget build(BuildContext context) {
 
 
-
+    StartLesson startLesson= new StartLesson();
      return new MaterialApp(
        title: 'AppiDucks for  Python',
      home: Scaffold(
@@ -35,7 +37,7 @@ class SummaryPage extends StatelessWidget {
 
               margin: EdgeInsets.only(top: 40.0, bottom: 20.0),
 
-              child: Text('  Du har brukt appen x dager på rad.\n '
+              child: Text('  Du har brukt appen  X dager på rad.\n '
               '\n'
                   'Du er nå på level Y',
                 style: TextStyle(

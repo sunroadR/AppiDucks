@@ -17,6 +17,7 @@ class InfoLesson {
 
   int correctAnsInRow =0;
 
+
   // Metode som henter antall på rad
   int getCorrectAnsInRow(){
      return this.correctAnsInRow;

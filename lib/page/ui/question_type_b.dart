@@ -131,7 +131,9 @@ class _QuestionTypeB extends State<QuestionTypeB> {
                           context, widget.question);
                     }
                   }
+                  _givenAnswer="";
                 }
+
                 );
               }   }
               ),

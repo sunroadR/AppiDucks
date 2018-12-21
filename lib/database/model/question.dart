@@ -91,7 +91,7 @@ class Question {
   /// example argument "uniqID:1.2.8 pageType:questionTypeC que:% correctAns: ans1: ans2: ans3: ans4: ans5: ans6:"
   /// example argument "uniqID:1.2.8 pageType:questionTypeC que:%"
   Question.fromString(v) {
-    List<String> args = v.split(" "); //TODO erstatt " " med space encoding eller annet tegn
+    List<String> args = v.split("|"); //TODO erstatt " " med space encoding eller annet tegn
     removeEmptyArguments(args);
     Map<String, String> fields = new Map.fromIterable(args,
         key: (item) => item.toString().split(":").elementAt(0),

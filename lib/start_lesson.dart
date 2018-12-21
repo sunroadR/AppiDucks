@@ -25,7 +25,7 @@ class StartLesson {
       questionsLesson.add(a);
 
 
-    for (int i = 1; i<3; i++) {
+    for (int i = 1; i<4; i++) {
       a = t.nextInt(3);
    //   while (inList(a)) {
         a = t.nextInt(3);

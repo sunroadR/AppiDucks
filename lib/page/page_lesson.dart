@@ -81,7 +81,7 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
             new Container(
                 margin: EdgeInsets.all(0.0),
                 child: new FutureBuilder<Question>(
-                  future: lesson.getQuestion(_allQuestion.elementAt(questionNr)),
+                  future: lesson.getQuestion(_allQuestion.elementAt(questionNr)), //TODO outofbounds
                   builder: (BuildContext context, AsyncSnapshot snapshot) {
 
                     if (snapshot.hasError) print(snapshot.hasError);
@@ -163,13 +163,16 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
   void screenUpdate() {
     setState(() {
      questionNr=questionNr+1;
-     print(questionNr);
-        lesson.getQuestion(_allQuestion.elementAt(questionNr));
-
-      
-
+     if(questionNr==_allQuestion.length){
+       Navigator.push(context, MaterialPageRoute(builder:(context)=> SummaryPage()));
+     }
+     else {
+       print(questionNr);
+       lesson.getQuestion(_allQuestion.elementAt(questionNr));
+     }
 
     });
+
   }
 }
 

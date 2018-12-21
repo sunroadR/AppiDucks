@@ -1,12 +1,13 @@
 {
-"1.2.8":"uniqID:1.2.8 pageType:questionTypeC que:% correctAns:",
+"1.2.8":"uniqID:1.2.8|pageType:questionTypeC|que:%|correctAns:",
 
-"1.2.7":"uniqID:1.2.7 pageType:questionTypeC que:% correctAns:",
+"1.2.7":"uniqID:1.2.7|pageType:questionTypeC|que:%|correctAns:",
 
-"1.2.6":"uniqID:1.2.6   que:// ans1: ans2: ans3: ans4: ans5: ans6: correctAns: pageType:questionTypeB",
+"1.2.6":"uniqID:1.2.6|que://correctAns:|pageType:questionTypeB",
 
-"1.2.1":"uniqID:1.2.1   que:// ans1: ans2: ans3: ans4: ans5: ans6: correctAns: pageType:questionTypeB"
+"1.2.1":"uniqID:1.2.1|que://|correctAns:|pageType:questionTypeB",
 
+"1.1.7":"uniqID7:1.1.7|que:Hva er en 'prosessor'?|ans1:skjerm|ans2:Hovedregneenheten i en datamaskin som utfører instruksjonene gitt i et dataprogram.|ans3:En kombinasjon av verdier, konstanter, variabler, operatorer og funksjoner som programmeringsspråket tolker og evaluerer og returnerer en annen verdi.|ans4:lagringsmedium for binært kodet informasjon|correctAns:Hovedregneenheten i en datamaskin som utfører instruksjonene gitt i et dataprogram|pageType:QuestionTypeA"
 
 }
 

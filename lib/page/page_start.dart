@@ -3,11 +3,9 @@ import 'package:appi_ducks/page/page_lesson.dart';
 import 'package:appi_ducks/start_lesson.dart';
 import 'package:appi_ducks/read_week.dart';
 
-/*
-    The startpage  for the  app where information about the users level,
-    which weeks the user can pick lesson from and som information about ....
+ //The startpage  for the  app where information about the users level,
+ //   which weeks the user can pick lesson from and som information about ....
 
- */
 class PageStart extends StatelessWidget {
 
   StartLesson startLesson = new StartLesson();

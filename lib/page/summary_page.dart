@@ -3,9 +3,8 @@ import 'package:appi_ducks/main.dart';
 import 'package:appi_ducks/page/page_start.dart';
 import 'package:appi_ducks/start_lesson.dart';
 
-/*
-The page
- */
+
+// The page
 class SummaryPage extends StatelessWidget {
   final String title;
 

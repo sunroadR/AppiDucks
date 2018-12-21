@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:appi_ducks/page/ui/lesson_feedback.dart';
 import 'package:appi_ducks/page/ui/question_feedback.dart';
 import 'package:appi_ducks/page/page_lesson.dart';
-/**
- *The class holds info about status in a lesson
- **/
+
+ //The class holds info about status in a lesson
 class InfoLesson {
 
   LessonFeedBack lessonFeedBack = new LessonFeedBack();

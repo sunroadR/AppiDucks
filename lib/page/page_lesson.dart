@@ -40,6 +40,8 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
   var t;
   var questionNr;
   List<int> _allQuestion;
+
+
   bool _notAnswered=false;
 
   @override
@@ -47,8 +49,11 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
     super.initState();
     print('Kom jeg inni initState page_lesson');
     _allQuestion=startLesson.createLesson();
+
+
     lesson = new Lesson(this);
     print('lengden til listen med sprøsmål ');
+    print(_allQuestion.length);
     print(_allQuestion);
     questionNr =0;
     _allQuestion.elementAt(questionNr);

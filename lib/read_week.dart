@@ -8,10 +8,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:appi_ducks/database/database_helper.dart';
 
-/**
-class that take an csv-fil with all the question for a week and
-read them and put them in the Question table for that week in the database
- */
+
+
+
+//class that take an csv-fil with all the question for a week and
+//read them and put them in the Question table for that week in the database
 
 class ReadWeek{
 
@@ -27,30 +28,43 @@ class ReadWeek{
 
     loadAssets('assets/week2.csv').then((dynamic output) {
       String weekQues = output;
-      print('weekQues: ' + weekQues);
-
+      //List<String> weekQues = output.split("\n");
+      //weekQues.removeWhere((s) => !s.contains("uniqID"));
 
       try {
-        Map<String, dynamic> decoded = cod.decode(weekQues);
-
-        for(int a=1; a<4  ; a++) {
-          String uniq = '${decoded['uniqID$a']}';
-          String ques = '${decoded['que$a']}';
-          String ans1 = '${decoded['ans1$a']}';
-          String ans2 = '${decoded['ans2$a']}';
-          String ans3 = '${decoded['ans3$a']}';
-          String ans4 = '${decoded['ans4$a']}';
-          String ans5 = '${decoded['ans5$a']}';
-          String ans6 = '${decoded['ans6$a']}';
-          String corrAns = '${decoded['correctAns$a']}';
+        //for(String question in weekQues) {
+          Map<Question, dynamic> decoded = cod.decode(weekQues, reviver:(k,v){
+            if(isQuestion(k))
+              return new Question.fromString(v);
+            return v;
+          });
+          print(decoded);
+          /*
+          String uniq = '${decoded['uniqID']}';
+          String ques = '${decoded['que']}';
+          String ans1 = '${decoded['ans']}';
+          String ans2 = '${decoded['ans']}';
+          String ans3 = '${decoded['ans']}';
+          String ans4 = '${decoded['ans']}';
+          String ans5 = '${decoded['ans']}';
+          String ans6 = '${decoded['ans']}';
+          String corrAns = '${decoded['correctAns']}';
           String pageType = '${decoded['pageType']}';
 
-          print("read from file: " + uniq+ques+ans1+ans2+ans3+ans4+ans5+ans6+corrAns+pageType);
-          db.saveQuestion(new Question(uniq,ques,ans1,ans2,ans3,ans4,ans5,ans6,corrAns,pageType));
-
-
-        }
-
+          print("read from file: " + uniq + ques + ans1 + ans2 + ans3 + ans4 +
+              ans5 + ans6 + corrAns + pageType);
+          db.saveQuestion(new Question(
+              uniq,
+              ques,
+              ans1,
+              ans2,
+              ans3,
+              ans4,
+              ans5,
+              ans6,
+              corrAns,
+              pageType));*/
+      //  }
       } catch (e) {
         print('Error : $e');
       }
@@ -58,6 +72,8 @@ class ReadWeek{
     });
 
   }
+
+  bool isQuestion(Object k) => k.toString().split(".").length == 3;
 
   Future<String> loadAssets(String path) async{
 

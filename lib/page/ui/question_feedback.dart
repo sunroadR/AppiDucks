@@ -4,10 +4,10 @@ import 'package:appi_ducks/main.dart';
 
 import 'package:appi_ducks/page/page_lesson.dart';
 import 'package:appi_ducks/database/model/question.dart';
-/**
- *    A statless widget that keeps the driffent pop up message ,
- *    with feedback to user off the app
- */
+
+   //  A statless widget that keeps the driffent pop up message ,
+   // with feedback to user off the app
+
 
 class QuestionFeedback extends StatelessWidget {
   final PageLesson pageLesson = new PageLesson();

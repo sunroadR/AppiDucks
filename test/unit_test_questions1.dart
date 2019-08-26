@@ -1,7 +1,7 @@
 /**import 'package:test/test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:appi_ducks/database/model/question.dart';
-import 'package:appi_ducks/question_evaluator.dart';
+import 'package:appi_ducks/question.dart';
+//import 'package:appi_ducks/question_evaluator.dart';
 
 class MockQuestionCategory1 extends Mock implements Question{
 
@@ -12,7 +12,6 @@ class MockQuestionCategory1 extends Mock implements Question{
 void main () {
 
   Question question1 = new MockQuestionCategory1();
-  QuestionEvaluator questionEvaluator= new QuestionEvaluator();
 
 
   test('check that checkAnswer return false when wrong is given answer', (){
@@ -25,7 +24,6 @@ void main () {
     String givenAns=question1.answer1;
 
     //  sjekk the answer from checkAnswer method
-    bool answer= questionEvaluator.checkAnswer(question1, givenAns);
 
     // check that the answer is false,
    expect(answer ,isFalse);
@@ -37,7 +35,6 @@ void main () {
 
     //Create a Question object
     Question question1 = new MockQuestionCategory1();
-    QuestionEvaluator questionEvaluator= new QuestionEvaluator();
 
     // set the givenAvwer to a right answer
     String givenAns=question1.answer3;
@@ -68,5 +65,6 @@ void main () {
 
 
 
-}*/
+}
 
+*/

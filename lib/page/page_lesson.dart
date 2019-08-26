@@ -1,4 +1,10 @@
 
+import 'package:appi_ducks/page/ui/question_missing_code_def_1.dart';
+import 'package:appi_ducks/page/ui/question_missing_code_def_2.dart';
+import 'package:appi_ducks/page/ui/question_missing_code_return_1.dart';
+import 'package:appi_ducks/page/ui/question_missing_code_return_2.dart';
+import 'package:appi_ducks/page/ui/question_returnere_code.dart';
+import 'package:appi_ducks/page/ui/question_type_print_tall.dart';
 import 'package:flutter/material.dart';
 
 
@@ -7,12 +13,23 @@ import 'package:appi_ducks/page/summary_page.dart';
 import 'package:appi_ducks/page/ui/question_type_a.dart';
 import 'package:appi_ducks/page/ui/question_type_b.dart';
 import 'package:appi_ducks/page/ui/question_type_c.dart';
-import 'package:appi_ducks/database/model/question.dart';
-import 'package:appi_ducks/info_lesson.dart';
-import 'package:appi_ducks/start_lesson.dart';
+import 'package:appi_ducks/question.dart';
+import 'package:appi_ducks/user.dart';
 
-// The page which shows the question in a lessonsession
+// The page which shows the question in a lesson-session
 class PageLesson extends StatefulWidget {
+
+  Lesson lesson;
+  User user;
+
+  int uke;
+
+  PageLesson(
+      this.lesson,
+      this.user,
+      this.uke
+
+      );
 
 
 
@@ -20,52 +37,54 @@ class PageLesson extends StatefulWidget {
   State<StatefulWidget> createState() {
     return _PageLesson();
   }
+
+
+
+
+
+
 }
 
-class _PageLesson extends State<PageLesson> implements LessonContract {
-  final controller = new ScrollController();
-  final InfoLesson  infoLesson = new InfoLesson();
-  OverlayEntry sticky;
-  GlobalKey stickyKey = new GlobalKey();
-
-  Question currentQuestion;
+class _PageLesson extends State<PageLesson> with WidgetsBindingObserver{
 
 
 
-  //HelpeFile helpeFile = new HelpeFile();
-
-  Lesson lesson;
-  StartLesson startLesson = new StartLesson();
-
-  var t;
-  var questionNr;
-  List<int> _allQuestion;
 
 
-  bool _notAnswered=false;
+  int max;
+  List<Question> _allQuestion;
+
+  int questionNr=0;
 
   @override
   void initState() {
     super.initState();
-    print('Kom jeg inni initState page_lesson');
-    _allQuestion=startLesson.createLesson();
 
 
-    lesson = new Lesson(this);
-    print('lengden til listen med sprøsmål ');
-    print(_allQuestion.length);
-    print(_allQuestion);
-    questionNr =0;
-    _allQuestion.elementAt(questionNr);
+    if (widget.uke == 1) {
+      _allQuestion = widget.lesson.createLessonUke1();
     }
+    if(widget.uke==2){
+      _allQuestion=widget.lesson.createLessonUke2();
+    }
+    if (widget.uke == 3) {
+      _allQuestion = widget.lesson.createLessonUke3();
+    }
+  }
 
+
+
+  /// Hva skjer egentlig her ?
   displayRecord() {
     setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    // readFromFile.read();
+    return new WillPopScope(
+        onWillPop: () => Future.value(false),
+    child: Scaffold(
       resizeToAvoidBottomPadding: false,
         appBar: AppBar(
           backgroundColor: Theme
@@ -76,34 +95,35 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
           //remove the back button in the AppBar i
           automaticallyImplyLeading: false,
         ),
-        body: Column(
+        body: ListView(
+
           children: <Widget>[
-            new Container(
+
+
+             new Container(
+
                 margin: EdgeInsets.all(0.0),
-                child: new FutureBuilder<Question>(
-                  future: lesson.getQuestion(_allQuestion.elementAt(questionNr)), //TODO outofbounds
-                  builder: (BuildContext context, AsyncSnapshot snapshot) {
-
-                    if (snapshot.hasError) print(snapshot.hasError);
-
-                    Question ques = snapshot.data;
 
 
-                    return snapshot.hasData
-                        ? Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Center(child: currentView(ques)),
-                    )
-                        : new Center(child: new CircularProgressIndicator());
-                  },
-                )),
-            Container(
 
-              padding: EdgeInsets.only(bottom: 3.0),
+                 child: currentView(_allQuestion.elementAt(questionNr)),
+
+
+             ),
+
+
+            Padding(
+              padding:EdgeInsets.only(bottom: 20.0,top: 10.0,left:20.0, right:20.0 ),
+             // padding: EdgeInsets.symmetric(vertical: 20.0),
+            child: Material(
+              color: Colors.deepOrangeAccent,
+              shape: RoundedRectangleBorder(side: BorderSide(color: Colors.blueGrey,width: 1.0),
+              borderRadius: BorderRadius.circular(12.0)),
+               // borderRadius:BorderRadius.circular(100.0) ,
+              shadowColor: Colors.lightBlueAccent.shade100,
             child: MaterialButton(
 
-                minWidth: 300.0,
-                height: 50.0,
+
                 color: Theme
                     .of(context)
                     .primaryColor,
@@ -112,63 +132,80 @@ class _PageLesson extends State<PageLesson> implements LessonContract {
                     style: TextStyle(fontSize: 18.0,
                     color: Colors.white)),
                 onPressed: () {
-                  if(questionNr>=_allQuestion.length-1){
-                    print('Antall spørsmål : ');
-                    print(_allQuestion.length);
 
-                    Navigator.push(context, MaterialPageRoute(builder:(context)=> SummaryPage()));
-                  }
+                    if (questionNr == _allQuestion.length - 1) {
+                      // prøver å se om det hjelper å sette listOfAllQuestion = null
+                      widget.lesson.listOfAllQuestions = null;
 
-                  screenUpdate();
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) =>
+                          SummaryPage(widget.lesson.weekNr, widget.user,
+                              widget.user.numberOfCorrectAnswerThisLesson)));
+                    }
+
+                    else {
+                      screenUpdate();
+                    }
+                  
                 }),
-            ),
+            ),),
 
-          ],
-        ));
+              ],
+        )
+    ),
+    );
   }
 
-
-  bool get notAnswered => _notAnswered;
-  void setNotAnsweredTrue(){
-     _notAnswered=true;
-  }
-
-  void setNotAnsweredFalse(){
-    _notAnswered=false;
-  }
-
-  void setCurrentQuestion(Question q) {
-
-    this.currentQuestion = q;
-  }
 
   Widget currentView(Question ques) {
 
-    print(ques.correctAns);
 
-    if (ques.pageWidget == "QuestionTypeA") {
-      return new QuestionTypeA(ques,infoLesson);
+    if (ques.pageWidget == "questionTypeA") {
+      return new QuestionTypeA(ques,widget.lesson,widget.user,widget);
     }
 
-    if (ques.pageWidget == "QuestionTypeB") {
-      return new QuestionTypeB(ques,infoLesson);
+    if (ques.pageWidget == "questionTypeB") {
+      return new QuestionTypeB(ques,widget.lesson,widget.user);
     }
 
-    if (ques.pageWidget == "QuestionTypeC") {
-      return new QuestionTypeC(ques,infoLesson);
+    if (ques.pageWidget == "questionTypeC") {
+      return new QuestionTypeC(ques,widget.lesson,widget.user);
     }
+
+    if (ques.pageWidget == "questionTypeD") {
+      return new QuestionTypeD(ques,widget.lesson,widget.user);
+    }
+    if (ques.pageWidget == "questionTypeE") {
+      return new QuestionTypeE(ques,widget.lesson,widget.user);
+    }
+    if (ques.pageWidget == "questionTypeD2") {
+      return new QuestionTypeD2(ques,widget.lesson,widget.user);
+    }
+    if (ques.pageWidget == "questionTypeE2") {
+      return new QuestionTypeE2(ques,widget.lesson,widget.user);
+    }
+    if (ques.pageWidget == "questionTypeF") {
+      return new QuestionTypeF(ques,widget.lesson,widget.user);
+    }
+    if (ques.pageWidget == "questionTypePrintTall") {
+      return new QuestionTypePrintTall(ques,widget.lesson,widget.user);
+    }
+
+
   }
 
-  @override
+
   void screenUpdate() {
     setState(() {
      questionNr=questionNr+1;
      if(questionNr==_allQuestion.length){
-       Navigator.push(context, MaterialPageRoute(builder:(context)=> SummaryPage()));
+       // prøver å se om det hjelper å sette listOfAllQuestion = null
+       widget.lesson.listOfAllQuestions=null;
+       Navigator.push(context, MaterialPageRoute(builder:(context)=> SummaryPage(widget.lesson.weekNr,widget.user,
+       widget.user.numberOfCorrectAnswerThisLesson)));
      }
      else {
-       print(questionNr);
-       lesson.getQuestion(_allQuestion.elementAt(questionNr));
+      widget.lesson.listOfAllQuestions.first;
      }
 
     });

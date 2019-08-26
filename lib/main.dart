@@ -1,14 +1,10 @@
-import 'package:appi_ducks/database/model/user';
 import 'package:flutter/material.dart';
-import 'package:appi_ducks/database/database_helper.dart';
 import 'package:appi_ducks/page/page_start.dart';
-import 'package:appi_ducks/read_week.dart';
+import 'package:appi_ducks/user.dart';
 
 void main() {
 
   runApp(
-
-
         //MaterielApp is top level widget
         MaterialApp(
       // Define the color through the app
@@ -25,12 +21,14 @@ void main() {
 class MyApp extends StatelessWidget {
 //  MyApp({Key key, @required this.readFromFile}) :super(key :key);
 
-  PageStart pageStart = new PageStart();
+  static User _user = new User();
+  PageStart pageStart = new PageStart(_user);
+
+
 
 
   @override
   Widget build(BuildContext context) {
-    // readFromFile.read();
     return pageStart;
   }
 

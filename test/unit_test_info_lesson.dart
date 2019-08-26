@@ -1,7 +1,7 @@
-import 'package:test/test.dart';
+/**import 'package:test/test.dart';
 import 'package:mockito/mockito.dart';
 
-import 'package:appi_ducks/info_lesson.dart';
+import 'package:appi_ducks/lesson.dart';
 
 
 void main () {
@@ -9,7 +9,7 @@ void main () {
 
   test('When lesson start, correctAnsInRow ==0', ()
   {
-    InfoLesson infoLesson = new InfoLesson();
+    Lesson infoLesson = new Lesson();
 
     expect( infoLesson.getCorrectAnsInRow(),0);
   });
@@ -17,16 +17,16 @@ void main () {
 
   test('When call addCorrectInRow, it increment with one ', ()
   {
-    InfoLesson infoLesson= new InfoLesson();
+    Lesson infoLesson= new Lesson();
 
-   // infoLesson.addCorrectAnsInRow();
+   infoLesson.addCorrectAnsInRow();
 
     expect(infoLesson.getCorrectAnsInRow(),1);
   });
 
   test('When call correctAnsInRowZero, correctAnsInRow  ', (){
 
-    InfoLesson infoLesson = new InfoLesson();
+    Lesson infoLesson = new Lesson();
     for(int i= 0; i<12; i++){
     //  infoLesson.addCorrectAnsInRow(Build Conte); Må finne ut av context
     }
@@ -36,4 +36,4 @@ void main () {
 
 
 
-}
+}*/

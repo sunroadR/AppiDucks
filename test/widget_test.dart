@@ -1,4 +1,4 @@
-// This is a basic Flutter widget test.
+
 // To perform an interaction with a widget in your test, use the WidgetTester utility that Flutter
 // provides. For example, you can send tap and scroll gestures. You can also use WidgetTester to
 // find child widgets in the widget tree, read text, and verify that the values of widget properties
@@ -11,7 +11,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
 import 'package:appi_ducks/main.dart';
-import 'package:appi_ducks/database/model/question.dart';
+import 'package:appi_ducks/question.dart';
 import 'package:flutter/widgets.dart';
 
 class MockQuestionA extends Mock implements Question{

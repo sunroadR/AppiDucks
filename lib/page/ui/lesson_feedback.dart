@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:appi_ducks/main.dart';
 
-import 'package:appi_ducks/info_lesson.dart';
 
 class LessonFeedBack extends StatelessWidget {
 
@@ -115,7 +113,7 @@ class LessonFeedBack extends StatelessWidget {
   // Shows message for 10 på rad
   void showMessageTenInRow(BuildContext context){
 
-    String _threeInRow = 'Ti rette på rad! Nå begynner du å bli klar til eksamen i materialet fra denne uken. ';
+    String _threeInRow = 'Ti rette på rad! Imponerende ! ';
     AlertDialog message = new AlertDialog(
 
       content: DecoratedBox(
@@ -162,9 +160,7 @@ class LessonFeedBack extends StatelessWidget {
   // Shows message for 12 på rad
   void showMessageTwelveInRow(BuildContext context){
 
-    String _threeInRow = 'Tolv rette på rad! Hm, kanskje du skal øve '
-        'på en av de andre ukene? Dette kan du allerede. Dette bør åpne for neste uke om '
-        'den ikke allerede er åpnet. ';
+    String _threeInRow = 'Tolv rette på rad! Enda mer imponerende ! ';
     AlertDialog message = new AlertDialog(
 
       content: DecoratedBox(

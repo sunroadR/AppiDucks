@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:appi_ducks/main.dart';
-
-import 'package:appi_ducks/page/page_lesson.dart';
-import 'package:appi_ducks/database/model/question.dart';
+import 'package:appi_ducks/question.dart';
 
    //  A statless widget that keeps the driffent pop up message ,
    // with feedback to user off the app
 
 
 class QuestionFeedback extends StatelessWidget {
-  final PageLesson pageLesson = new PageLesson();
+ // final PageLesson pageLesson = new PageLesson();
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +51,7 @@ class QuestionFeedback extends StatelessWidget {
 
   void showMessageWrongAnswer(BuildContext context, Question question) {
     // variable that holdes the feedback
-    String _feedbackMessage = 'Feil, riktig er :  ';; // if right or wrong message
+    String _feedbackMessage = 'Feil, riktig er :  '; // if right or wrong message
     // variabl to hold the coorect answer
     String _correctAnsToShow;
 
@@ -79,14 +76,14 @@ else {
             text: _feedbackMessage,
             // in indigo blue
             style: new TextStyle(
-                color: Theme.of(context).accentColor, fontSize: 20.0),
+                color: Theme.of(context).accentColor, fontSize: 18.0),
           ),
           //  The right answer
           new TextSpan(
             text: _correctAnsToShow,
             // in deepOrangeAccent
             style: new TextStyle(
-                color: Theme.of(context).primaryColor, fontSize: 28.0),
+                color: Theme.of(context).primaryColor, fontSize: 20.0),
           ),
         ]),
       ),

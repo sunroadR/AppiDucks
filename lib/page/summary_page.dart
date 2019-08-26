@@ -1,25 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:appi_ducks/main.dart';
 import 'package:appi_ducks/page/page_start.dart';
-import 'package:appi_ducks/start_lesson.dart';
-
+import 'package:appi_ducks/user.dart';
+import 'package:flutter/services.dart';
 
 // The page
 class SummaryPage extends StatelessWidget {
-  final String title;
 
 
-  const SummaryPage({
-    Key key,
-    this.title,
-  }) : super(key: key);
+  // final String title;
+   int _totalCorrect;
+  int _weekNr;
+  User _user;
+
+
+  bool isbackButtonActivated = false;
+
+  //SummaryPage(int weekNr, User user, int numberOfCorrectAnswerThisLesson);
+
+  SummaryPage (
+
+          this._weekNr,
+          this._user,
+          this._totalCorrect
+      );
+
+
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
 
-
-    StartLesson startLesson= new StartLesson();
-     return new MaterialApp(
+    //
+    return new WillPopScope(
+        onWillPop: () => Future.value(false),
+     child: MaterialApp(
        title: 'AppiDucks for  Python',
      home: Scaffold(
         appBar: AppBar(
@@ -28,51 +45,69 @@ class SummaryPage extends StatelessWidget {
           //remove the back button in the AppBar i
           automaticallyImplyLeading: false,
         ),
-        body: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+        body: ListView(
+
+
+
           children:<Widget>[
 
-            Container(
 
-              margin: EdgeInsets.only(top: 40.0, bottom: 20.0),
+             new Align(
 
-              child: Text('  Du har brukt appen  X dager på rad.\n '
+            child: Container(
+
+              margin: EdgeInsets.only(top: 10.0, bottom: 50.0),
+
+              child: Text('  Du klarte ' +_totalCorrect.toString()+' riktige.\n'
               '\n'
-                  'Du er nå på level Y',
+                ,
                 style: TextStyle(
                     fontSize: 24.0, color: Theme.of(context).accentColor),
                 textAlign: TextAlign.center,
                 softWrap: true,),
-            ),
-          Container(
-          height: 125.0 ,
-          width: 250.0,
 
+     )
+
+            ),
+
+             new Container(
+        height: 125.0 ,
+          width: 250.0,
           decoration : BoxDecoration(
 
-            image: DecorationImage(
+           image: DecorationImage(
           image : ExactAssetImage('assets/picture/and1.png'),
             ),
 
-
-          ),
-          child: Container(
-
-            child:  Text('Level Y',
+   ),
+            child: Container(
+            child:  Text(''+_weekNr.toString()+'',
               style: TextStyle(
+
                   fontSize: 24.0, color: Theme.of(context).accentColor),
               textAlign: TextAlign.center,
 
               softWrap: true,),
-            alignment: Alignment(0.0, 0.0),
-            ),
-            alignment: Alignment.center,
-        ),
-          Container(
-            child: MaterialButton
-              (
-                minWidth: 200.0,
-                height: 50.0,
+
+
+
+
+           alignment: Alignment( 0.0, 0.0),
+    ),
+        alignment: Alignment.center,
+    ),
+
+      Padding(
+          padding:EdgeInsets.only(bottom: 60.0,top: 40.0,left:20.0, right:40.0 ),
+          // padding: EdgeInsets.symmetric(vertical: 20.0),
+          child: Material(
+            color: Colors.deepOrangeAccent,
+            shape: RoundedRectangleBorder(side: BorderSide(color: Colors.blueGrey,width: 1.0),
+                borderRadius: BorderRadius.circular(12.0)),
+            // borderRadius:BorderRadius.circular(100.0) ,
+            shadowColor: Colors.lightBlueAccent.shade100,
+            child: MaterialButton(
+
 
                 key: Key('answerA1'),
                 color: Colors.deepOrangeAccent,
@@ -83,12 +118,32 @@ class SummaryPage extends StatelessWidget {
                 ),
                 onPressed: () {
 
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => PageStart()));
-            }),
-          )
-        ]),
-      ),
-    );
+
+
+             _user.setNumberOfCorrectAnswerToZero();
+
+              Navigator.pop(context);
+            Navigator.pop(context);
+
+            Navigator.push(context, MaterialPageRoute(builder: (context) => PageStart(_user)));
+
+
+        // SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+
+
+
+        //     Navigator.push(context, MaterialPageRoute(builder: (context) => PageStart(_user)));
+
+
+                }),
+          )),
+
+    ]),
+    ),
+     ),
+      );
+
+
+
   }
 }

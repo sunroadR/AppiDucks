@@ -1,0 +1,20 @@
+{
+"1.1.42":"uniqID:1.1.42|que:Hva er en kommentar ?|ans1:Oppgavetekst|ans2:Minneaddresse|ans3:Snakkingen man gjør mens man programmerer|ans4:Forklaringer på hva kode gjør og hvordan|correctAns:Forklaringer på hva kode gjør og hvordan|pageType:questionTypeA|firstTime:true",
+
+"1.1.41":"uniqID:1.1.41|que:Hva betyr # ?|ans1:Begynner en kommentar|ans2:Prompt|ans3:Help|ans4:Linjefortsettelse|correctAns:Begynner en kommentar|pageType:questionTypeA|firstTime:true",
+
+"1.1.40":"uniqID:1.1.40|que:Hva er 'Backslash' ? |ans1:Deletegn|ans2:Begynnelsen på en kommentar|ans3:Sier at koden fortssetter på linjen under og ikke tolk koden før den også er lest|ans4:Forkortelse for deling og assignment|correctAns:Sier at koden fortssetter på linjen under og ikke tolk koden før den også er lest|pageType:questionTypeA|firstTime:true",
+
+"1.1.39":"uniqID:1.1.39|que:Hva er 'Whitespace' ?|ans1:Python skall|ans2:Max linjelendge i Python|ans3:#|ans4:Alle tegn som normalt er usynlig slik som space og return|correctAns:Alle tegn som normalt er usynlig slik som space og return|pageType:questionTypeA|firstTime:true",
+
+"1.1.38":"uniqID:1.1.38|que:Hva er anbefalt max linjelengde i Python ?|ans1:80 tegn|ans2:70 tegn|ans3:60 tegn|ans4:50 tegn|correctAns:80 tegn|pageType:questionTypeA|firstTime:true",
+
+"1.1.37":"uniqID:1.1.37|que:Hva er en 'Literal' ?|ans1:En konkret fast verdi|ans2:Bokstav|ans3:Variabel|ans4:Assignment|correctAns:En konkret fast verdi|pageType:questionTypeA|firstTime:true",
+
+"1.4.3":"uniqID:1.4.3|que:xOp(yOpz)|correctAns:|pageType:questionTypeC|firstTime:true",
+
+"1.4.2":"uniqID:1.4.2|que:xOpyOpz|correctAns:|pageType:questionTypeC|firstTime:true",
+
+"1.4.1":"uniqID:1.4.1|que:(xOpy)Opz|correctAns:|pageType:questionTypeC|firstTime:true"
+}
+

@@ -1,0 +1,29 @@
+{
+"3.1.13":"uniqID:3.1.13|que:Hva menes med  len ?|ans1:innebygd funksjon som gir lengden til en streng|ans2:end of line|ans3:å sette sammen to strenger til en|ans4:marke hvert element i en streng|correctAns:innebygd funksjon som gir lengden til en streng|pageType:questionTypeA|firstTime:true",
+
+"3.1.12":"uniqID:3.1.12|que:Hva menes med  Konkatinering ?|ans1:begynne og avslutte strenger|ans2:end of line|ans3:å sette sammen to strenger til en|ans4:marke hvert element i en streng|correctAns:å sette sammen to strenger til en|pageType:questionTypeA|firstTime:true",
+
+"3.1.11":"uniqID:3.1.11|que:Hva menes med  EOL ?|ans1:begynne og avslutte strenger|ans2:end of line|ans3:typen til tall med komma - casting til float|ans4:marke hvert element i en streng|correctAns:end of line|pageType:questionTypeA|firstTime:true",
+
+"3.1.10":"uniqID:3.1.10|que:Hva menes med  ' ?|ans1:begynne og avslutte strenger|ans2:typen til heltall - casting til int|ans3:typen til tall med komma - casting til float|ans4:marke hvert element i en streng|correctAns:begynne og avslutte strenger|pageType:questionTypeA|firstTime:true",
+
+"3.1.9":"uniqID:3.1.9|que:Hva menes med float() ?|ans1:En type på linje med string og float|ans2:typen til heltall - casting til int|ans3:typen til tall med komma - casting til float|ans4:marke hvert element i en streng|correctAns:typen til tall med komma - casting til float|pageType:questionTypeA|firstTime:true",
+
+"3.1.8":"uniqID:3.1.8|que:Hva menes med int() ?|ans1:En type på linje med string og float|ans2:typen til heltall - casting til int|ans3:typen til tall med komma - casting til float|ans4:marke hvert element i en streng|correctAns:typen til heltall - casting til int|pageType:questionTypeA|firstTime:true",
+
+"3.1.7":"uniqID:3.1.7|que:Hva menes med str() ?|ans1:En type på linje med int og float|ans2:hvert element i en streng|ans3:typen til streng - casting til streng|ans4:marke hvert element i en streng|correctAns:typen til streng - casting til streng|pageType:questionTypeA|firstTime:true",
+
+"3.1.6":"uniqID:3.1.6|que:Hva menes med Character ?|ans1:En type på linje med int og float|ans2:hvert element i en streng|ans3:typen til streng - casting til streng|ans4:marke hvert element i en streng|correctAns:hvert element i en streng|pageType:questionTypeA|firstTime:true",
+
+"3.1.5":"uniqID:3.1.5|que:Hva menes med String ?|ans1:En type på linje med int og float|ans2:hvert element i en streng|ans3:typen til streng - casting til streng|ans4:marke hvert element i en streng|correctAns:En type på linje med int og float|pageType:questionTypeA|firstTime:true",
+
+"3.1.4":"uniqID:3.1.4|que:Hva er en 'system test'?|ans1:Test av seriekoblede brannvarslsere|ans2:Systemer som tester software|ans3:Systematisk testing|ans4:Test av software som en helhet|correctAns:Test av software som en helhet|pageType:questionTypeA|firstTime:true",
+
+"3.1.3":"uniqID:3.1.3|que:Hva er 'assertEqual(x,y)'?|ans1:Funksjon som undersøker om to programmører sitter på samme datamaskin|ans2:Funksjon som returnerer et antall integers som er likt til prarameterne|ans3:Funksjon som returnerer to like integers|ans4:Funksjon i unit-test som undersøker om de to første parameterne er like|correctAns:Funksjon i unit-test som undersøker om de to første parameterne er like|pageType:questionTypeA|firstTime:true",
+
+"3.1.2":"uniqID:3.1.2|que:Hva er en 'unit test'? |ans1:Styrketest for datamaskiner|ans2:Test mange selskaper holder av programmører før de ansetter dem|ans3:Test av programmer|ans4:Test av en isolert komponent av et program|correctAns:Test av en isolert komponent av et program|pageType:questionTypeA|firstTime:true",
+
+"3.1.1":"uniqID:3.1.1|que:Hva menes med 'quality assurance'?|ans1:Testing|ans2:Vanlig type software insurance|ans3:Programmører som spiser Quality Street mens de programmerer|ans4:Undersøke at software fungerer rett|correctAns:Undersøke at software fungerer rett|pageType:questionTypeA|firstTime:true"
+
+
+}

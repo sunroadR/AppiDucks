@@ -1,0 +1,27 @@
+{
+"2.1.12":"uniqID:2.1.12|que:Hva er 'local variables'? |ans1:variabler som bare gjelder på den linjen de er skrevet|ans2:variabler som bare refererer til et bestemt sted (lokasjon) i minnet|ans3:variabeler som er gyldig i et program men ikke i moduler|ans4:variabeler som er gyldige i en liten, bestemt del av et program|correctAns:variabeler som er gyldige i en liten, bestemt del av et program|pageType:questionTypeA|firstTime:true",
+
+"2.1.11":"uniqID:2.1.11|que:Hva er 'parameter'?|ans1:Verdier sendt til en funksjon når den kalles|ans2:Innebygd Python funksjon som returnerer definisjonen til en annen (navngitt) funksjon|ans3:Begynnelsen på alle funksjonsdefinisjoner i Python|ans4:Navn gitt til argumenter når de mottas av en funksjon|correctAns:Navn gitt til argumenter når de mottas av en funksjon|pageType:questionTypeA|firstTime:true",
+
+"2.1.10":"uniqID:2.1.10|que:Hva er 'def'?|ans1:Begynnelsen på dokumentasjon til en funksjon|ans2:Parameterliste|ans3:Innebygd Python funksjon som returnerer definisjonen til en annen (navngitt) funksjon|ans4:Begynnelsen på alle funksjonsdefinisjoner i Python|correctAns:Begynnelsen på alle funksjonsdefinisjoner i Python|pageType:questionTypeA|firstTime:true",
+
+"2.1.9":"uniqID:2.1.9|que:Hva er 'return'?|ans1:Innebygd Python funksjon som returnerer verdien til resten av statementen|ans2:Innebygd Python funksjon som setter id’en til en variabel|ans3:Innebygd Python funksjon som returnerer definisjonen til en annen (navngitt) funksjon|ans4:Innebygd Python funksjon som returnerer verdien til parameter(ne)|correctAns:Innebygd Python funksjon som returnerer verdien til resten av statementen|pageType:questionTypeA|firstTime:true",
+
+"2.1.8":"uniqID:2.1.8|que:Hva er 'id'?|ans1:Innebygd Python funksjon som setter id’en til en variabel|ans2:Innebygd Python funksjon som returnerer definisjonen til en annen (navngitt) funksjon|ans3:Innebygd Python funksjon som returnerer verdien til parameter(ne)|ans4:Innebygd Python funksjon som returnerer id’en til en variabel|correctAns:Innebygd Python funksjon som returnerer id’en til en variabel|pageType:questionTypeA|firstTime:true",
+
+"2.1.7":"uniqID:2.1.1|que:Hva er 'round'?|ans1:Innebygd Python funksjon som returnerer den avrundede verdien til sitt parameter|ans2:Innebygd Python funksjon som returnerer det første parameteret opphøyd i det andre parameteret|ans3:Innebygd Python funksjon som returnerer hvor stor del av en sirkel gradene i parameteret er|ans4:Innebygd Python funksjon som returnerer en runding|correctAns:Innebygd Python funksjon som returnerer den avrundede verdien til sitt parameter|pageType:questionTypeA|firstTime:true",
+
+"2.1.6":"uniqID:2.1.6|que:Hva er 'help'?|ans1:Alle de andre tre svarene er riktige|ans2:Innebygd Python funksjon som returnerer typen til en varabel|ans3:Innebygd Python funksjon som returnerer all kjent informasjon om variabler|ans4:Innebygd Python funksjon som returnerer en beskrivelse av hva en funksjon gjør|correctAns:Innebygd Python funksjon som returnerer en beskrivelse av hva en funksjon gjør|pageType:questionTypeA|firstTime:true",
+
+"2.1.5":"uniqID:2.1.5|que:Hva er 'pow'?|ans1:Innebygd Python funksjon som returnerer det første parameteret opphøyd i det andre parameteret|ans2:Innebygd Python funksjon som returnerer det andre parameteret opphøyd i det første parameteret|ans3:Innebygd Python funksjon som returnerer differansen mellom de to parameterne|ans4:Innebygd Python funksjon som returnerer den sammenlagte styrken til paramterne|correctAns:Innebygd Python funksjon som returnerer det første parameteret opphøyd i det andre parameteret|pageType:questionTypeA|firstTime:true",
+
+"2.1.4":"uniqID:2.1.4|que:Hva er et 'argument'?|ans1:id|ans2:scope|ans3:abs|ans4:Verdier sendt til funksjoner|correctAns:Verdier sendt til funksjoner|pageType:questionTypeA|firstTime:true",
+
+"2.1.3":"uniqID:2.1.1|que:Hva er et 'function call'? |ans1:function name(arguments)|ans2:argument function name|ans3:function name|ans4:help(function name)|correctAns:function name(arguments)|pageType:questionTypeA|firstTime:true",
+
+"2.1.2":"uniqID:2.1.2|que:Hva er 'abs'? |ans1:Python sine kraftigste metoder|ans2:Innebygd funksjon i Python som setter en variabel til sin absolutte verdi|ans3:Verdier som sendes til funksjoner|ans4:Innebygd Python funksjon som returnerer den absolutte verdien til sitt parameter|correctAns:Innebygd Python funksjon som returnerer den absolutte verdien til sitt parameter|pageType:questionTypeA|firstTime:true",
+
+"2.1.1":"uniqID:2.1.1|que:Hva er en 'built-in function'?|ans1:funksjoner som kommer med Python|ans2:function call|ans3:lokal variabel|ans4:variabel|correctAns:funksjoner som kommer med Python|pageType:questionTypeA|firstTime:true"
+}
+
+

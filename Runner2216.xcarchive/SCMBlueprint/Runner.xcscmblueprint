@@ -1,0 +1,39 @@
+{
+  "DVTSourceControlWorkspaceBlueprintLocationsKey" : {
+    "D2AEFD5464DB27D147CACCB9480EB69EB284E031" : {
+      "DVTSourceControlBranchIdentifierKey" : "endringAvSpr",
+      "DVTSourceControlLocationRevisionKey" : "45f6a0c0ae4a1cdd80dd3c9704f013ab4a161553",
+      "DVTSourceControlBranchOptionsKey" : 4,
+      "DVTSourceControlBranchRemoteNameKey" : "origin",
+      "DVTSourceControlWorkspaceBlueprintLocationTypeKey" : "DVTSourceControlBranch"
+    },
+    "ECD0A59EC88E1BC7C473949BACEA86800ADECCFD" : {
+      "DVTSourceControlBranchIdentifierKey" : "beta",
+      "DVTSourceControlLocationRevisionKey" : "5391447fae6209bb21a89e6a5a6583cac1af9b4b",
+      "DVTSourceControlBranchOptionsKey" : 4,
+      "DVTSourceControlBranchRemoteNameKey" : "origin",
+      "DVTSourceControlWorkspaceBlueprintLocationTypeKey" : "DVTSourceControlBranch"
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D2AEFD5464DB27D147CACCB9480EB69EB284E031",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "72A0FDB4-4338-450B-BCDF-150308E9555F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D2AEFD5464DB27D147CACCB9480EB69EB284E031" : "appi_ducks\/",
+    "ECD0A59EC88E1BC7C473949BACEA86800ADECCFD" : "flutter\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Runner",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/Runner.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rafaelsen\/appi_ducks.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D2AEFD5464DB27D147CACCB9480EB69EB284E031"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/flutter\/flutter.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ECD0A59EC88E1BC7C473949BACEA86800ADECCFD"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+
+"1.8.3":"uniqID:1.8.3|que:Hva menes med denne feilmeldingen ?\n print'Helo world') \n SyntaxError: EOL while scanning string literal|ans1:Mangler utropstegn|ans2:bruker feil type quote mark|ans3:feilstavet Helo|ans4:mangler parantesbegynnelse før ‘|correctAns:mangler parantesbegynnelse før ‘|pageType:questionTypeA|firstTime:true",
+
+"1.1.42":"uniqID:1.1.42|que:Hva er en kommentar ?|ans1:Oppgavetekst|ans2:Minneaddresse|ans3:Snakkingen man gjør mens man programmerer|ans4:Forklaringer på hva kode gjør og hvordan|correctAns:Forklaringer på hva kode gjør og hvordan|pageType:questionTypeA|firstTime:true",
+
+"1.1.41":"uniqID:1.1.41|que:Hva betyr # ?|ans1:Begynner en kommentar|ans2:Prompt|ans3:Help|ans4:Linjefortsettelse|correctAns:Begynner en kommentar|pageType:questionTypeA|firstTime:true",
+
+"1.1.40":"uniqID:1.1.40|que:Hva er 'Backslash' ? |ans1:Deletegn|ans2:Begynnelsen på en kommentar|ans3:Sier at koden fortssetter på linjen under og ikke tolk koden før den også er lest|ans4:Forkortelse for deling og assignment|correctAns:Sier at koden fortssetter på linjen under og ikke tolk koden før den også er lest|pageType:questionTypeA|firstTime:true",
+
+"1.1.39":"uniqID:1.1.39|que:Hva er 'Whitespace' ?|ans1:Python skall|ans2:Max linjelendge i Python|ans3:#|ans4:Alle tegn som normalt er usynlig slik som space og return|correctAns:Alle tegn som normalt er usynlig slik som space og return|pageType:questionTypeA|firstTime:true",
+
+"1.1.38":"uniqID:1.1.38|que:Hva er anbefalt max linjelengde i Python ?|ans1:80 tegn|ans2:70 tegn|ans3:60 tegn|ans4:50 tegn|correctAns:80 tegn|pageType:questionTypeA|firstTime:true",
+
+"1.1.37":"uniqID:1.1.37|que:Hva er en 'Literal' ?|ans1:En konkret fast verdi|ans2:Bokstav|ans3:Variabel|ans4:Assignment|correctAns:En konkret fast verdi|pageType:questionTypeA|firstTime:true",
+
+"1.1.39":"uniqID:1.1.39|que:Hva er 'Whitespace' ?|ans1:Python skall|ans2:Max linjelendge i Python|ans3:#|ans4:Alle tegn som normalt er usynlig slik som space og return|correctAns:Alle tegn som normalt er usynlig slik som space og return|pageType:questionTypeA|firstTime:true",
+
+"1.1.38":"uniqID:1.1.38|que:Hva er anbefalt max linjelengde i Python ?|ans1:80 tegn|ans2:70 tegn|ans3:60 tegn|ans4:50 tegn|correctAns:80 tegn|pageType:questionTypeA|firstTime:true",
+
+"1.1.37":"uniqID:1.1.37|que:Hva er en 'Literal' ?|ans1:En konkret fast verdi|ans2:Bokstav|ans3:Variabel|ans4:Assignment|correctAns:En konkret fast verdi|pageType:questionTypeA|firstTime:true",
+
+"1.1.36":"uniqID:1.1.36|que:Hva er en 'Semantisk feil' ?|ans1:En feil pga noe som ikke lar seg utføre|ans2:Error|ans3:Operator feil|ans4:En feil pga noe som ikke er gyldig Python kode|correctAns:En feil pga noe som ikke lar seg utføre|pageType:questionTypeA|firstTime:true",
+
+"1.1.35":"uniqID:1.1.35|que:Hva betyr 'Syntax feil'  ?|ans1:En feil pga noe som ikke er gyldig Python kode|ans2:En feil pga noe som ikke lar seg utføre|ans3:Error statement|ans4:Operator feil|correctAns:En feil pga noe som ikke er gyldig Python kode.|pageType:questionTypeA|firstTime:true",
+
+"1.1.34":"uniqID:1.1.34|que:Hva betyr '**= '  ?|ans1:Operand|ans2:Forkortelse for exponantiation og assignment|ans3:Operator assignment|ans4:En verdi som refererer til et navn|correctAns:Forkortelse for exponantiation og assignment|pageType:questionTypeA|firstTime:true",
+
+"1.1.33":"uniqID:1.1.33|que:Hva betyr '%= '  ?|ans1:Operand|ans2:Forkortelse for remaninder og assignment|ans3:Operator assignment|ans4:En verdi som refererer til et navn|correctAns:Forkortelse for remaninder og assignment|pageType:questionTypeA|firstTime:true",
+
+"1.1.32":"uniqID:1.1.32|que:Hva betyr '//= '  ?|ans1:Operand|ans2:Forkortelse for integer deling og assignment|ans3:Operator assignment|ans4:En verdi som refererer til et navn|correctAns:Forkortelse for integer deling og assignment|pageType:questionTypeA|firstTime:true",
+
+"1.1.31":"uniqID:1.1.31|que:Hva betyr '/= '  ?|ans1:Operand|ans2:Forkortelse for deling og assignment|ans3:Operator assignment|ans4:En verdi som refererer til et navn|correctAns:Forkortelse for deling og assignment|pageType:questionTypeA|firstTime:true",
+
+"1.1.30":"uniqID:1.1.30|que:Hva betyr ' -= '  ?|ans1:Operand|ans2:Forkortelse for minus og assignment|ans3:Operator assignment|ans4:En verdi som refererer til et navn|correctAns:Forkortelse for minus og assignment|pageType:questionTypeA|firstTime:true",
+
+"1.1.29":"uniqID:1.1.29|que:Hva betyr ' *= ' ?|ans1:Operand|ans2:Forkortelse for gange og assignment|ans3:Operator assignment|ans4:En verdi som refererer til et navn|correctAns:Forkortelse for gange og assignment|pageType:questionTypeA|firstTime:true",
+
+"1.1.28":"uniqID:1.1.28|que:Hva betyr ' += '  ?|ans1:Operand|ans2:Forkortelse for pluss og assignment|ans3:Operator assignment|ans4:En verdi som refererer til et navn|correctAns:Forkortelse for pluss og assignment|pageType:questionTypeA|firstTime:true",
+
+"1.1.27":"uniqID:1.1.27|que:Hva er 'Augmented assignemnt' ?|ans1:Forkortelse hvor en operator og en assignment slåes sammen|ans2:Operator|ans3:Operand|ans4:En verdi som refererer til et navn|correctAns:Forkortelse hvor en operator og en assignment slåes sammen|pageType:questionTypeA|firstTime:true",
+
+"1.1.26":"uniqID:1.1.26|que:Hva er 'Minne adresse' ?|ans1:Augmented assignment|ans2:En adresse for hvert sted i datamaskinens minne|ans3:Assignment statement|ans4:id1|correctAns:En adresse for hvert sted i datamaskinens minne|pageType:questionTypeA|firstTime:true",
+
+"1.1.25":"uniqID:1.1.25|que:Hva er 'Assignment statement' ?|ans1:Operator presedens|ans2:Å gi en variabel en verdi|ans3:Minneadresse|ans4:Unær operator|correctAns:Å gi en variabel en verdi|pageType:questionTypeA|firstTime:true",
+
+"1.1.24":"uniqID:1.1.24|que:Hva er ' en variabel'?|ans1:Et navn som refererer til en verdi|ans2:En verdi som refererer til et navn|ans3:Assignment|ans4:En verdi som refererer til et navn|correctAns:Et navn som refererer til en verdi|pageType:questionTypeA|firstTime:true",
+
+"1.1.23":"uniqID:1.1.23|que:Hva er 'Operator presedens'?|ans1:Evalueringsrekkefølgen til matematiske operatorer|ans2:Binære operatorer unære operatoerer overloaded operatorer|ans3:En forkortelse hvor en operator og assignment slåes sammen|ans4:Et navn som referrerer til en verdi|correctAns:Evalueringsrekkefølgen til matematiske operatorer|pageType:questionTypeA|firstTime:true"
+
+
+}

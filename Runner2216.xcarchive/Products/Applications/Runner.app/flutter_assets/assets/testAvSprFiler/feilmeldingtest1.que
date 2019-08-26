@@ -1,0 +1,7 @@
+{
+"1.8.3":"uniqID:1.8.3|que:Hva menes med denne feilmeldingen ?\n print'Helo world') \n SyntaxError: EOL while scanning string literal|ans1:Mangler utropstegn|ans2:bruker feil type quote mark|ans3:feilstavet Helo|ans4:mangler parantesbegynnelse før ‘|correctAns:mangler parantesbegynnelse før ‘|pageType:questionTypeA|firstTime:true",
+
+"1.8.2":"uniqID:1.8.2|que:Hva menes med denne feilmeldingen ?\n print(Helo world') \n SyntaxError: EOL while scanning string literal|ans1:Mangler utropstegn|ans2:bruker feil type quote mark|ans3:feilstavet Helo|ans4:mangler quote før Helo|correctAns:mangler quote før Helo|pageType:questionTypeA|firstTime:true",
+
+"1.8.1":"uniqID:1.8.1|que:Hva menes med denne feilmeldingen ?\n print('Helo world) \n SyntaxError: EOL while scanning string literal|ans1:Mangler utropstegn|ans2:bruker feil type quote mark|ans3:feilstavet Helo|ans4:mangler quote etter world|correctAns:mangler quote etter world|pageType:questionTypeA|firstTime:true"
+}

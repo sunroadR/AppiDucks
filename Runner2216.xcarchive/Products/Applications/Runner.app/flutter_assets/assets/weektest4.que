@@ -1,0 +1,63 @@
+{
+"2.7.16":"uniqID:2.7.16|que:Hva vil du tro denne variabelen står for ? 'prosess' |ans1:kjemisk reaksjon|ans2:kjernefysisk eksperiment|ans3:prosess i operativ systemet|ans4:det er et teit navn som ingen vil huske hva står for om et halvt år|correctAns:det er et teit navn som ingen vil huske hva står for om et halvt år|pageType:questionTypeA|firstTime:true",
+
+"2.7.15":"uniqID:2.1.15|que:Hva vil du tro denne variabelen står for ?  'første' |ans1:den første parameteren til en funksjon|ans2:den førstefødte ungen til arveprinsen av Nederland|ans3:førstegrads forbrenning|ans4:det er et teit navn som ingen vil huske hva står for om et halvt år|correctAns:det er et teit navn som ingen vil huske hva står for om et halvt år|pageType:questionTypeA|firstTime:true",
+
+"2.7.14":"uniqID:2.7.14|que:Hva vil du tro denne variabelen står for ?  'grader' |ans1:1/360 del av en cirkel|ans2:grader farenheit|ans3:grader celcius|ans4:det er et teit navn som ingen vil huske hva står for om et halvt år|correctAns:det er et teit navn som ingen vil huske hva står for om et halvt år|pageType:questionTypeA|firstTime:true",
+
+"2.7.13":"uniqID:2.7.13|que:Hva vil du tro denne variabelen står for ? 'ukedag' |ans1:en hvilken som helst dag i uken|ans2:hverdager + helger|ans3:hverdager|ans4:det er et teit navn som ingen vil huske hva står for om et halvt år|correctAns:det er et teit navn som ingen vil huske hva står for om et halvt år|pageType:questionTypeA|firstTime:true",
+
+"2.7.12":"uniqID:2.7.12|que:Hva vil du tro denne variabelen står for ?  'uke'|ans1:en måned|ans2:en runde|ans3:en periode|ans4:en uke|correctAns:en uke|pageType:questionTypeA|firstTime:true",
+
+"2.7.11":"uniqID:2.7.11|que:Hva vil du tro denne variabelen står for ?  'foreleser'|ans1:en forleser|ans2:en spiller|ans3:en deltager|ans4:en student|correctAns:en forleser|pageType:questionTypeA|firstTime:true",
+
+"2.7.10":"uniqID:2.7.10|que:Hva vil du tro denne variabelen står for ?  'student'|ans1:en forleser|ans2:en spiller|ans3:en deltager|ans4:en student|correctAns:en student|pageType:questionTypeA|firstTime:true",
+
+"2.7.9":"uniqID:2.7.9|que:Hva vil du tro denne variabelen står for ?  'bok_år' |ans1:året en bok ble anskaffet|ans2:året en bok er trykt|ans3:året en bok er utgitt|ans4:det er et teit navn som ingen vil huske hva står for om et halvt år|correctAns:det er et teit navn som ingen vil huske hva står for om et halvt år|pageType:questionTypeA|firstTime:true",
+
+"2.7.8":"uniqID:2.7.8|que:Hva vil være et godt variabel navn for 'forfatteren til en bok' ?|ans1:body|ans2:forfatter|ans3:bok|ans4:bok_forfatter|correctAns:bok_forfatter|pageType:questionTypeA|firstTime:true",
+
+"2.7.7":"uniqID:2.7.7|que:Hva vil være et godt variabel navn for 'tittelen på en bok' ?|ans1:overskrift|ans2:bok|ans3:tittel|ans4:bok_tittel|correctAns:bok_tittel|pageType:questionTypeA|firstTime:true",
+
+"2.7.6":"uniqID:2.7.6|que:Hva vil være et godt variabel navn for 'volumet av en sirkel' ?|ans1:areal|ans2:sirkel|ans3:volum|ans4:volum_sirkel|correctAns:volum_sirkel|pageType:questionTypeA|firstTime:true",
+
+"2.7.5":"uniqID:2.7.5|que:Hva vil være et godt variabel navn for 'det ene katetet' ?|ans1:en_kortside|ans2:side|ans3:student|ans4:katet2|correctAns:katet2|pageType:questionTypeA|firstTime:true",
+
+"2.7.4":"uniqID:2.7.4|que:Hva vil være et godt variabel navn for 'det ene katetet' ?|ans1:en_kortside|ans2:side|ans3:student|ans4:katet1|correctAns:katet1|pageType:questionTypeA|firstTime:true",
+
+"2.7.3":"uniqID:2.7.3|que:Hva vil være et godt variabel navn for 'hypotenus' ? |ans1:katet|ans2:langsiden|ans3:ene_siden|ans4:hypotenus|correctAns:hypotenus|pageType:questionTypeA|firstTime:true",
+
+"2.7.2":"uniqID:2.7.2|que:Hva vil være et godt variabel navn for 'grader i farenheit' ?|ans1:first_value|ans2:grader|ans3:grader_farenheit|ans4:grader_celcius|correctAns:grader_farenheit|pageType:questionTypeA|firstTime:true",
+
+"2.7.1":"uniqID:2.7.1|que:Hva vil være et godt variabel navn for 'grader i celsius' ?|ans1:first_value|ans2:katet|ans3:grader_farenheit|ans4:grader_celcius|correctAns:grader_celcius|pageType:questionTypeA|firstTime:true",
+
+"2.1.25":"uniqID:2.1.25|que:Hva menes med 'Returverdi' ?|ans1:Verdier som blir tatt vare på|ans2:Verdien til tur x 2|ans3:Variabler med typen retur|ans4:Verdien en funksjon returnerer|correctAns:Verdien en funksjon returnerer|pageType:questionTypeA|firstTime:true",
+
+"2.1.24":"uniqID:2.1.24|que:Hva betyr 'Temporary variables' ?|ans1:Midlertidige programmer|ans2:Variabler med typen tmp|ans3:Variabler som har verdier som er temperatur/grader|ans4:Variabler som bare har verdi i et begrenset områdråde av et program|correctAns:Variabler som bare har verdi i et begrenset områdråde av et program|pageType:questionTypeA|firstTime:true",
+
+"2.1.23":"uniqID:2.1.23|que:Hva betyr 'TypeError' ?|ans1:Feil gjort av en ung mann (en type)|ans2:Feilmelding fra Python tolken du får om du bruker en midlertidig varabel utenfor dens scope|ans3:Returverdi av feil type|ans4:Feilmelding fra Python tolken du får om en funksjon er kalt med feil antall argumenter|correctAns:Feilmelding fra Python tolken du får om en funksjon er kalt med feil antall argumenter|pageType:questionTypeA|firstTime:true",
+
+"2.1.22":"uniqID:2.1.22|que:Hva betyr 'IndentationError' ?|ans1:Variabler som bare har verdi på den linjen den blir satt|ans2:det samme som FunctionError|ans3:en feil i indentert kode|ans4:feilmelding du får når Python tolken forventer indentert kode|correctAns:feilmelding du får når Python tolken forventer indentert kode|pageType:questionTypeA|firstTime:true",
+
+"2.1.21":"uniqID:2.1.21|que:Hva betyr 'NameError' ?|ans1:feilmelding du får når Python tolken forventer indentert kode|ans2:feil i navnevalg|ans3:feilstavede navn|ans4:feilmelding du får når et navn i koden ikke refererer til noe i den kodebiten hvor den står|correctAns:feilmelding du får når et navn i koden ikke refererer til noe i den kodebiten hvor den står|pageType:questionTypeA|firstTime:true",
+
+"2.1.20":"uniqID:2.1.20|que:Hva er en 'feilmelding' ?|ans1:scope error|ans2:kode som ikke er indentert|ans3:type retur|ans4:meldinger om feil i programmet ditt fra Python tolken|correctAns:meldinger om feil i programmet ditt fra Python tolken|pageType:questionTypeA|firstTime:true",
+
+"2.1.20":"uniqID:2.1.20|que:Hva menes det med 'typekontrakt' ?|ans1:parameter liste|ans2:feilmeldinger om typer|ans3:kontrakt med en ung mann (en type)|ans4:kontrakt med en funksjon som sier at om du gir de(n) rette typen parametere vil du få den rette typen returnert|correctAns:kontrakt med en funksjon som sier at om du gir de(n) rette typen parametere vil du få den rette typen returnert|pageType:questionTypeA|firstTime:true",
+
+"2.1.19":"uniqID:2.1.19|que:Hva menes  med 'Precondition' ?|ans1:Funksjoner som trenger trening for å fungere i programmer|ans2:Moduler som trenger bearbeiding for å passe inn i programmer|ans3:Krav til programmører|ans4:Krav til input til en funksjon eller programbit|correctAns:Krav til input til en funksjon eller programbit|pageType:questionTypeA|firstTime:true",
+
+"2.1.18":"uniqID:2.1.18|que:Hva betyr 'None' ?|ans1:No open node exeption|ans2:Det samme som null|ans3:Tom fil|ans4:Fravær av verdi|correctAns:Fravær av verdi|pageType:questionTypeA|firstTime:true",
+
+"2.1.17":"uniqID:2.1.17|que:Hva er en 'test' ?|ans1:TestError|ans2:Feilmelding|ans3:Streng som finner feil i kode|ans4:Kodekall som undersøker om man får tilbake det forventede av en annen kodebit|correctAns:Kodekall som undersøker om man får tilbake det forventede av en annen kodebit|pageType:questionTypeA|firstTime:true",
+
+"2.1.16":"uniqID:2.1.16|que:Hva er 'docstring' ?|ans1:dokumentering av typen string|ans2:Strenger skrevet til dokumenter/tekst filer|ans3:Strenger hentet fra dokumenter/tekst filer|ans4:Beskrivelse av en funksjon hvor type(ne) til paramterne og returverdien er gitt|correctAns:Beskrivelse av en funksjon hvor type(ne) til paramterne og returverdien er gitt|pageType:questionTypeA|firstTime:true",
+
+"2.1.15":"uniqID:2.1.15|que:Hva er 'documentation' ?|ans1:tekst fil(er)|ans2:ASCII tekst|ans3:navn gitt til argumenter når de mottas av en funksjon|ans4:beskrivelse av en programdel som mennesker er ment å lese|correctAns:beskrivelse av en programdel som mennesker er ment å lese|pageType:questionTypeA|firstTime:true",
+
+"2.1.14":"uniqID:2.1.14|que:Hva er 'namespace' ?|ans1:plassen et navn tar på skjermen|ans2:mengden minne satt av til et variabel eller funksjonsnavn|ans3:området av et program hvor en funksjon er definert|ans4:en gruppering av navn slik at du kan skille forskjellig bruk av det samme navnet|correctAns:en gruppering av navn slik at du kan skille forskjellig bruk av det samme navnet|pageType:questionTypeA|firstTime:true",
+
+"2.1.13":"uniqID:2.1.13|que:Hva er et 'scope' ?|ans1:vaiabler|ans2:abs|ans3:stedet i minent hvor en variabel er satt|ans4:området av et program hvor en variabel er gyldig|correctAns:området av et program hvor en variabel er gyldig|pageType:questionTypeA|firstTime:true"
+
+
+}

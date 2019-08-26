@@ -1,0 +1,9 @@
+{
+"3.1.4":"uniqID:3.1.4|que:Hva er en 'system test' ? |ans1:Test av seriekoblede brannvarslsere|ans2:Systemer som tester software|ans3:Systematisk testing.|ans4:Test av software som en helhet|correctAns:Test av software som en helhet|pageType:questionTypeA|firstTime:true",
+
+"3.1.3":"uniqID:3.1.3|que:Hva er 'assertEqual(x,y)' ?|ans1:Funksjon som undersøker om to programmører sitter på samme datamaskin|ans2:Funksjon som returernerer et antall integers som er likt til prarameterne|ans3:Funksjon som returnerer to like integers|ans4:Funksjon i unittest som undersøker om de to første parameterne er like|correctAns:Funksjon i unittest som undersøker om de to første parameterne er like|pageType:questionTypeA|firstTime:true",
+
+"3.1.2":"uniqID:3.1.2|que: Hva er en 'unit test' ? |ans1:Styrketest for datamaskiner|ans2:Test mange selskaper holder av programmører før de ansetter dem|ans3:Test av programmer|ans4:Test av en isolert komponent av et program|correctAns:Test av en isolert komponent av et program|pageType:questionTypeA|firstTime:true",
+
+"3.1.1":"uniqID:3.1.1|que: Hva menes med 'Quality assurance' ?|ans1:Testing|ans2:Vanlig type software insureance|ans3:Programmører som spiser Quality Street mens de programmerer|ans4:Undersøke at software fungerer rett|correctAns:Undersøke at software fungerer rett|pageType:questionTypeA|firstTime:true"
+}

@@ -1,0 +1,8 @@
+{
+"1.1.43":"uniqID:1.1.43|que:Hva er en kommentar ?|ans1:Oppgavetekst|ans2:Minneaddresse|ans3:Snakkingen man gjør mens man programmerer|ans4:Forklaringer på hva kode gjør og hvordan|correctAns:Forklaringer på hva kode gjør og hvordan|pageType:questionTypeA|firstTime:true",
+
+"1.1.42":"uniqID:1.1.42|que:Hva betyr # ?|ans1:Begynner en kommentar|ans2:Prompt|ans3:Help|ans4:Linjefortsettelse|correctAns:Begynner en kommentar|pageType:questionTypeA|firstTime:true",
+
+"1.1.41":"uniqID:1.1.41|que:Hva er 'Backslash' ? |ans1:Deletegn|ans2:Begynnelsen på en kommentar|ans3:Sier at koden fortssetter på linjen under og ikke tolk koden før den også er lest|ans4:Forkortelse for deling og assignment|correctAns:Sier at koden fortssetter på linjen under og ikke tolk koden før den også er lest|pageType:questionTypeA|firstTime:true"
+
+}

@@ -1,0 +1,49 @@
+{
+"1.8.2":"uniqID:1.8.2|que:Hva menes med denne feilmeldingen?\n print(Helo world')\n SyntaxError: EOL while scanning string literal|ans1:Mangler utropstegn|ans2:bruker feil type quote mark|ans3:feilstavet Helo|ans4:mangler quote før Helo|correctAns:mangler quote før Helo|pageType:questionTypeA|firstTime:true",
+
+"1.8.1":"uniqID:1.8.1|que:Hva menes med denne feilmeldingen?\n print('Helo world) \n SyntaxError: EOL while scanning string literal|ans1:Mangler utropstegn|ans2:bruker feil type quote mark|ans3:feilstavet Helo|ans4:mangler quote etter world|correctAns:mangler quote etter world|pageType:questionTypeA|firstTime:true",
+
+"1.1.22":"uniqID:1.1.22|que:Hva er 'overloaded operatorer'?|ans1:Operatorer som kan utføres på flere typer|ans2:Variabler|ans3:Operator presedens|ans4:Å gi en variabel en verdi|correctAns:Operatorer som kan utføres på flere typer|pageType:questionTypeA|firstTime:true",
+
+"1.1.21":"uniqID:1.1.21|que:Hva er 'unære operatorer'?|ans1:Operator som tar to operander|ans2:Operatorer som tar en operand|ans3:Overloaded operatorer|ans4:Alle operatorene i Python|correctAns:Operatorer som tar en operand|pageType:questionTypeA|firstTime:true",
+
+"1.1.20":"uniqID:1.1.20|que:Hva er 'binære operatorer'?|ans1:Operator som tar to operander|ans2:Operator som fungerer på to typer|ans3:Kommentar|ans4:Alle operatorene i Python|correctAns:Operator som tar to operander|pageType:questionTypeA|firstTime:true",
+
+"1.1.19":"uniqID:1.1.19|que:Hva er 'floor'?|ans1:Heltall-biten til et float tall|ans2:Modul|ans3:Det største heltallet mindre eller lik input tallet|ans4:Bibliotek |correctAns:Det største heltallet mindre eller lik input tallet|pageType:questionTypeA|firstTime:true",
+
+"1.1.18":"uniqID:1.1.18|que:Hva er ‘integer division’?|ans1:Deling av to heltall|ans2:Resten etter en deling|ans3:Type|ans4:Å gi en variabel en verdi|correctAns:Deling av to heltall|pageType:questionTypeA|firstTime:true",
+
+"1.1.17":"uniqID:1.1.17|que:Hva er ‘modulo’?|ans1:Tall med komma|ans2:Deling av to heltall|ans3:Resten etter en deling|ans4:Type|correctAns:Resten etter en deling|pageType:questionTypeA|firstTime:true",
+
+"1.1.16":"uniqID:1.1.16|que:Hva er ‘float’?|ans1:Tall med komma|ans2:Heltall|ans3:Modulo|ans4:Unær operator|correctAns:Tall med komma|pageType:questionTypeA|firstTime:true",
+
+"1.1.15":"uniqID:1.1.15|que:Hva er ‘int’ ?|ans1:Tall med komma|ans2:Uttrykk|ans3:Typer|ans4:Heltall|correctAns:Heltall|pageType:questionTypeA|firstTime:true",
+
+"1.1.14":"uniqID:1.1.14|que:Hva betyr begrepet ‘type‘?|ans1:Tall med komma|ans2:Heltall|ans3:Et sett med verdier og et sett med operasjoner som kan brukes på disse verdiene |ans4:Alle tegn som normalt er usynlige slik som space og return|correctAns:Et sett med verdier og et sett med operasjoner som kan brukes på disse verdiene |pageType:questionTypeA|firstTime:true",
+
+"1.1.13":"uniqID:1.1.13|que:Hva er 'operander'?|ans1:Operasanger(e)|ans2:Verdi(er) som blir brukt med operatorer|ans3:Folk som gjør matematikk|ans4:Utvikler(e)|correctAns:Verdi(er) som blir brukt med operatorer|pageType:questionTypeA|firstTime:true",
+
+"1.1.12":"uniqID:1.1.12|que:Hva er 'aritmetiske operatorer'?|ans1:tegn som [ ] og { }|ans2:Tegn som  +  *  -  % /|ans3:sinA/a=sinB/b=sinC/c|ans4:a2+b2=c2|correctAns:Tegn som  +  *  -  % /|pageType:questionTypeA|firstTime:true",
+
+"1.1.11":"uniqID:1.1.11|que:Hva er et Python skall?|ans1:Python kommentarer|ans2:Noe som er planlagt å utføre i Python|ans3:Et sted hvor du taster inn en og en Python kommando og får respons etter hver av dem|ans4:Alle tegn som normalt er usynlige slik som space og return|correctAns:Et sted hvor du taster inn en og en Python kommando og får respons etter hver av dem|pageType:questionTypeA|firstTime:true",
+
+"1.1.10":"uniqID:1.1.10|que:Hva er en interpreter?|ans1:Filsystem og databaser|ans2:Noe som kjører et program og oversetter det til noe operativsystemet kan forstå|ans3:Et kunstig språk som benyttes til å styre og kontrollere datamaskiner|ans4:Et sett med verdier og operasjoner som kan brukes på disse verdiene|correctAns:Noe som kjører et program og oversetter det til noe operativsystemet kan forstå|pageType:questionTypeA|firstTime:true",
+
+"1.1.9":"uniqID:1.1.9|que:Hva er et operativsystem?|ans1:Samling av operatorene i et programmeringsspråk|ans2:Objekt-orientering|ans3:Program som tolker Python programmer slik at de kan kjøres på en datamaskin|ans4:Det eneste programmet som snakker direkte med hardwaren til en datamaskin|correctAns:Det eneste programmet som snakker direkte med hardwaren til en datamaskin|pageType:questionTypeA|firstTime:true",
+
+"1.1.8":"uniqID:1.1.8|que:Hva er en 'hard drive’?|ans1:Datamaskinen|ans2:Hovedregneenheten i en datamaskin som utfører instruksjonene gitt i et dataprogram|ans3:Et program som snakker med operativsystemet|ans4:Lagringsmedium for binært kodet informasjon|correctAns:Lagringsmedium for binært kodet informasjon|pageType:questionTypeA|firstTime:true",
+
+"1.1.7":"uniqID:1.1.7|que:Hva er en 'prosessor'?|ans1:skjerm|ans2:Hovedregneenheten i en datamaskin som utfører instruksjonene gitt i et dataprogram|ans3:En kombinasjon av verdier|ans4: konstanter|correctAns:Hovedregneenheten i en datamaskin som utfører instruksjonene gitt i et dataprogram|pageType:questionTypeA|firstTime:true",
+
+"1.1.6":"uniqID:1.1.6|que:Hva er et 'program'?|ans1:Python|ans2:Matte oppgaver|ans3:Sett med variabler|ans4:Sett med instruksjoner|correctAns:Sett med instruksjoner|pageType:questionTypeA|firstTime:true",
+
+"1.1.5":"uniqID:1.1.5|que:Hva er et 'programmeringsspråk'?|ans1:Å si eller skrive ordet programmering|ans2:Et kunstig språk for å styre og kontrollere en datamaskin|ans3:Å taste inn noe på en datamaskin|ans4:Variabler|correctAns:Et kunstig språk for å styre og kontrollere en datamaskin|pageType:questionTypeA|firstTime:true",
+
+"1.1.4":"uniqID:1.1.4|que:Hvordan ser parenteser ut?|ans1:( )|ans2:< >|ans3:{ }|ans4:[ ]|correctAns:( )|pageType:questionTypeA|firstTime:true",
+
+"1.1.3":"uniqID:1.1.3|que:Hvordan ser krøllparenteser ut?|ans1:( )|ans2:< >|ans3:{ }|ans4:[ ]|correctAns:{ }|pageType:questionTypeA|firstTime:true",
+
+"1.1.2":"uniqID:1.1.2|que:Hvordan ser klammeparenteser ut?|ans1:( )|ans2:< >|ans3:{ }|ans4:[ ]|correctAns:[ ]|pageType:questionTypeA|firstTime:true",
+
+"1.1.1":"uniqID:1.1.1|que:Hva er et 'statement' i et program?|ans1:Kommando som datamaskinen utfører|ans2:Partiprogram|3:Kommentar|ans4:Endring|correctAns:Kommando som datamaskinen utfører|pageType:questionTypeA|firstTime:true"
+}

@@ -1,8 +1,4 @@
 # appi_ducks
+The source code for a prototype of a learning app for Python. Developed for my master thesis
 
-A new Flutter application.
 
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
